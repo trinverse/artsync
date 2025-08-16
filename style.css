@@ -101,6 +101,23 @@ main {
     width: 35%;
 }
 
+#blog-list {
+    padding: 2rem;
+}
+
+.blog-post-summary {
+    margin-bottom: 2rem;
+}
+
+.post-meta {
+    color: #777;
+    font-style: italic;
+}
+
+#blog-post {
+    padding: 2rem;
+}
+
 #services {
     display: flex;
     justify-content: space-around;
