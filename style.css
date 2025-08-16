@@ -42,7 +42,7 @@ img {
 }
 
 section {
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
 }
 
 section:nth-of-type(even) {
@@ -65,9 +65,13 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 header h1 {
@@ -103,16 +107,25 @@ header nav a:hover {
     background: linear-gradient(to right, var(--primary-color), #0056b3);
     color: #fff;
     text-align: center;
-    padding: 6rem 0;
+    padding: 6rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.hero-content {
+    max-width: 800px;
 }
 
 .hero-content h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     margin-bottom: 2rem;
 }
 
@@ -120,17 +133,19 @@ header nav a:hover {
     display: inline-block;
     background-color: #fff;
     color: var(--primary-color);
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 5px;
     font-weight: 700;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1rem;
 }
 
 .cta-button:hover {
     background-color: var(--primary-color);
     color: #fff;
     border: 1px solid #fff;
+    transform: translateY(-3px);
 }
 
 /* Services Section */
@@ -145,26 +160,27 @@ header nav a:hover {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
 .service {
     background: #fff;
-    padding: 2rem;
+    padding: 2.5rem 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service:hover {
     transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
 }
 
 .service i {
     font-size: 3rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .service h4 {
@@ -173,15 +189,16 @@ header nav a:hover {
 }
 
 /* About Section */
-#about {
+#about .container {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 4rem;
 }
 
 #about img {
-    width: 400px;
+    width: 45%;
     border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 #about h3 {
@@ -214,9 +231,10 @@ header nav a:hover {
 
 .portfolio-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .portfolio-item:hover img {
@@ -229,7 +247,7 @@ header nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 123, 255, 0.8);
+    background: rgba(0, 123, 255, 0.85);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -237,6 +255,8 @@ header nav a:hover {
     align-items: center;
     opacity: 0;
     transition: opacity 0.4s ease;
+    text-align: center;
+    padding: 1rem;
 }
 
 .portfolio-item:hover .portfolio-overlay {
@@ -260,27 +280,34 @@ header nav a:hover {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
 }
 
 .team-member {
     background: #fff;
-    padding: 1.5rem;
+    padding: 2rem 1rem;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
 }
 
 .team-member img {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border: 5px solid var(--primary-color);
 }
 
 .team-member h4 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 0.2rem;
 }
 
@@ -304,27 +331,37 @@ header nav a:hover {
 #contact-form textarea {
     display: block;
     width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-family: var(--font-family-body);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
 }
 
 #contact-form button {
     width: 100%;
-    padding: 0.8rem;
+    padding: 1rem;
     border: none;
     border-radius: 5px;
     background: var(--primary-color);
     color: #fff;
     font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1rem;
 }
 
 #contact-form button:hover {
     background: #0056b3;
+    transform: translateY(-3px);
 }
 
 /* Footer */
@@ -332,19 +369,13 @@ footer {
     background: var(--dark-color);
     color: var(--light-color);
     text-align: center;
-    padding: 2rem 0;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 3rem 2rem;
 }
 
 .social-links a {
     color: #fff;
-    margin: 0 0.7rem;
-    font-size: 1.8rem;
+    margin: 0 0.8rem;
+    font-size: 2rem;
     transition: color 0.3s ease;
 }
 
@@ -354,7 +385,7 @@ footer {
 
 footer p {
     margin-top: 1.5rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 footer a {
@@ -363,7 +394,7 @@ footer a {
 
 /* Responsive */
 @media (max-width: 768px) {
-    header {
+    header .container {
         flex-direction: column;
     }
 
@@ -372,16 +403,22 @@ footer a {
     }
 
     header nav li {
-        margin: 0 0.5rem;
+        margin: 0 0.7rem;
+    }
+
+    #hero {
+        min-height: auto;
+        padding: 4rem 2rem;
     }
 
     #hero h2 {
         font-size: 2.5rem;
     }
 
-    #about {
+    #about .container {
         flex-direction: column;
         text-align: center;
+        gap: 2rem;
     }
 
     #about img {
