@@ -84,6 +84,23 @@ main {
     margin-right: 1rem;
 }
 
+#contact-page {
+    padding: 2rem;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form {
+    width: 60%;
+}
+
+.contact-info {
+    width: 35%;
+}
+
 #services {
     display: flex;
     justify-content: space-around;
