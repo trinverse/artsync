@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,14 +7,14 @@
     <title>ArtSync - Software, Data, and IT Support</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>ArtSync</h1>
+            <a href="#" class="logo">ArtSync</a>
             <nav>
                 <ul>
                     <li><a href="services.html">Services</a></li>
@@ -29,30 +30,28 @@
     <main>
         <section id="hero">
             <div class="container">
-                <div class="hero-content">
-                    <h2>Your Partner in Digital Excellence</h2>
-                    <p>We provide top-tier software development, data entry, and IT support services to help your business thrive.</p>
-                    <a href="#contact" class="cta-button">Get a Free Quote</a>
-                </div>
+                <h2>Your Partner in Digital Excellence</h2>
+                <p>We provide top-tier software development, data entry, and IT support services to help your business thrive.</p>
+                <a href="#contact" class="m3-button filled">Get a Free Quote</a>
             </div>
         </section>
 
         <section id="services">
             <div class="container">
-                <h3>Our Services</h3>
+                <h2>Our Services</h2>
                 <div class="services-grid">
-                    <div class="service">
-                        <i class="fas fa-code"></i>
+                    <div class="m3-card service-card">
+                        <div class="icon"><i class="fas fa-code"></i></div>
                         <h4>Software Development</h4>
                         <p>From custom applications to enterprise solutions, we build software that solves your unique challenges.</p>
                     </div>
-                    <div class="service">
-                        <i class="fas fa-keyboard"></i>
+                    <div class="m3-card service-card">
+                        <div class="icon"><i class="fas fa-keyboard"></i></div>
                         <h4>Data Entry</h4>
                         <p>Accurate and efficient data entry services to keep your information organized and accessible.</p>
                     </div>
-                    <div class="service">
-                        <i class="fas fa-headset"></i>
+                    <div class="m3-card service-card">
+                        <div class="icon"><i class="fas fa-headset"></i></div>
                         <h4>IT Support</h4>
                         <p>Reliable IT support to ensure your systems are always running smoothly.</p>
                     </div>
@@ -62,7 +61,7 @@
 
         <section id="about">
             <div class="container">
-                <img src="https://via.placeholder.com/450x350" alt="A modern office with people working on computers">
+                <img src="https://placehold.co/450x350/DDE0FF/001452?text=About+Us" alt="A modern office with people working on computers" class="about-image">
                 <div>
                     <h3>About Us</h3>
                     <p>ArtSync is a team of passionate and experienced professionals dedicated to providing the best possible solutions for our clients. We believe in building long-term partnerships based on trust and mutual success. Our mission is to empower businesses with technology and innovation.</p>
@@ -72,25 +71,25 @@
 
         <section id="portfolio">
             <div class="container">
-                <h3>Our Work</h3>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/300x200" alt="Project 1">
-                        <div class="portfolio-overlay">
+                <h2>Our Work</h2>
+                <div class="grid-layout">
+                    <div class="grid-item">
+                        <div class="m3-card">
+                            <img src="https://placehold.co/300x200/DDE0FF/001452?text=Project+1" alt="Project 1">
                             <h4>Project 1</h4>
                             <p>A brief description of the project.</p>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/300x200" alt="Project 2">
-                        <div class="portfolio-overlay">
+                    <div class="grid-item">
+                        <div class="m3-card">
+                            <img src="https://placehold.co/300x200/DDE0FF/001452?text=Project+2" alt="Project 2">
                             <h4>Project 2</h4>
                             <p>A brief description of the project.</p>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/300x200" alt="Project 3">
-                        <div class="portfolio-overlay">
+                    <div class="grid-item">
+                        <div class="m3-card">
+                            <img src="https://placehold.co/300x200/DDE0FF/001452?text=Project+3" alt="Project 3">
                             <h4>Project 3</h4>
                             <p>A brief description of the project.</p>
                         </div>
@@ -101,22 +100,28 @@
 
         <section id="team">
             <div class="container">
-                <h3>Our Team</h3>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="https://via.placeholder.com/150" alt="Team Member 1">
-                        <h4>John Doe</h4>
-                        <p>CEO</p>
+                <h2>Our Team</h2>
+                <div class="grid-layout">
+                    <div class="grid-item">
+                        <div class="m3-card">
+                            <img src="https://picsum.photos/seed/team1/150/150" alt="Team Member 1">
+                            <h4>John Doe</h4>
+                            <p>CEO</p>
+                        </div>
                     </div>
-                    <div class="team-member">
-                        <img src="https://via.placeholder.com/150" alt="Team Member 2">
-                        <h4>Jane Smith</h4>
-                        <p>Lead Developer</p>
+                    <div class="grid-item">
+                        <div class="m3-card">
+                            <img src="https://picsum.photos/seed/team2/150/150" alt="Team Member 2">
+                            <h4>Jane Smith</h4>
+                            <p>Lead Developer</p>
+                        </div>
                     </div>
-                    <div class="team-member">
-                        <img src="https://via.placeholder.com/150" alt="Team Member 3">
-                        <h4>Peter Jones</h4>
-                        <p>IT Support Specialist</p>
+                    <div class="grid-item">
+                        <div class="m3-card">
+                            <img src="https://picsum.photos/seed/team3/150/150" alt="Team Member 3">
+                            <h4>Peter Jones</h4>
+                            <p>IT Support Specialist</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,13 +129,19 @@
 
         <section id="contact">
             <div class="container">
-                <h3>Contact Us</h3>
+                <h2>Contact Us</h2>
                 <p>Ready to get started? Contact us today to discuss your project.</p>
                 <form id="contact-form">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="cta-button">Send Message</button>
+                    <div class="form-field">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-field">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-field">
+                        <textarea name="message" placeholder="Your Message" required rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="m3-button filled">Send Message</button>
                 </form>
             </div>
         </section>
@@ -138,14 +149,12 @@
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-                <p>&copy; 2025 ArtSync. All rights reserved. | <a href="#">Privacy Policy</a></p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
+            <p>&copy; 2025 ArtSync. All rights reserved. | <a href="#">Privacy Policy</a></p>
         </div>
     </footer>
 
