@@ -1,61 +1,85 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - ArtSync</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1><a href="index.html" style="color: #fff; text-decoration: none;">ArtSync</a></h1>
-        <nav>
-            <ul>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <a href="index.html" class="logo">ArtSync</a>
+            <nav>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="service-details">
-            <h2>Software Development</h2>
-            <p>We offer a wide range of software development services, including:</p>
-            <ul>
-                <li>Custom web application development</li>
-                <li>Mobile application development (iOS and Android)</li>
-                <li>Enterprise software solutions</li>
-                <li>UI/UX design</li>
-                <li>Software testing and quality assurance</li>
-            </ul>
-
-            <h2>Data Entry</h2>
-            <p>Our data entry services are designed to be accurate, efficient, and affordable. We can handle a variety of data entry tasks, such as:</p>
-            <ul>
-                <li>Data input from various sources (e.g., paper, images, PDFs)</li>
-                <li>Data cleansing and validation</li>
-                <li>Data conversion</li>
-                <li>Database management</li>
-            </ul>
-
-            <h2>IT Support</h2>
-            <p>We provide comprehensive IT support services to keep your business running smoothly. Our services include:</p>
-            <ul>
-                <li>24/7 help desk support</li>
-                <li>Network monitoring and management</li>
-                <li>Server administration</li>
-                <li>Cybersecurity solutions</li>
-                <li>Cloud computing services</li>
-            </ul>
+        <section id="services-page">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="service-details-grid">
+                    <div class="m3-card">
+                        <div class="service-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Software Development</h3>
+                        </div>
+                        <p>We offer a wide range of software development services, including:</p>
+                        <ul>
+                            <li>Custom web application development</li>
+                            <li>Mobile application development (iOS and Android)</li>
+                            <li>Enterprise software solutions</li>
+                            <li>UI/UX design</li>
+                            <li>Software testing and quality assurance</li>
+                        </ul>
+                    </div>
+                    <div class="m3-card">
+                        <div class="service-header">
+                            <i class="fas fa-keyboard"></i>
+                            <h3>Data Entry</h3>
+                        </div>
+                        <p>Our data entry services are designed to be accurate, efficient, and affordable. We can handle a variety of data entry tasks, such as:</p>
+                        <ul>
+                            <li>Data input from various sources (e.g., paper, images, PDFs)</li>
+                            <li>Data cleansing and validation</li>
+                            <li>Data conversion</li>
+                            <li>Database management</li>
+                        </ul>
+                    </div>
+                    <div class="m3-card">
+                        <div class="service-header">
+                            <i class="fas fa-headset"></i>
+                            <h3>IT Support</h3>
+                        </div>
+                        <p>We provide comprehensive IT support services to keep your business running smoothly. Our services include:</p>
+                        <ul>
+                            <li>24/7 help desk support</li>
+                            <li>Network monitoring and management</li>
+                            <li>Server administration</li>
+                            <li>Cybersecurity solutions</li>
+                            <li>Cloud computing services</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-content">
+        <div class="container">
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
