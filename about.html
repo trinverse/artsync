@@ -1,61 +1,90 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - ArtSync</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1><a href="index.html" style="color: #fff; text-decoration: none;">ArtSync</a></h1>
-        <nav>
-            <ul>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <a href="index.html" class="logo">ArtSync</a>
+            <nav>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="about-us">
-            <h2>About ArtSync</h2>
-            <p>ArtSync was founded in 2025 with a mission to provide high-quality software development, data entry, and IT support services to businesses of all sizes. We are a team of passionate and experienced professionals who are dedicated to helping our clients succeed.</p>
-            <p>Our values are:</p>
-            <ul>
-                <li><strong>Integrity:</strong> We are honest and transparent in all our dealings.</li>
-                <li><strong>Excellence:</strong> We strive for excellence in everything we do.</li>
-                <li><strong>Customer Focus:</strong> We are committed to providing our customers with the best possible service.</li>
-            </ul>
+        <section id="about-page">
+            <div class="container">
+                <div class="about-header">
+                    <h2>About ArtSync</h2>
+                    <p class="subtitle">We are a team of passionate and experienced professionals dedicated to helping our clients succeed.</p>
+                </div>
 
-            <h2>Our Team</h2>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Team Member 1">
-                <h4>John Doe</h4>
-                <p>CEO</p>
-                <p>John has over 20 years of experience in the software industry. He is a visionary leader who is passionate about helping businesses grow.</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Team Member 2">
-                <h4>Jane Smith</h4>
-                <p>Lead Developer</p>
-                <p>Jane is a highly skilled developer with a passion for creating innovative software solutions. She is an expert in a variety of programming languages and technologies.</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Team Member 3">
-                <h4>Peter Jones</h4>
-                <p>IT Support Specialist</p>
-                <p>Peter is a certified IT professional with over 10 years of experience. He is an expert in troubleshooting and resolving technical issues.</p>
+                <div class="about-content">
+                    <div class="m3-card">
+                        <h3>Our Mission</h3>
+                        <p>ArtSync was founded in 2025 with a mission to provide high-quality software development, data entry, and IT support services to businesses of all sizes.</p>
+                    </div>
+                    <div class="m3-card">
+                        <h3>Our Values</h3>
+                        <ul>
+                            <li><strong>Integrity:</strong> We are honest and transparent in all our dealings.</li>
+                            <li><strong>Excellence:</strong> We strive for excellence in everything we do.</li>
+                            <li><strong>Customer Focus:</strong> We are committed to providing our customers with the best possible service.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="team-section">
+                    <h2>Our Team</h2>
+                    <div class="grid-layout">
+                        <div class="grid-item">
+                            <div class="m3-card">
+                                <img src="https://placehold.co/150x150/DDE0FF/001452?text=JD" alt="Team Member 1">
+                                <h4>John Doe</h4>
+                                <p class="role">CEO</p>
+                                <p>John has over 20 years of experience in the software industry. He is a visionary leader who is passionate about helping businesses grow.</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="m3-card">
+                                <img src="https://placehold.co/150x150/DDE0FF/001452?text=JS" alt="Team Member 2">
+                                <h4>Jane Smith</h4>
+                                <p class="role">Lead Developer</p>
+                                <p>Jane is a highly skilled developer with a passion for creating innovative software solutions. She is an expert in a variety of programming languages and technologies.</p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="m3-card">
+                                <img src="https://placehold.co/150x150/DDE0FF/001452?text=PJ" alt="Team Member 3">
+                                <h4>Peter Jones</h4>
+                                <p class="role">IT Support Specialist</p>
+                                <p>Peter is a certified IT professional with over 10 years of experience. He is an expert in troubleshooting and resolving technical issues.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-content">
+        <div class="container">
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
