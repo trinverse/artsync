@@ -412,3 +412,132 @@ footer {
     margin-top: -0.5rem;
     margin-bottom: 1rem;
 }
+
+/* Contact Page */
+#contact-page .contact-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+#contact-page .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+#contact-page .contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+#contact-page .contact-info-item i {
+    font-size: 1.5rem;
+    color: var(--md-sys-color-primary);
+    margin-right: 1.5rem;
+    margin-top: 0.25rem;
+}
+
+#contact-page .map-container {
+    margin-top: 2rem;
+    border-radius: var(--md-sys-shape-corner-large);
+    overflow: hidden;
+}
+
+@media (max-width: 992px) {
+    #contact-page .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Blog Page */
+#blog-page .blog-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+#blog-page .blog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+#blog-page .blog-post-summary {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+#blog-page .blog-post-summary img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--md-sys-shape-corner-medium);
+}
+
+#blog-page .post-meta {
+    font-size: 0.9rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: 1rem;
+}
+
+#blog-page .m3-button {
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    #blog-page .blog-post-summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Portfolio Page */
+#portfolio-page .portfolio-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+#portfolio-page .portfolio-card {
+    text-decoration: none;
+    color: var(--md-sys-color-on-surface-variant);
+    display: block;
+}
+
+#portfolio-page .portfolio-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--md-sys-shape-corner-medium);
+    margin-bottom: 1rem;
+}
+
+#portfolio-page .portfolio-card .card-content {
+    padding: 0 0.5rem 0.5rem;
+}
+
+/* Employees Page */
+#employees-page .employees-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+#employees-page .employee-card {
+    text-align: center;
+}
+
+#employees-page .employee-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: var(--md-sys-shape-corner-full);
+    margin-bottom: 1.5rem;
+}
+
+#employees-page .employee-details {
+    text-align: left;
+    margin-top: 1.5rem;
+}
+
+#employees-page .employee-details p {
+    margin-bottom: 0.5rem;
+}

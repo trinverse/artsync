@@ -1,46 +1,67 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - ArtSync</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1><a href="index.html" style="color: #fff; text-decoration: none;">ArtSync</a></h1>
-        <nav>
-            <ul>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <a href="index.html" class="logo">ArtSync</a>
+            <nav>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="employees.html">Employees</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="blog-list">
-            <h2>Blog</h2>
-            <div class="blog-post-summary">
-                <h3><a href="blog/post1.html">The Importance of a Strong Online Presence</a></h3>
-                <p class="post-meta">Published on August 17, 2025 by Jane Smith</p>
-                <p>In today's digital age, having a strong online presence is more important than ever. A well-designed website is the cornerstone of your online presence, and it can help you to reach a wider audience, generate leads, and grow your business.</p>
-                <a href="blog/post1.html" class="cta-button">Read More</a>
-            </div>
-            <div class="blog-post-summary">
-                <h3><a href="blog/post2.html">How to Choose the Right Technology Stack for Your Project</a></h3>
-                <p class="post-meta">Published on August 10, 2025 by John Doe</p>
-                <p>Choosing the right technology stack is one of the most important decisions you will make when developing a new software application. The right technology stack can help you to build a scalable, reliable, and maintainable application. In this blog post, we will discuss some of the factors you should consider when choosing a technology stack.</p>
-                <a href="blog/post2.html" class="cta-button">Read More</a>
+        <section id="blog-page">
+            <div class="container">
+                <div class="blog-header">
+                    <h2>Blog</h2>
+                    <p class="subtitle">Check out our latest articles and insights.</p>
+                </div>
+
+                <div class="blog-grid">
+                    <div class="m3-card blog-post-summary">
+                        <img src="https://placehold.co/600x400/DDE0FF/001452?text=Blog+Post" alt="Blog Post 1">
+                        <div class="card-content">
+                            <h3><a href="blog/post1.html">The Importance of a Strong Online Presence</a></h3>
+                            <p class="post-meta">Published on August 17, 2025 by Jane Smith</p>
+                            <p>In today's digital age, having a strong online presence is more important than ever. A well-designed website is the cornerstone of your online presence...</p>
+                            <a href="blog/post1.html" class="m3-button">Read More</a>
+                        </div>
+                    </div>
+                    <div class="m3-card blog-post-summary">
+                        <img src="https://placehold.co/600x400/DDE0FF/001452?text=Blog+Post" alt="Blog Post 2">
+                        <div class="card-content">
+                            <h3><a href="blog/post2.html">How to Choose the Right Technology Stack for Your Project</a></h3>
+                            <p class="post-meta">Published on August 10, 2025 by John Doe</p>
+                            <p>Choosing the right technology stack is one of the most important decisions you will make when developing a new software application...</p>
+                            <a href="blog/post2.html" class="m3-button">Read More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-content">
+        <div class="container">
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
