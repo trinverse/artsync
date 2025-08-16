@@ -65,6 +65,25 @@ main {
     padding-left: 2rem;
 }
 
+#about-us {
+    padding: 2rem;
+}
+
+#about-us h2 {
+    margin-top: 2rem;
+}
+
+#about-us .team-member {
+    display: block;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+#about-us .team-member img {
+    float: left;
+    margin-right: 1rem;
+}
+
 #services {
     display: flex;
     justify-content: space-around;
