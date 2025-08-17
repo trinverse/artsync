@@ -93,6 +93,60 @@ h2 { font-size: 3rem; margin-bottom: 2rem; text-align: center; }
 h3 { font-size: 2rem; margin-bottom: 1rem; }
 h4 { font-size: 1.25rem; margin-bottom: 0.5rem; }
 
+/* Logo Styles */
+.artsync-logo {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.artsync-logo:hover {
+    transform: scale(1.05);
+}
+
+.artsync-logo.size-small {
+    --logo-size: 32px;
+}
+
+.artsync-logo.size-medium {
+    --logo-size: 48px;
+}
+
+.artsync-logo.size-large {
+    --logo-size: 80px;
+}
+
+.artsync-logo.size-extra-large {
+    --logo-size: 120px;
+}
+
+.artsync-logo.animate-fade-in {
+    animation: logoFadeIn 1s ease-out;
+}
+
+.artsync-logo.animate-rotate {
+    animation: logoRotate 0.8s ease-out;
+}
+
+@keyframes logoFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoRotate {
+    from {
+        transform: rotate(-5deg) scale(0.95);
+    }
+    to {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
 /* Header */
 header {
     background-color: var(--md-sys-color-surface);
@@ -116,6 +170,12 @@ header .logo {
     letter-spacing: 1.5px;
     color: var(--md-sys-color-primary);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+header .logo .artsync-logo {
+    margin: 0;
 }
 
 header nav ul {
