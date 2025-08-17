@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,17 +14,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
+    <script>
+        // Initialize theme immediately
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
     <header>
         <div class="container">
             <a href="index.html" class="logo" id="header-logo">ArtSync</a>
             <nav>
                 <ul>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="employees.html">Employees</a></li>
+                    <li><a href="employees.html">Our Team</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,53 +45,279 @@
         <section id="contact-page">
             <div class="container">
                 <div class="contact-header">
-                    <h2>Contact Us</h2>
-                    <p class="subtitle">We're here to help. Please fill out the form below and we will get back to you as soon as possible.</p>
+                    <h1>Get in Touch</h1>
+                    <p class="subtitle">We're here to help bring your vision to life</p>
                 </div>
 
-                <div class="contact-content">
-                    <div class="contact-form-container">
-                        <form id="contact-form" action="#" method="post">
-                            <div class="form-field">
-                                <input type="text" name="name" placeholder="Your Name" required>
+                <div class="contact-info-grid">
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon-large">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h2>Visit Our Office</h2>
+                        <p class="contact-description">Our headquarters is located near Meerut University in Uttar Pradesh, India.</p>
+                        
+                        <div class="contact-details">
+                            <div class="detail-item">
+                                <i class="fas fa-building"></i>
+                                <div>
+                                    <h4>Main Office</h4>
+                                    <p>ARTSYNC INDIA LLP<br>311/4 Jagrati Vihar<br>Meerut University<br>Meerut, Uttar Pradesh, India<br>PIN - 250004</p>
+                                </div>
                             </div>
-                            <div class="form-field">
-                                <input type="email" name="email" placeholder="Your Email" required>
+                            <div class="detail-item">
+                                <i class="fas fa-parking"></i>
+                                <div>
+                                    <h4>Parking</h4>
+                                    <p>Visitor parking available<br>Near University campus</p>
+                                </div>
                             </div>
-                            <div class="form-field">
-                                <textarea name="message" placeholder="Your Message" rows="7" required></textarea>
+                            <div class="detail-item">
+                                <i class="fas fa-bus"></i>
+                                <div>
+                                    <h4>Public Transit</h4>
+                                    <p>Local buses available<br>Auto-rickshaw accessible</p>
+                                </div>
                             </div>
-                            <button type="submit" class="m3-button filled">Send Message</button>
-                        </form>
+                        </div>
+                        
+                        <a href="https://maps.google.com" target="_blank" class="m3-button filled large">Get Directions</a>
                     </div>
-                    <div class="contact-info-container">
-                        <div class="m3-card">
-                            <h3>Contact Information</h3>
-                            <div class="contact-info-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <h4>Our Location</h4>
-                                    <p>123 Main Street<br>Anytown, USA 12345</p>
-                                </div>
-                            </div>
-                            <div class="contact-info-item">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <h4>Email</h4>
-                                    <p>contact@artsync.com</p>
-                                </div>
-                            </div>
-                            <div class="contact-info-item">
+                    
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon-large">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h2>Call or Email</h2>
+                        <p class="contact-description">Reach out to our team directly for immediate assistance with your inquiries.</p>
+                        
+                        <div class="contact-details">
+                            <div class="detail-item">
                                 <i class="fas fa-phone"></i>
                                 <div>
-                                    <h4>Phone</h4>
-                                    <p>(123) 456-7890</p>
+                                    <h4>Sales Department</h4>
+                                    <p><a href="tel:+919997213595">+91-9997213595</a></p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-headset"></i>
+                                <div>
+                                    <h4>Support Hotline</h4>
+                                    <p><a href="tel:+919997213595">+91-9997213595</a></p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email Inquiries</h4>
+                                    <p><a href="mailto:artsyncindiallp@gmail.com">artsyncindiallp@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-fax"></i>
+                                <div>
+                                    <h4>Fax</h4>
+                                    <p>+91-9997213595</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.22091209243!2d-73.98566488459308!3d40.74844097932867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1678886875693!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        
+                        <a href="tel:+919997213595" class="m3-button filled large">Call Now</a>
+                    </div>
+                    
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon-large">
+                            <i class="fas fa-clock"></i>
                         </div>
+                        <h2>Business Hours</h2>
+                        <p class="contact-description">We're available to assist you during our regular business hours and offer 24/7 support.</p>
+                        
+                        <div class="contact-details">
+                            <div class="detail-item">
+                                <i class="fas fa-briefcase"></i>
+                                <div>
+                                    <h4>Weekdays</h4>
+                                    <p>Monday - Friday<br>9:00 AM - 6:00 PM IST</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-week"></i>
+                                <div>
+                                    <h4>Weekends</h4>
+                                    <p>Saturday: 10:00 AM - 4:00 PM IST<br>Sunday: Closed</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-globe"></i>
+                                <div>
+                                    <h4>Time Zone</h4>
+                                    <p>Indian Standard Time (IST)<br>UTC+5:30</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-life-ring"></i>
+                                <div>
+                                    <h4>Emergency Support</h4>
+                                    <p>24/7 availability for critical issues</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#contact-form" class="m3-button filled large">Schedule a Call</a>
+                    </div>
+                </div>
+
+                <div class="contact-form-section" id="contact-form">
+                    <div class="glass-card">
+                        <h2>Send Us a Message</h2>
+                        <p>Have a project in mind? Fill out the form below and we'll get back to you within 24 hours.</p>
+                        
+                        <form id="contact-page-form" class="contact-page-form">
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="company">Company Name</label>
+                                    <input type="text" id="company" name="company">
+                                </div>
+                                <div class="form-field">
+                                    <label for="service">Service Interested In</label>
+                                    <select id="service" name="service">
+                                        <option value="">Select a service</option>
+                                        <option value="software">Software Development</option>
+                                        <option value="data">Data Entry Services</option>
+                                        <option value="support">IT Support</option>
+                                        <option value="consulting">Consulting</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-field">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="m3-button filled large">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="map-section">
+                    <div class="glass-card map-card">
+                        <h2>Find Us On The Map</h2>
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3490.7273776139247!2d77.70089871506775!3d28.96604338228669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c65025ee8b5b9%3A0x5778eb5a5e5a5b5b!2sJagrati%20Vihar%2C%20Meerut%2C%20Uttar%20Pradesh%20250004!5e0!3m2!1sen!2sin!4v1678886875693!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="400" 
+                                style="border:0; border-radius: var(--md-sys-shape-corner-large);" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-grid">
+                        <div class="faq-item glass-card">
+                            <div class="faq-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <h3>What services do you offer?</h3>
+                            <p>We provide comprehensive digital solutions including software development, data entry services, and IT support. Each service is tailored to meet your specific business needs.</p>
+                        </div>
+                        <div class="faq-item glass-card">
+                            <div class="faq-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>How quickly can you start a project?</h3>
+                            <p>We can typically begin new projects within 1-2 weeks after initial consultation and agreement. Urgent projects can be accommodated based on availability.</p>
+                        </div>
+                        <div class="faq-item glass-card">
+                            <div class="faq-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3>Do you offer ongoing support?</h3>
+                            <p>Yes, we provide comprehensive support packages including 24/7 monitoring, regular maintenance, and dedicated support teams for all our solutions.</p>
+                        </div>
+                        <div class="faq-item glass-card">
+                            <div class="faq-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <h3>What is your pricing model?</h3>
+                            <p>We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. Contact us for a customized quote based on your requirements.</p>
+                        </div>
+                        <div class="faq-item glass-card">
+                            <div class="faq-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>How do you ensure data security?</h3>
+                            <p>We implement industry-standard security protocols, encryption, and regular security audits to protect your sensitive data and maintain compliance with regulations.</p>
+                        </div>
+                        <div class="faq-item glass-card">
+                            <div class="faq-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Can you work with our existing team?</h3>
+                            <p>Absolutely! We seamlessly integrate with your existing teams and workflows, providing collaborative solutions that enhance your current capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-section">
+                    <h2>Connect With Us</h2>
+                    <div class="social-links-large">
+                        <a href="#" class="social-link-card" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-link-card" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="social-link-card" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="social-link-card" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="#" class="social-link-card" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="#" class="social-link-card" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -89,16 +325,32 @@
     </main>
 
     <footer>
-        <div class="container">
+        <div class="footer-left">
+            <span id="footer-logo" class="logo-text">🎨 ArtSync</span>
+        </div>
+        <div class="footer-center">
             <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>&copy; 2025 ArtSync. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        </div>
+        <div class="footer-right">
+            <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved. | <a href="#">Privacy Policy</a></p>
         </div>
     </footer>
     
     <script src="script.js"></script>
+    <script>
+        // Add click handler after DOM is loaded
+        document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
+        
+        // Contact form submission
+        document.getElementById('contact-page-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>

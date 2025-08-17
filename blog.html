@@ -15,17 +15,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
+    <script>
+        // Initialize theme immediately
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
     <header>
         <div class="container">
             <a href="index.html" class="logo" id="header-logo">ArtSync</a>
             <nav>
                 <ul>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="employees.html">Employees</a></li>
+                    <li><a href="employees.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
                 </ul>
             </nav>
         </div>
@@ -64,16 +75,25 @@
     </main>
 
     <footer>
-        <div class="container">
+        <div class="footer-left">
+            <span id="footer-logo" class="logo-text">🎨 ArtSync</span>
+        </div>
+        <div class="footer-center">
             <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>&copy; 2025 ArtSync. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        </div>
+        <div class="footer-right">
+            <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved. | <a href="#">Privacy Policy</a></p>
         </div>
     </footer>
     
     <script src="script.js"></script>
+    <script>
+        // Add click handler after DOM is loaded
+        document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
+    </script>
 </body>
 </html>

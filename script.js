@@ -1,3 +1,35 @@
+// Theme Toggle Functionality
+function initTheme() {
+    // Check for saved theme preference or default to 'light'
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    // Update body class for smooth transition after initial load
+    setTimeout(() => {
+        document.body.classList.add('theme-transition');
+    }, 100);
+}
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Trigger animation on toggle button
+    const toggleBtn = document.querySelector('.theme-toggle');
+    if (toggleBtn) {
+        toggleBtn.style.transform = 'rotate(360deg)';
+        setTimeout(() => {
+            toggleBtn.style.transform = '';
+        }, 300);
+    }
+}
+
+// Initialize theme on page load
+initTheme();
+
 // ArtSync Logo Component
 function createArtSyncLogo(options = {}) {
     const {
@@ -134,6 +166,36 @@ function createArtSyncLogo(options = {}) {
 
 // Initialize logos when page loads
 document.addEventListener('DOMContentLoaded', function() {
+    // Aggressive cleanup of any logos in hero section
+    const heroSection = document.getElementById('hero');
+    if (heroSection) {
+        // Remove any existing logos
+        const allLogos = heroSection.querySelectorAll('.artsync-logo, .hero-logo-container, [class*="logo"]');
+        allLogos.forEach(element => {
+            // Don't remove the word "logo" from text content, only actual logo elements
+            if (element.querySelector('svg') || element.id?.includes('logo')) {
+                element.remove();
+            }
+        });
+        
+        // Prevent any future logos from being added to hero
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                mutation.addedNodes.forEach((node) => {
+                    if (node.nodeType === 1) { // Element node
+                        if (node.classList?.contains('artsync-logo') || 
+                            node.classList?.contains('hero-logo-container') ||
+                            node.id?.includes('logo')) {
+                            node.remove();
+                        }
+                    }
+                });
+            });
+        });
+        
+        observer.observe(heroSection, { childList: true, subtree: true });
+    }
+    
     // Replace header logo
     const headerLogo = document.getElementById('header-logo');
     if (headerLogo) {
@@ -146,46 +208,17 @@ document.addEventListener('DOMContentLoaded', function() {
         headerLogo.appendChild(logo);
     }
     
-    // Add logo to hero section
-    const heroSection = document.getElementById('hero');
-    if (heroSection) {
-        const heroContainer = heroSection.querySelector('.container');
-        const heroH2 = heroContainer.querySelector('h2');
-        
-        // Create hero logo
-        const heroLogoDiv = document.createElement('div');
-        heroLogoDiv.className = 'hero-logo-container';
-        heroLogoDiv.style.marginBottom = '2rem';
-        
-        const heroLogo = createArtSyncLogo({
-            size: 120,
-            showText: false,
-            className: 'artsync-logo size-extra-large animate-fade-in'
-        });
-        
-        heroLogoDiv.appendChild(heroLogo);
-        heroContainer.insertBefore(heroLogoDiv, heroH2);
-    }
-    
     // Add logo to footer
-    const footer = document.querySelector('footer .container');
-    if (footer) {
-        const socialLinks = footer.querySelector('.social-links');
-        
-        // Create footer logo container
-        const footerLogoDiv = document.createElement('div');
-        footerLogoDiv.className = 'footer-logo-container';
-        footerLogoDiv.style.marginBottom = '1.5rem';
-        
-        const footerLogo = createArtSyncLogo({
-            size: 32,
+    const footerLogo = document.getElementById('footer-logo');
+    if (footerLogo) {
+        const logo = createArtSyncLogo({
+            size: 28,
             showText: true,
-            className: 'artsync-logo size-small',
-            primaryColor: '#777680'
+            className: 'artsync-logo footer-logo',
+            primaryColor: '#4A55A2'
         });
-        
-        footerLogoDiv.appendChild(footerLogo);
-        footer.insertBefore(footerLogoDiv, socialLinks);
+        footerLogo.innerHTML = '';
+        footerLogo.appendChild(logo);
     }
 });
 
@@ -200,12 +233,3 @@ if (contactForm) {
     });
 }
 
-const contactFormPage = document.getElementById('contact-form-page');
-
-if (contactFormPage) {
-    contactFormPage.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Thank you for your message! We will get back to you soon.');
-        contactFormPage.reset();
-    });
-}

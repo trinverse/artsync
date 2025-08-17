@@ -17,17 +17,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
+    <script>
+        // Initialize theme immediately
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
     <header>
         <div class="container">
             <a href="#" class="logo" id="header-logo">ArtSync</a>
             <nav>
                 <ul>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="employees.html">Our Team</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="employees.html">Employees</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,9 +47,26 @@
     <main>
         <section id="hero">
             <div class="container">
-                <h2>Your Partner in Digital Excellence</h2>
-                <p>We provide top-tier software development, data entry, and IT support services to help your business thrive.</p>
-                <a href="#contact" class="m3-button filled">Get a Free Quote</a>
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Your Partner in Digital Excellence</h1>
+                        <p class="hero-subtitle">We provide top-tier software development, data entry, and IT support services to help your business thrive in the digital age.</p>
+                        <div class="hero-actions">
+                            <a href="#contact" class="m3-button filled large">Get Started</a>
+                            <a href="#services" class="m3-button outlined large">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="hero-shapes">
+                            <div class="shape shape-1"></div>
+                            <div class="shape shape-2"></div>
+                            <div class="shape shape-3"></div>
+                        </div>
+                        <div class="hero-graphic">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -61,16 +89,6 @@
                         <h4>IT Support</h4>
                         <p>Reliable IT support to ensure your systems are always running smoothly.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="container">
-                <img src="https://placehold.co/450x350/DDE0FF/001452?text=About+Us" alt="A modern office with people working on computers" class="about-image">
-                <div>
-                    <h3>About Us</h3>
-                    <p>ArtSync is a team of passionate and experienced professionals dedicated to providing the best possible solutions for our clients. We believe in building long-term partnerships based on trust and mutual success. Our mission is to empower businesses with technology and innovation.</p>
                 </div>
             </div>
         </section>
@@ -135,35 +153,72 @@
 
         <section id="contact">
             <div class="container">
-                <h2>Contact Us</h2>
-                <p>Ready to get started? Contact us today to discuss your project.</p>
-                <form id="contact-form">
-                    <div class="form-field">
-                        <input type="text" name="name" placeholder="Your Name" required>
+                <h2>Get in Touch</h2>
+                <div class="contact-grid">
+                    <div class="about-column">
+                        <div class="glass-card">
+                            <h3>About Us</h3>
+                            <p>ArtSync is a team of passionate and experienced professionals dedicated to providing the best possible solutions for our clients.</p>
+                            <p>We believe in building long-term partnerships based on trust and mutual success. Our mission is to empower businesses with technology and innovation.</p>
+                            <div class="company-info">
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>311/4 Jagrati Vihar, Meerut University, Meerut, UP 250004</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+91-9997213595</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>artsyncindiallp@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-field">
-                        <input type="email" name="email" placeholder="Your Email" required>
+                    <div class="contact-column">
+                        <div class="glass-card">
+                            <h3>Contact Us</h3>
+                            <p>Ready to get started? Send us a message and we'll get back to you within 24 hours.</p>
+                            <form id="contact-form">
+                                <div class="form-field">
+                                    <input type="text" name="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-field">
+                                    <input type="email" name="email" placeholder="Your Email" required>
+                                </div>
+                                <div class="form-field">
+                                    <textarea name="message" placeholder="Your Message" required rows="5"></textarea>
+                                </div>
+                                <button type="submit" class="m3-button filled large">Send Message</button>
+                            </form>
+                        </div>
                     </div>
-                    <div class="form-field">
-                        <textarea name="message" placeholder="Your Message" required rows="5"></textarea>
-                    </div>
-                    <button type="submit" class="m3-button filled">Send Message</button>
-                </form>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
+        <div class="footer-left">
+            <span id="footer-logo" class="logo-text">🎨 ArtSync</span>
+        </div>
+        <div class="footer-center">
             <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>&copy; 2025 ArtSync. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        </div>
+        <div class="footer-right">
+            <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved. | <a href="#">Privacy Policy</a></p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Add click handler after DOM is loaded
+        document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
+    </script>
 </body>
 </html>

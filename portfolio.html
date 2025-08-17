@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,17 +14,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
+    <script>
+        // Initialize theme immediately
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
     <header>
         <div class="container">
             <a href="index.html" class="logo" id="header-logo">ArtSync</a>
             <nav>
                 <ul>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="employees.html">Our Team</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="employees.html">Employees</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,46 +45,201 @@
         <section id="portfolio-page">
             <div class="container">
                 <div class="portfolio-header">
-                    <h2>Our Work</h2>
-                    <p class="subtitle">Here are some of the projects we're proud of.</p>
+                    <h1>Our Work</h1>
+                    <p class="subtitle">Showcasing our best projects and success stories</p>
                 </div>
 
-                <div class="grid-layout">
-                    <div class="grid-item">
-                        <a href="portfolio/project1.html" class="m3-card portfolio-card">
-                            <img src="https://placehold.co/600x400/DDE0FF/001452?text=Project+1" alt="Project 1">
-                            <div class="card-content">
-                                <h4>Project 1</h4>
-                                <p>A brief description of the project.</p>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="data">Data Solutions</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="web">
+                        <a href="portfolio/project1.html" class="portfolio-card glass-card">
+                            <div class="portfolio-image">
+                                <img src="https://placehold.co/600x400/DDE0FF/001452?text=E-Commerce+Platform" alt="E-Commerce Platform">
+                                <div class="portfolio-overlay">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-tags">
+                                    <span class="tag">Web Development</span>
+                                    <span class="tag">React</span>
+                                </div>
+                                <h3>E-Commerce Platform</h3>
+                                <p>A modern e-commerce solution with real-time inventory management and AI-powered recommendations.</p>
+                                <div class="portfolio-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>50K+ Users</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-chart-line"></i>
+                                        <span>200% ROI</span>
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     </div>
-                    <div class="grid-item">
-                        <a href="portfolio/project2.html" class="m3-card portfolio-card">
-                            <img src="https://placehold.co/600x400/DDE0FF/001452?text=Project+2" alt="Project 2">
-                            <div class="card-content">
-                                <h4>Project 2</h4>
-                                <p>A brief description of the project.</p>
+
+                    <div class="portfolio-item" data-category="mobile">
+                        <a href="portfolio/project2.html" class="portfolio-card glass-card">
+                            <div class="portfolio-image">
+                                <img src="https://placehold.co/600x400/DDE0FF/001452?text=Health+Tracking+App" alt="Health Tracking App">
+                                <div class="portfolio-overlay">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-tags">
+                                    <span class="tag">Mobile App</span>
+                                    <span class="tag">Flutter</span>
+                                </div>
+                                <h3>Health Tracking App</h3>
+                                <p>Cross-platform mobile application for personal health monitoring with wearable device integration.</p>
+                                <div class="portfolio-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-download"></i>
+                                        <span>100K+ Downloads</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.8 Rating</span>
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     </div>
-                    <div class="grid-item">
-                        <a href="portfolio/project3.html" class="m3-card portfolio-card">
-                            <img src="https://placehold.co/600x400/DDE0FF/001452?text=Project+3" alt="Project 3">
-                            <div class="card-content">
-                                <h4>Project 3</h4>
-                                <p>A brief description of the project.</p>
+
+                    <div class="portfolio-item" data-category="data">
+                        <a href="portfolio/project3.html" class="portfolio-card glass-card">
+                            <div class="portfolio-image">
+                                <img src="https://placehold.co/600x400/DDE0FF/001452?text=Analytics+Dashboard" alt="Analytics Dashboard">
+                                <div class="portfolio-overlay">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-tags">
+                                    <span class="tag">Data Analytics</span>
+                                    <span class="tag">Python</span>
+                                </div>
+                                <h3>Analytics Dashboard</h3>
+                                <p>Real-time business intelligence dashboard with predictive analytics and automated reporting.</p>
+                                <div class="portfolio-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-database"></i>
+                                        <span>10TB+ Data</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Real-time</span>
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     </div>
-                    <div class="grid-item">
-                        <a href="portfolio/project4.html" class="m3-card portfolio-card">
-                            <img src="https://placehold.co/600x400/DDE0FF/001452?text=Project+4" alt="Project 4">
-                            <div class="card-content">
-                                <h4>Project 4</h4>
-                                <p>A brief description of the project.</p>
+
+                    <div class="portfolio-item" data-category="web">
+                        <a href="portfolio/project4.html" class="portfolio-card glass-card">
+                            <div class="portfolio-image">
+                                <img src="https://placehold.co/600x400/DDE0FF/001452?text=SaaS+Platform" alt="SaaS Platform">
+                                <div class="portfolio-overlay">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-tags">
+                                    <span class="tag">SaaS</span>
+                                    <span class="tag">Node.js</span>
+                                </div>
+                                <h3>SaaS Management Platform</h3>
+                                <p>Comprehensive business management platform with CRM, invoicing, and project tracking features.</p>
+                                <div class="portfolio-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-building"></i>
+                                        <span>500+ Companies</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-sync"></i>
+                                        <span>99.9% Uptime</span>
+                                    </div>
+                                </div>
                             </div>
                         </a>
+                    </div>
+
+                    <div class="portfolio-item" data-category="mobile">
+                        <a href="portfolio/project5.html" class="portfolio-card glass-card">
+                            <div class="portfolio-image">
+                                <img src="https://placehold.co/600x400/DDE0FF/001452?text=Food+Delivery+App" alt="Food Delivery App">
+                                <div class="portfolio-overlay">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-tags">
+                                    <span class="tag">Mobile App</span>
+                                    <span class="tag">React Native</span>
+                                </div>
+                                <h3>Food Delivery App</h3>
+                                <p>On-demand food delivery application with real-time tracking and multi-restaurant support.</p>
+                                <div class="portfolio-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-utensils"></i>
+                                        <span>1000+ Restaurants</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-truck"></i>
+                                        <span>50K+ Deliveries</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-item" data-category="data">
+                        <a href="portfolio/project6.html" class="portfolio-card glass-card">
+                            <div class="portfolio-image">
+                                <img src="https://placehold.co/600x400/DDE0FF/001452?text=AI+Chatbot" alt="AI Chatbot">
+                                <div class="portfolio-overlay">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-tags">
+                                    <span class="tag">AI/ML</span>
+                                    <span class="tag">Python</span>
+                                </div>
+                                <h3>AI Customer Support Bot</h3>
+                                <p>Intelligent chatbot with natural language processing for automated customer support.</p>
+                                <div class="portfolio-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-comments"></i>
+                                        <span>1M+ Conversations</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-percentage"></i>
+                                        <span>85% Resolution</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <div class="cta-content glass-card">
+                        <h2>Have a Project in Mind?</h2>
+                        <p>Let's work together to bring your ideas to life. Our team is ready to help you build something amazing.</p>
+                        <div class="cta-buttons">
+                            <a href="contact.html" class="m3-button filled large">Start Your Project</a>
+                            <a href="services.html" class="m3-button outlined large">View Our Services</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -82,16 +247,54 @@
     </main>
 
     <footer>
-        <div class="container">
+        <div class="footer-left">
+            <span id="footer-logo" class="logo-text">🎨 ArtSync</span>
+        </div>
+        <div class="footer-center">
             <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>&copy; 2025 ArtSync. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        </div>
+        <div class="footer-right">
+            <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved. | <a href="#">Privacy Policy</a></p>
         </div>
     </footer>
     
     <script src="script.js"></script>
+    <script>
+        // Add click handler after DOM is loaded
+        document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
+        
+        // Portfolio filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    const filter = btn.getAttribute('data-filter');
+                    
+                    portfolioItems.forEach(item => {
+                        if (filter === 'all') {
+                            item.style.display = 'block';
+                        } else {
+                            if (item.getAttribute('data-category') === filter) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>

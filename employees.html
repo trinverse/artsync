@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,17 +14,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
+    <script>
+        // Initialize theme immediately
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
     <header>
         <div class="container">
             <a href="index.html" class="logo" id="header-logo">ArtSync</a>
             <nav>
                 <ul>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="employees.html" class="active">Our Team</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="employees.html">Employees</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,61 +45,226 @@
         <section id="employees-page">
             <div class="container">
                 <div class="employees-header">
-                    <h2>Our Team</h2>
-                    <p class="subtitle">Meet the talented people behind ArtSync.</p>
+                    <h1>Our Team</h1>
+                    <p class="subtitle">Meet the talented professionals driving innovation at ArtSync</p>
                 </div>
 
-                <div class="grid-layout">
-                    <div class="grid-item">
-                        <div class="m3-card employee-card">
-                            <img src="https://placehold.co/150x150/DDE0FF/001452?text=E1" alt="Employee 1">
-                            <h4>John Doe</h4>
-                            <p class="role">CEO</p>
-                            <div class="employee-details">
-                                <p><strong>Education:</strong> MBA from XYZ University</p>
-                                <p><strong>Experience:</strong> 20+ years in the software industry.</p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-card glass-card">
+                            <div class="member-image">
+                                <img src="https://picsum.photos/seed/ceo/400/400" alt="John Doe">
+                                <div class="member-overlay">
+                                    <div class="social-links">
+                                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h3>John Doe</h3>
+                                <p class="role">Chief Executive Officer</p>
+                                <p class="bio">Visionary leader with 20+ years of experience in technology and business strategy. John founded ArtSync with a mission to democratize digital transformation.</p>
+                                <div class="member-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <span>MBA, Stanford University</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-briefcase"></i>
+                                        <span>Ex-Google, Microsoft</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="grid-item">
-                        <div class="m3-card employee-card">
-                            <img src="https://placehold.co/150x150/DDE0FF/001452?text=E2" alt="Employee 2">
-                            <h4>Jane Smith</h4>
-                            <p class="role">Lead Developer</p>
-                            <div class="employee-details">
-                                <p><strong>Education:</strong> B.S. in Computer Science from ABC University</p>
-                                <p><strong>Experience:</strong> 10+ years of experience in software development.</p>
+
+                    <div class="team-member">
+                        <div class="team-card glass-card">
+                            <div class="member-image">
+                                <img src="https://picsum.photos/seed/cto/400/400" alt="Jane Smith">
+                                <div class="member-overlay">
+                                    <div class="social-links">
+                                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h3>Jane Smith</h3>
+                                <p class="role">Chief Technology Officer</p>
+                                <p class="bio">Technical architect and full-stack expert leading our engineering teams. Jane specializes in scalable systems and cloud architecture.</p>
+                                <div class="member-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <span>MS Computer Science, MIT</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-briefcase"></i>
+                                        <span>Ex-Amazon, Meta</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="grid-item">
-                        <div class="m3-card employee-card">
-                            <img src="https://placehold.co/150x150/DDE0FF/001452?text=E3" alt="Employee 3">
-                            <h4>Peter Jones</h4>
-                            <p class="role">IT Support Specialist</p>
-                            <div class="employee-details">
-                                <p><strong>Education:</strong> A.S. in Information Technology from QRS College</p>
-                                <p><strong>Experience:</strong> 5+ years of experience in IT support.</p>
+
+                    <div class="team-member">
+                        <div class="team-card glass-card">
+                            <div class="member-image">
+                                <img src="https://picsum.photos/seed/designer/400/400" alt="Sarah Johnson">
+                                <div class="member-overlay">
+                                    <div class="social-links">
+                                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                        <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h3>Sarah Johnson</h3>
+                                <p class="role">Head of Design</p>
+                                <p class="bio">Creative director with a passion for user-centered design. Sarah leads our UI/UX team in creating beautiful, intuitive experiences.</p>
+                                <div class="member-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <span>BFA Design, Parsons</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-briefcase"></i>
+                                        <span>Ex-Apple, Adobe</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Add more employees as needed -->
+
+                    <div class="team-member">
+                        <div class="team-card glass-card">
+                            <div class="member-image">
+                                <img src="https://picsum.photos/seed/developer/400/400" alt="Michael Chen">
+                                <div class="member-overlay">
+                                    <div class="social-links">
+                                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h3>Michael Chen</h3>
+                                <p class="role">Lead Full-Stack Developer</p>
+                                <p class="bio">Expert in modern web technologies and cloud solutions. Michael architects our most complex systems and mentors junior developers.</p>
+                                <div class="member-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <span>BS Computer Science, UC Berkeley</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-briefcase"></i>
+                                        <span>10+ years experience</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="team-card glass-card">
+                            <div class="member-image">
+                                <img src="https://picsum.photos/seed/dataeng/400/400" alt="Emily Davis">
+                                <div class="member-overlay">
+                                    <div class="social-links">
+                                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h3>Emily Davis</h3>
+                                <p class="role">Data Engineering Lead</p>
+                                <p class="bio">Data scientist and engineer specializing in big data solutions and machine learning. Emily transforms data into actionable insights.</p>
+                                <div class="member-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <span>PhD Data Science, Carnegie Mellon</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-briefcase"></i>
+                                        <span>Ex-Netflix, Spotify</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="team-card glass-card">
+                            <div class="member-image">
+                                <img src="https://picsum.photos/seed/support/400/400" alt="David Wilson">
+                                <div class="member-overlay">
+                                    <div class="social-links">
+                                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h3>David Wilson</h3>
+                                <p class="role">IT Support Manager</p>
+                                <p class="bio">Infrastructure and support specialist ensuring smooth operations. David leads our 24/7 support team with a focus on customer satisfaction.</p>
+                                <div class="member-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <span>BS Information Systems</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-certificate"></i>
+                                        <span>AWS, Azure Certified</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <div class="cta-content glass-card">
+                        <h2>Join Our Growing Team</h2>
+                        <p>We're always looking for talented individuals who share our passion for innovation and excellence. Explore career opportunities at ArtSync.</p>
+                        <div class="cta-buttons">
+                            <a href="contact.html" class="m3-button filled large">View Open Positions</a>
+                            <a href="contact.html" class="m3-button outlined large">Send Your Resume</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
+        <div class="footer-left">
+            <span id="footer-logo" class="logo-text">🎨 ArtSync</span>
+        </div>
+        <div class="footer-center">
             <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>&copy; 2025 ArtSync. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        </div>
+        <div class="footer-right">
+            <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved. | <a href="#">Privacy Policy</a></p>
         </div>
     </footer>
     
     <script src="script.js"></script>
+    <script>
+        // Add click handler after DOM is loaded
+        document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
+    </script>
 </body>
 </html>

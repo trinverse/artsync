@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,17 +14,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
+    <script>
+        // Initialize theme immediately
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
     <header>
         <div class="container">
             <a href="index.html" class="logo" id="header-logo">ArtSync</a>
             <nav>
                 <ul>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="employees.html">Our Team</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="employees.html">Employees</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,48 +44,165 @@
     <main>
         <section id="services-page">
             <div class="container">
-                <h2>Our Services</h2>
+                <div class="services-header">
+                    <h1>Our Services</h1>
+                    <p class="subtitle">Comprehensive digital solutions tailored to your business needs</p>
+                </div>
+                
                 <div class="service-details-grid">
-                    <div class="m3-card">
-                        <div class="service-header">
+                    <div class="service-detail-card glass-card">
+                        <div class="service-icon-large">
                             <i class="fas fa-code"></i>
-                            <h3>Software Development</h3>
                         </div>
-                        <p>We offer a wide range of software development services, including:</p>
-                        <ul>
-                            <li>Custom web application development</li>
-                            <li>Mobile application development (iOS and Android)</li>
-                            <li>Enterprise software solutions</li>
-                            <li>UI/UX design</li>
-                            <li>Software testing and quality assurance</li>
-                        </ul>
+                        <h2>Software Development</h2>
+                        <p class="service-description">We build custom software solutions that drive innovation and growth. Our expert developers use cutting-edge technologies to create scalable, secure, and user-friendly applications.</p>
+                        
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Custom Web Applications</h4>
+                                    <p>Tailored web solutions built with modern frameworks and responsive design</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Mobile App Development</h4>
+                                    <p>Native and cross-platform apps for iOS and Android</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Enterprise Solutions</h4>
+                                    <p>Scalable software for large organizations and complex workflows</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>UI/UX Design</h4>
+                                    <p>Beautiful, intuitive interfaces that users love</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Quality Assurance</h4>
+                                    <p>Comprehensive testing to ensure reliability and performance</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="contact.html" class="m3-button filled large">Get Started</a>
                     </div>
-                    <div class="m3-card">
-                        <div class="service-header">
+                    
+                    <div class="service-detail-card glass-card">
+                        <div class="service-icon-large">
                             <i class="fas fa-keyboard"></i>
-                            <h3>Data Entry</h3>
                         </div>
-                        <p>Our data entry services are designed to be accurate, efficient, and affordable. We can handle a variety of data entry tasks, such as:</p>
-                        <ul>
-                            <li>Data input from various sources (e.g., paper, images, PDFs)</li>
-                            <li>Data cleansing and validation</li>
-                            <li>Data conversion</li>
-                            <li>Database management</li>
-                        </ul>
+                        <h2>Data Entry Services</h2>
+                        <p class="service-description">Accurate and efficient data management solutions that help you organize, process, and leverage your information assets effectively.</p>
+                        
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Data Input & Digitization</h4>
+                                    <p>Convert paper documents, images, and PDFs into digital formats</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Data Cleansing</h4>
+                                    <p>Remove duplicates, correct errors, and standardize data formats</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Data Conversion</h4>
+                                    <p>Transform data between different formats and systems</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Database Management</h4>
+                                    <p>Organize and maintain your data for easy access and analysis</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Data Validation</h4>
+                                    <p>Ensure accuracy and consistency across all data entries</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="contact.html" class="m3-button filled large">Learn More</a>
                     </div>
-                    <div class="m3-card">
-                        <div class="service-header">
+                    
+                    <div class="service-detail-card glass-card">
+                        <div class="service-icon-large">
                             <i class="fas fa-headset"></i>
-                            <h3>IT Support</h3>
                         </div>
-                        <p>We provide comprehensive IT support services to keep your business running smoothly. Our services include:</p>
-                        <ul>
-                            <li>24/7 help desk support</li>
-                            <li>Network monitoring and management</li>
-                            <li>Server administration</li>
-                            <li>Cybersecurity solutions</li>
-                            <li>Cloud computing services</li>
-                        </ul>
+                        <h2>IT Support</h2>
+                        <p class="service-description">Comprehensive IT support services that keep your technology infrastructure running smoothly, securely, and efficiently 24/7.</p>
+                        
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>24/7 Help Desk</h4>
+                                    <p>Round-the-clock technical support for all your IT needs</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Network Management</h4>
+                                    <p>Monitor and optimize your network infrastructure</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Server Administration</h4>
+                                    <p>Maintain and secure your server environments</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Cybersecurity</h4>
+                                    <p>Protect your business from digital threats and vulnerabilities</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Cloud Services</h4>
+                                    <p>Migration, management, and optimization of cloud infrastructure</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="contact.html" class="m3-button filled large">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="cta-section">
+                    <div class="cta-content glass-card">
+                        <h2>Ready to Transform Your Business?</h2>
+                        <p>Let's discuss how our services can help you achieve your goals. Our team of experts is ready to provide tailored solutions that meet your unique requirements.</p>
+                        <div class="cta-buttons">
+                            <a href="contact.html" class="m3-button filled large">Get a Quote</a>
+                            <a href="portfolio.html" class="m3-button outlined large">View Our Work</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,16 +210,25 @@
     </main>
 
     <footer>
-        <div class="container">
+        <div class="footer-left">
+            <span id="footer-logo" class="logo-text">🎨 ArtSync</span>
+        </div>
+        <div class="footer-center">
             <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>&copy; 2025 ArtSync. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        </div>
+        <div class="footer-right">
+            <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved. | <a href="#">Privacy Policy</a></p>
         </div>
     </footer>
     
     <script src="script.js"></script>
+    <script>
+        // Add click handler after DOM is loaded
+        document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
+    </script>
 </body>
 </html>
