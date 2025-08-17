@@ -1,8 +1,23 @@
 // Theme Toggle Functionality
 function initTheme() {
-    // Check for saved theme preference or default to 'light'
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
+    // Check for system theme preference
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Check for saved theme preference, or use system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemTheme = prefersDarkScheme.matches ? 'dark' : 'light';
+    const theme = savedTheme || systemTheme;
+    
+    document.documentElement.setAttribute('data-theme', theme);
+    
+    // Listen for system theme changes
+    prefersDarkScheme.addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            // Only update if user hasn't manually set a preference
+            const newTheme = e.matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+        }
+    });
     
     // Update body class for smooth transition after initial load
     setTimeout(() => {
