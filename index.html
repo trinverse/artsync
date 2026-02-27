@@ -14,15 +14,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=8">
+    <link rel="stylesheet" href="style.css?v=10">
 </head>
 
 <body>
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" aria-label="Toggle theme">
-        <i class="fas fa-sun"></i>
-        <i class="fas fa-moon"></i>
-    </button>
+
     <script>
         // Initialize theme immediately
         (function () {
@@ -41,6 +37,12 @@
                     <li><a href="employees.html">Our Team</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="blog.html" class="nav-cta">Blog</a></li>
+                    <li class="nav-theme-toggle">
+                        <button class="theme-toggle" aria-label="Toggle theme">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -296,9 +298,6 @@
 
     <script src="script.js"></script>
     <script>
-        // Add click handler after DOM is loaded
-        document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
-
         // Handle form submission with Web3Forms
         document.getElementById('contact-form').addEventListener('submit', async function (e) {
             e.preventDefault();

@@ -11,9 +11,10 @@
     --color-on-primary: #FFFFFF;
     --color-secondary: #4B5563;
     /* muted gray — body text, subtitles */
-    --color-accent: #226db0;
-    /* blue — links, highlights, focus rings */
-    --color-accent-light: #e8f0fb;
+    --color-accent: #0D0D0D;
+    /* black — links, highlights, focus rings */
+    --color-accent-light: #F3F4F6;
+    /* light gray */
 
     /* Backgrounds */
     --color-bg: #FFFFFF;
@@ -51,7 +52,7 @@
     --md-sys-color-inverse-surface: var(--color-primary);
     --md-sys-color-inverse-on-surface: #FFFFFF;
     --md-sys-color-inverse-primary: var(--color-accent);
-    --md-sys-color-primary-rgb: 34, 109, 176;
+    --md-sys-color-primary-rgb: 13, 13, 13;
     --md-sys-color-secondary-rgb: 75, 85, 99;
 
     /* Shape & Corner Radius */
@@ -81,29 +82,29 @@
 
 /* Dark Theme — preserve for users who prefer dark */
 [data-theme="dark"] {
-    --color-primary: #ECECEC;
-    --color-primary-hover: #FFFFFF;
-    --color-on-primary: #171717;
+    --color-primary: #FFFFFF;
+    --color-primary-hover: #ECECEC;
+    --color-on-primary: #000000;
     --color-secondary: #9CA3AF;
-    --color-accent: #62dce6;
-    --color-accent-light: #163a5b;
-    --color-bg: #171717;
-    --color-bg-alt: #1F1F1F;
-    --color-surface: #1F1F1F;
-    --color-border: #374151;
+    --color-accent: #FFFFFF;
+    --color-accent-light: #262626;
+    --color-bg: #000000;
+    --color-bg-alt: #0D0D0D;
+    --color-surface: #0D0D0D;
+    --color-border: #262626;
 
     --md-sys-color-primary: var(--color-accent);
-    --md-sys-color-on-primary: #0b2a4a;
-    --md-sys-color-primary-container: #194d88;
-    --md-sys-color-on-primary-container: #bfeef3;
+    --md-sys-color-on-primary: #171717;
+    --md-sys-color-primary-container: #262626;
+    --md-sys-color-on-primary-container: #FFFFFF;
     --md-sys-color-secondary: var(--color-secondary);
     --md-sys-color-on-secondary: var(--color-bg);
-    --md-sys-color-secondary-container: #374151;
+    --md-sys-color-secondary-container: #262626;
     --md-sys-color-on-secondary-container: var(--color-primary);
     --md-sys-color-tertiary: var(--color-accent);
-    --md-sys-color-on-tertiary: #0b2a4a;
-    --md-sys-color-tertiary-container: #226db0;
-    --md-sys-color-on-tertiary-container: #d9f7fa;
+    --md-sys-color-on-tertiary: #171717;
+    --md-sys-color-tertiary-container: #2F2F2F;
+    --md-sys-color-on-tertiary-container: #FFFFFF;
     --md-sys-color-error: #FCA5A5;
     --md-sys-color-on-error: #7F1D1D;
     --md-sys-color-error-container: #991B1B;
@@ -119,7 +120,7 @@
     --md-sys-color-inverse-surface: var(--color-primary);
     --md-sys-color-inverse-on-surface: var(--color-bg);
     --md-sys-color-inverse-primary: var(--color-accent);
-    --md-sys-color-primary-rgb: 98, 220, 230;
+    --md-sys-color-primary-rgb: 255, 255, 255;
     --md-sys-color-secondary-rgb: 156, 163, 175;
 
     --glass-bg: var(--color-surface);
@@ -368,6 +369,13 @@ header nav ul {
     display: flex;
     align-items: center;
     gap: 0.25rem;
+    flex-wrap: nowrap;
+}
+
+header nav li.nav-theme-toggle {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
 }
 
 header nav li {
@@ -518,7 +526,7 @@ header .logo img {
     width: 92%;
     height: 92%;
     object-fit: contain;
-    filter: drop-shadow(0 8px 20px rgba(6, 26, 46, 0.18));
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
 }
 
 /* Hero background shapes hidden — clean white look like Trinly */
@@ -563,12 +571,12 @@ header .logo img {
 .btn-primary {
     background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-secondary));
     color: var(--md-sys-color-on-primary);
-    box-shadow: 0 4px 15px rgba(34, 109, 176, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(34, 109, 176, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .btn-secondary {
@@ -970,7 +978,7 @@ select:not(#contact-form select) {
 #contact-form textarea {
     width: 100%;
     padding: 0.875rem 1rem;
-    border: 1px solid rgba(34, 109, 176, 0.2);
+    border: 1px solid var(--color-border);
     border-radius: var(--md-sys-shape-corner-medium);
     background: rgba(255, 255, 255, 0.55);
     font-size: 1rem;
@@ -987,7 +995,7 @@ select:focus {
     outline: none;
     border-color: var(--md-sys-color-primary);
     background: white;
-    box-shadow: 0 0 0 3px rgba(34, 109, 176, 0.1);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
 }
 
 #contact-form input:focus,
@@ -995,21 +1003,21 @@ select:focus {
     outline: none;
     border-color: var(--md-sys-color-primary);
     background: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 0 0 3px rgba(34, 109, 176, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 [data-theme="dark"] #contact-form input[type="text"],
 [data-theme="dark"] #contact-form input[type="email"],
 [data-theme="dark"] #contact-form textarea {
     background: rgba(0, 0, 0, 0.25);
-    border-color: rgba(98, 220, 230, 0.25);
+    border-color: rgba(255, 255, 255, 0.1);
     color: var(--md-sys-color-on-surface);
 }
 
 [data-theme="dark"] #contact-form input:focus,
 [data-theme="dark"] #contact-form textarea:focus {
     background: rgba(0, 0, 0, 0.35);
-    box-shadow: 0 0 0 3px rgba(98, 220, 230, 0.18), inset 0 1px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08), inset 0 1px 2px rgba(0, 0, 0, 0.12);
 }
 
 input::placeholder,
@@ -1546,7 +1554,7 @@ label {
     background: none;
     background-color: transparent;
     background-image: none;
-    border: 1px solid rgba(34, 109, 176, 0.2);
+    border: 1px solid var(--color-border);
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -1562,7 +1570,7 @@ label {
     background: none;
     background-color: transparent;
     border-color: var(--md-sys-color-primary);
-    box-shadow: 0 0 0 3px rgba(34, 109, 176, 0.1);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
 }
 
 .glass-card #contact-form input[type="text"]:hover,
@@ -1573,7 +1581,7 @@ label {
 .contact-column #contact-form textarea:hover {
     background: none;
     background-color: transparent;
-    border-color: rgba(34, 109, 176, 0.3);
+    border-color: rgba(13, 13, 13, 0.3);
 }
 
 /* Webkit-specific rules for contact form */
@@ -1817,7 +1825,7 @@ label {
 #team .m3-card:hover img {
     transform: scale(1.1) rotate(5deg);
     border-color: var(--md-sys-color-primary);
-    box-shadow: 0 10px 20px rgba(34, 109, 176, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 #team .m3-card h4 {
@@ -1907,12 +1915,12 @@ label {
     border-radius: var(--md-sys-shape-corner-full);
     font-weight: 500;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 15px rgba(34, 109, 176, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(34, 109, 176, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .footer-content {
@@ -1932,7 +1940,7 @@ label {
 
 .contact-info-container {
     padding: 3rem;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(221, 224, 255, 0.5));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(243, 244, 246, 0.8));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: var(--md-sys-shape-corner-extra-large);
@@ -2712,8 +2720,8 @@ a:hover {
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg,
-            rgba(34, 109, 176, 0.9),
-            rgba(25, 77, 136, 0.9));
+            rgba(13, 13, 13, 0.85),
+            rgba(0, 0, 0, 0.9));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2880,7 +2888,7 @@ a:hover {
     bottom: 0;
     background: linear-gradient(to bottom,
             transparent 0%,
-            rgba(34, 109, 176, 0.9) 100%);
+            rgba(0, 0, 0, 0.8) 100%);
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -2987,7 +2995,7 @@ section#contact .glass-card form#contact-form input[type="email"],
 section#contact .glass-card form#contact-form textarea {
     background: transparent;
     background-color: transparent;
-    border: 1px solid rgba(34, 109, 176, 0.2);
+    border: 1px solid var(--color-border);
 }
 
 section#contact .glass-card form#contact-form input[type="text"]:focus,
@@ -3397,30 +3405,20 @@ section#contact .glass-card form#contact-form textarea:focus {
 
 /* Theme Toggle Button Styles */
 .theme-toggle {
-    display: none !important;
-    /* Hidden - using system theme preference */
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 10000;
-    background: var(--md-sys-color-surface);
-    background: var(--glass-bg);
-    backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
-    border: 2px solid var(--md-sys-color-primary);
-    border-radius: var(--md-sys-shape-corner-full);
-    width: 50px;
-    height: 50px;
+    display: flex;
+    background: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 0;
 }
 
 .theme-toggle:hover {
     transform: scale(1.1);
-    box-shadow: var(--md-sys-elevation-level-3);
 }
 
 .theme-toggle:active {
@@ -3456,17 +3454,17 @@ section#contact .glass-card form#contact-form textarea:focus {
 
 /* Dark theme specific adjustments */
 [data-theme="dark"] body {
-    background: linear-gradient(135deg, #061a2e 0%, #194d88 50%, #226db0 100%);
+    background: #000000;
 }
 
 [data-theme="dark"] header {
-    background: rgba(9, 28, 46, 0.95);
-    border-color: rgba(98, 220, 230, 0.16);
+    background: rgba(13, 13, 13, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="dark"] footer {
-    background: rgba(9, 28, 46, 0.92);
-    border-color: rgba(98, 220, 230, 0.14);
+    background: rgba(13, 13, 13, 0.92);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="dark"] footer p,
@@ -3510,16 +3508,14 @@ section#contact .glass-card form#contact-form textarea:focus {
 }
 
 [data-theme="dark"] .gradient-bg {
-    background: linear-gradient(135deg, #226db0 0%, #061a2e 100%);
+    background: #000000;
 }
 
 /* Responsive Theme Toggle */
 @media (max-width: 768px) {
     .theme-toggle {
-        width: 45px;
-        height: 45px;
-        top: 70px;
-        right: 15px;
+        width: 32px;
+        height: 32px;
     }
 
     .theme-toggle i {

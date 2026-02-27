@@ -2,14 +2,14 @@
 function initTheme() {
     // Check for system theme preference
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    
+
     // Check for saved theme preference, or use system preference
     const savedTheme = localStorage.getItem('theme');
     const systemTheme = prefersDarkScheme.matches ? 'dark' : 'light';
     const theme = savedTheme || systemTheme;
-    
+
     document.documentElement.setAttribute('data-theme', theme);
-    
+
     // Listen for system theme changes
     prefersDarkScheme.addEventListener('change', (e) => {
         if (!localStorage.getItem('theme')) {
@@ -18,7 +18,7 @@ function initTheme() {
             document.documentElement.setAttribute('data-theme', newTheme);
         }
     });
-    
+
     // Update body class for smooth transition after initial load
     setTimeout(() => {
         document.body.classList.add('theme-transition');
@@ -28,10 +28,10 @@ function initTheme() {
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
+
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
-    
+
     // Trigger animation on toggle button
     const toggleBtn = document.querySelector('.theme-toggle');
     if (toggleBtn) {
@@ -44,6 +44,11 @@ function toggleTheme() {
 
 // Initialize theme on page load
 initTheme();
+
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtns = document.querySelectorAll('.theme-toggle');
+    toggleBtns.forEach(btn => btn.addEventListener('click', toggleTheme));
+});
 
 // ArtSync Logo Component
 function trimTransparentPadding(imageElement) {
@@ -126,7 +131,7 @@ function createArtSyncLogo(options = {}) {
         showText = true,
         className = 'artsync-logo'
     } = options;
-    
+
     const logoContainer = document.createElement('div');
     logoContainer.className = className;
     logoContainer.style.display = 'inline-flex';
@@ -153,12 +158,12 @@ function createArtSyncLogo(options = {}) {
     if (!showText) {
         logoImage.alt = 'ArtSync logo';
     }
-    
+
     return logoContainer;
 }
 
 // Initialize logos when page loads
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Aggressive cleanup of any logos in hero section
     const heroSection = document.getElementById('hero');
     if (heroSection) {
@@ -175,13 +180,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 element.remove();
             }
         });
-        
+
         // Prevent any future logos from being added to hero
         const observer = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
                 mutation.addedNodes.forEach((node) => {
                     if (node.nodeType === 1) { // Element node
-                        if (node.classList?.contains('artsync-logo') || 
+                        if (node.classList?.contains('artsync-logo') ||
                             node.classList?.contains('hero-logo-container') ||
                             node.id?.includes('logo')) {
                             node.remove();
@@ -190,10 +195,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         });
-        
+
         observer.observe(heroSection, { childList: true, subtree: true });
     }
-    
+
     // Replace header logo
     const headerLogo = document.getElementById('header-logo');
     if (headerLogo) {
@@ -205,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function() {
         headerLogo.innerHTML = '';
         headerLogo.appendChild(logo);
     }
-    
+
     // Add logo to footer
     const footerLogo = document.getElementById('footer-logo');
     if (footerLogo) {
@@ -213,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
             size: 32,
             showText: true,
             className: 'artsync-logo footer-logo',
-            primaryColor: '#226db0'
+            primaryColor: '#0D0D0D'
         });
         footerLogo.innerHTML = '';
         footerLogo.appendChild(logo);
@@ -221,13 +226,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Notification function for form submissions
-window.showNotification = function(message, type = 'success') {
+window.showNotification = function (message, type = 'success') {
     // Remove any existing notifications
     const existingNotification = document.querySelector('.notification');
     if (existingNotification) {
         existingNotification.remove();
     }
-    
+
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
@@ -238,10 +243,10 @@ window.showNotification = function(message, type = 'success') {
             <i class="fas fa-times"></i>
         </button>
     `;
-    
+
     // Add to page
     document.body.appendChild(notification);
-    
+
     // Auto remove after 5 seconds
     setTimeout(() => {
         if (notification.parentNode) {
