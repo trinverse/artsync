@@ -1,35 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - ArtSync</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="favicon-32.png">
+    <link rel="icon" href="tab-icon-large.png" type="image/png">
+    <link rel="apple-touch-icon" href="tab-icon-large.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=8">
 </head>
+
 <body>
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" aria-label="Toggle theme">
-        <i class="fas fa-sun"></i>
-        <i class="fas fa-moon"></i>
-    </button>
-    <script>
-        // Initialize theme immediately
-        (function() {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        })();
-    </script>
+
     <header>
         <div class="container">
-            <a href="index.html" class="logo" id="header-logo">ArtSync</a>
+            <a href="index.html" class="logo" id="header-logo"><img src="artsync-logo.png" alt="ArtSync Logo"></a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -57,16 +46,19 @@
                         <div class="card-content">
                             <h3><a href="blog/post1.html">The Importance of a Strong Online Presence</a></h3>
                             <p class="post-meta">Published on August 17, 2025 by Jane Smith</p>
-                            <p>In today's digital age, having a strong online presence is more important than ever. A well-designed website is the cornerstone of your online presence...</p>
+                            <p>In today's digital age, having a strong online presence is more important than ever. A
+                                well-designed website is the cornerstone of your online presence...</p>
                             <a href="blog/post1.html" class="m3-button">Read More</a>
                         </div>
                     </div>
                     <div class="m3-card blog-post-summary">
                         <img src="https://placehold.co/600x400/DDE0FF/001452?text=Blog+Post" alt="Blog Post 2">
                         <div class="card-content">
-                            <h3><a href="blog/post2.html">How to Choose the Right Technology Stack for Your Project</a></h3>
+                            <h3><a href="blog/post2.html">How to Choose the Right Technology Stack for Your Project</a>
+                            </h3>
                             <p class="post-meta">Published on August 10, 2025 by John Doe</p>
-                            <p>Choosing the right technology stack is one of the most important decisions you will make when developing a new software application...</p>
+                            <p>Choosing the right technology stack is one of the most important decisions you will make
+                                when developing a new software application...</p>
                             <a href="blog/post2.html" class="m3-button">Read More</a>
                         </div>
                     </div>
@@ -76,25 +68,32 @@
     </main>
 
     <footer>
-        <div class="footer-left">
-            <span id="footer-logo" class="logo-text">🎨 ArtSync</span>
-        </div>
-        <div class="footer-center">
-            <div class="social-links">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <div class="footer-wrapper">
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul class="contact-list">
+                    <li>
+                        <a href="tel:+919997213595">
+                            <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                            +91-9997213595
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:artsyncindiallp@gmail.com">
+                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                            artsyncindiallp@gmail.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved.</p>
             </div>
         </div>
-        <div class="footer-right">
-            <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved. | <a href="#">Privacy Policy</a></p>
-        </div>
     </footer>
-    
+
     <script src="script.js"></script>
-    <script>
-        // Add click handler after DOM is loaded
-        document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
-    </script>
+
 </body>
+
 </html>

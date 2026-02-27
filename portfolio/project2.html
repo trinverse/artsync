@@ -1,50 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 2 - ArtSync</title>
+    <title>RDACTD - ArtSync Portfolio</title>
+    <link rel="icon" href="../tab-icon-large.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=8">
 </head>
+
 <body>
     <header>
-        <h1><a href="../index.html" style="color: #fff; text-decoration: none;">ArtSync</a></h1>
-        <nav>
-            <ul>
-                <li><a href="../services.html">Services</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="../portfolio.html">Portfolio</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <a href="../index.html" class="logo" id="header-logo">
+                <img src="../artsync-logo.png" alt="ArtSync">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="../employees.html">Our Team</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../blog.html" class="nav-cta">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="project-details">
-            <h2>Project 2</h2>
-            <img src="https://via.placeholder.com/800x400" alt="Project 2">
-            <p>This is a detailed description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.</p>
-            <h3>Key Features</h3>
-            <ul>
-                <li>Feature 1</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
-            </ul>
-            <a href="#" class="cta-button">Visit Website</a>
+        <section id="project-detail-page">
+            <div class="container">
+
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb" aria-label="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="../portfolio.html">Portfolio</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>RDACTD</span>
+                </nav>
+
+                <!-- Hero Image -->
+                <div class="project-hero-img">
+                    <img src="../rdactd.png" alt="RDACTD Complaint Management Platform">
+                </div>
+
+                <!-- Project Title block -->
+                <div class="project-title-block">
+                    <div class="project-tags">
+                        <span class="tag">Mobile App</span>
+                        <span class="tag">Flutter</span>
+                        <span class="tag">SaaS</span>
+                    </div>
+                    <h1>RDACTD</h1>
+                    <p class="project-lead">Complaint Management & Business Accountability Platform</p>
+                </div>
+
+                <!-- Content body -->
+                <div class="project-body">
+
+                    <p><strong>RDACTD</strong> is a full-stack cross-platform application for anonymous complaint
+                        submission, business accountability scoring, and dispute resolution.</p>
+
+                    <h3>Overview</h3>
+                    <p>RDACTD is a SaaS platform that empowers consumers to file complaints against businesses while
+                        giving companies tools to respond, resolve disputes, and improve their accountability scores.
+                        The platform supports anonymous submissions, real-time messaging with end-to-end encryption,
+                        AI-powered insights, and a tiered subscription model for both consumers and businesses.</p>
+
+                    <h3>Key Features</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <strong>Anonymous Complaint Filing</strong>
+                            Evidence upload, category taxonomy, and status tracking with full privacy protection.
+                        </div>
+                        <div class="feature-card">
+                            <strong>Business Dashboards</strong>
+                            Multi-location management, predictive analytics, score improvement recommendations, and
+                            enhanced analytics.
+                        </div>
+                        <div class="feature-card">
+                            <strong>Real-Time Messaging</strong>
+                            Encrypted chat between complainants and businesses with quick actions and analytics.
+                        </div>
+                        <div class="feature-card">
+                            <strong>AI-Powered Insights</strong>
+                            AI chat assistant, smart complaint form suggestions, and predictive analytics for
+                            businesses.
+                        </div>
+                        <div class="feature-card">
+                            <strong>Company Search & Profiles</strong>
+                            Public business profiles with accountability scores, reviews, and complaint history.
+                        </div>
+                        <div class="feature-card">
+                            <strong>Subscription System</strong>
+                            5-tier model (Free through Enterprise at $149/mo) with feature gating, Stripe billing, and
+                            team management.
+                        </div>
+                        <div class="feature-card">
+                            <strong>Enterprise Features</strong>
+                            SSO configuration, white-label support, API access, and dedicated support.
+                        </div>
+                        <div class="feature-card">
+                            <strong>Admin Panel</strong>
+                            User management, business claim review, audit logs, analytics dashboards, and unverified
+                            company moderation.
+                        </div>
+                    </div>
+
+                    <h3>Tech Stack</h3>
+                    <div class="tech-stack-grid">
+                        <div class="tech-category">
+                            <h4>Frontend</h4>
+                            <p>Flutter (iOS, Android, Web, macOS, Windows, Linux) — 458 source files, ~157K lines
+                                of Dart</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Backend</h4>
+                            <p>Firebase (Firestore, Auth, Storage, Cloud Functions, Remote Config, Analytics)</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Cloud Functions</h4>
+                            <p>Python 3.11 (Google Places proxy, scheduled jobs, Firestore triggers)</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>DevOps & API</h4>
+                            <p>GitHub Actions, Stripe Integration</p>
+                        </div>
+                    </div>
+
+                    <h3>Architecture Highlights</h3>
+                    <ul class="highlights-list">
+                        <li><strong>Monorepo structure:</strong> Shared JSON schemas for model generation across Dart
+                            and Python.</li>
+                        <li><strong>Provider-based state management:</strong> Offline/online sync via hybrid complaint
+                            service.</li>
+                        <li><strong>Design system:</strong> Reusable tokens, components, chart factory pattern, and
+                            unified search bar variants.</li>
+                        <li><strong>109 services:</strong> Covering authentication, analytics, caching, notifications,
+                            AI, and business logic.</li>
+                        <li><strong>776+ automated tests:</strong> Across models, services, and widgets.</li>
+                    </ul>
+
+                    <div class="project-cta">
+                        <a href="https://rdactd.com/" class="m3-button filled large" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt"></i> Visit Website
+                        </a>
+                        <a href="../portfolio.html" class="m3-button outlined large">
+                            <i class="fas fa-arrow-left"></i> Back to Portfolio
+                        </a>
+                    </div>
+
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+        <div class="footer-wrapper">
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul class="contact-list">
+                    <li>
+                        <a href="tel:+919997213595">
+                            <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                            +91-9997213595
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:artsyncindiallp@gmail.com">
+                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                            artsyncindiallp@gmail.com
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <p>&copy; 2025 ArtSync. All rights reserved. | <a href="#">Privacy Policy</a></p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
+
 </html>

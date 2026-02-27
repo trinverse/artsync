@@ -1,34 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Team - ArtSync</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="favicon-32.png">
+    <link rel="icon" href="tab-icon-large.png" type="image/png">
+    <link rel="apple-touch-icon" href="tab-icon-large.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=8">
 </head>
+
 <body>
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" aria-label="Toggle theme">
-        <i class="fas fa-sun"></i>
-        <i class="fas fa-moon"></i>
-    </button>
-    <script>
-        // Initialize theme immediately
-        (function() {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        })();
-    </script>
+
     <header>
         <div class="container">
-            <a href="index.html" class="logo" id="header-logo">ArtSync</a>
+            <a href="index.html" class="logo" id="header-logo"><img src="artsync-logo.png" alt="ArtSync Logo"></a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -36,7 +26,7 @@
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="employees.html" class="active">Our Team</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="blog.html" class="nav-cta">Blog</a></li>
                 </ul>
             </nav>
         </div>
@@ -54,27 +44,26 @@
                     <div class="team-member">
                         <div class="team-card glass-card">
                             <div class="member-image">
-                                <img src="https://picsum.photos/seed/ceo/400/400" alt="John Doe">
+                                <img src="ashish.jpg" alt="Ashish Tyagi">
                                 <div class="member-overlay">
                                     <div class="social-links">
-                                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                        <a href="https://www.linkedin.com/in/ashishtyagi10/" aria-label="LinkedIn"
+                                            target="_blank"><i class="fab fa-linkedin"></i></a>
                                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                        <a href="mailto:ashishtyagi10@gmail.com" aria-label="Email"><i
+                                                class="fas fa-envelope"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="member-info">
-                                <h3>John Doe</h3>
+                                <h3>Ashish Tyagi</h3>
                                 <p class="role">Chief Executive Officer</p>
-                                <p class="bio">Visionary leader with 20+ years of experience in technology and business strategy. John founded ArtSync with a mission to democratize digital transformation.</p>
+                                <p class="bio">Leading ArtSync with a vision to deliver exceptional digital solutions
+                                    and innovation.</p>
                                 <div class="member-details">
                                     <div class="detail-item">
-                                        <i class="fas fa-graduation-cap"></i>
-                                        <span>MBA, Stanford University</span>
-                                    </div>
-                                    <div class="detail-item">
                                         <i class="fas fa-briefcase"></i>
-                                        <span>Ex-Google, Microsoft</span>
+                                        <span>Founder & CEO</span>
                                     </div>
                                 </div>
                             </div>
@@ -84,27 +73,26 @@
                     <div class="team-member">
                         <div class="team-card glass-card">
                             <div class="member-image">
-                                <img src="https://picsum.photos/seed/cto/400/400" alt="Jane Smith">
+                                <img src="aditya_new.jpeg" alt="Aditya Tyagi">
                                 <div class="member-overlay">
                                     <div class="social-links">
-                                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                        <a href="https://www.linkedin.com/in/aditya-tyagi-27268222b/"
+                                            aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+
+                                        <a href="mailto:adityatyagi.mrt@gmail.com" aria-label="Email"><i
+                                                class="fas fa-envelope"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="member-info">
-                                <h3>Jane Smith</h3>
-                                <p class="role">Chief Technology Officer</p>
-                                <p class="bio">Technical architect and full-stack expert leading our engineering teams. Jane specializes in scalable systems and cloud architecture.</p>
+                                <h3>Aditya Tyagi</h3>
+                                <p class="role">Lead Developer</p>
+                                <p class="bio">Expert in full-stack development, driving the technical architecture and
+                                    engineering excellence at ArtSync.</p>
                                 <div class="member-details">
                                     <div class="detail-item">
-                                        <i class="fas fa-graduation-cap"></i>
-                                        <span>MS Computer Science, MIT</span>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="fas fa-briefcase"></i>
-                                        <span>Ex-Amazon, Meta</span>
+                                        <i class="fas fa-code"></i>
+                                        <span>Full Stack Architech</span>
                                     </div>
                                 </div>
                             </div>
@@ -114,27 +102,26 @@
                     <div class="team-member">
                         <div class="team-card glass-card">
                             <div class="member-image">
-                                <img src="https://picsum.photos/seed/designer/400/400" alt="Sarah Johnson">
+                                <img src="ujjawal_new.jpeg" alt="Ujjawal Tyagi">
                                 <div class="member-overlay">
                                     <div class="social-links">
-                                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                        <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
-                                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                        <a href="https://www.linkedin.com/in/ujjwal-tyagi-500467289/"
+                                            aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+
+                                        <a href="mailto:utyagi565@gmail.com" aria-label="Email"><i
+                                                class="fas fa-envelope"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="member-info">
-                                <h3>Sarah Johnson</h3>
-                                <p class="role">Head of Design</p>
-                                <p class="bio">Creative director with a passion for user-centered design. Sarah leads our UI/UX team in creating beautiful, intuitive experiences.</p>
+                                <h3>Ujjawal Tyagi</h3>
+                                <p class="role">Developer</p>
+                                <p class="bio">Passionate developer focused on creating seamless and efficient software
+                                    solutions.</p>
                                 <div class="member-details">
                                     <div class="detail-item">
-                                        <i class="fas fa-graduation-cap"></i>
-                                        <span>BFA Design, Parsons</span>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="fas fa-briefcase"></i>
-                                        <span>Ex-Apple, Adobe</span>
+                                        <i class="fas fa-laptop-code"></i>
+                                        <span>Software Development</span>
                                     </div>
                                 </div>
                             </div>
@@ -144,98 +131,36 @@
                     <div class="team-member">
                         <div class="team-card glass-card">
                             <div class="member-image">
-                                <img src="https://picsum.photos/seed/developer/400/400" alt="Michael Chen">
+                                <img src="abhinav.jpeg" alt="Abhinav">
                                 <div class="member-overlay">
                                     <div class="social-links">
                                         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
                                         <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="member-info">
-                                <h3>Michael Chen</h3>
-                                <p class="role">Lead Full-Stack Developer</p>
-                                <p class="bio">Expert in modern web technologies and cloud solutions. Michael architects our most complex systems and mentors junior developers.</p>
+                                <h3>Abhinav</h3>
+                                <p class="role">AI Developer</p>
+                                <p class="bio">Building intelligent systems and machine learning solutions that power
+                                    the next generation of ArtSync products.</p>
                                 <div class="member-details">
                                     <div class="detail-item">
-                                        <i class="fas fa-graduation-cap"></i>
-                                        <span>BS Computer Science, UC Berkeley</span>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="fas fa-briefcase"></i>
-                                        <span>10+ years experience</span>
+                                        <i class="fas fa-brain"></i>
+                                        <span>Artificial Intelligence</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="team-member">
-                        <div class="team-card glass-card">
-                            <div class="member-image">
-                                <img src="https://picsum.photos/seed/dataeng/400/400" alt="Emily Davis">
-                                <div class="member-overlay">
-                                    <div class="social-links">
-                                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h3>Emily Davis</h3>
-                                <p class="role">Data Engineering Lead</p>
-                                <p class="bio">Data scientist and engineer specializing in big data solutions and machine learning. Emily transforms data into actionable insights.</p>
-                                <div class="member-details">
-                                    <div class="detail-item">
-                                        <i class="fas fa-graduation-cap"></i>
-                                        <span>PhD Data Science, Carnegie Mellon</span>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="fas fa-briefcase"></i>
-                                        <span>Ex-Netflix, Spotify</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <div class="team-card glass-card">
-                            <div class="member-image">
-                                <img src="https://picsum.photos/seed/support/400/400" alt="David Wilson">
-                                <div class="member-overlay">
-                                    <div class="social-links">
-                                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h3>David Wilson</h3>
-                                <p class="role">IT Support Manager</p>
-                                <p class="bio">Infrastructure and support specialist ensuring smooth operations. David leads our 24/7 support team with a focus on customer satisfaction.</p>
-                                <div class="member-details">
-                                    <div class="detail-item">
-                                        <i class="fas fa-graduation-cap"></i>
-                                        <span>BS Information Systems</span>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="fas fa-certificate"></i>
-                                        <span>AWS, Azure Certified</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="cta-section">
                     <div class="cta-content glass-card">
                         <h2>Join Our Growing Team</h2>
-                        <p>We're always looking for talented individuals who share our passion for innovation and excellence. Explore career opportunities at ArtSync.</p>
+                        <p>We're always looking for talented individuals who share our passion for innovation and
+                            excellence. Explore career opportunities at ArtSync.</p>
                         <div class="cta-buttons">
                             <a href="contact.html" class="m3-button filled large">View Open Positions</a>
                             <a href="contact.html" class="m3-button outlined large">Send Your Resume</a>
@@ -247,25 +172,32 @@
     </main>
 
     <footer>
-        <div class="footer-left">
-            <span id="footer-logo" class="logo-text">🎨 ArtSync</span>
-        </div>
-        <div class="footer-center">
-            <div class="social-links">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <div class="footer-wrapper">
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul class="contact-list">
+                    <li>
+                        <a href="tel:+919997213595">
+                            <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                            +91-9997213595
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:artsyncindiallp@gmail.com">
+                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                            artsyncindiallp@gmail.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved.</p>
             </div>
         </div>
-        <div class="footer-right">
-            <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved. | <a href="#">Privacy Policy</a></p>
-        </div>
     </footer>
-    
+
     <script src="script.js"></script>
-    <script>
-        // Add click handler after DOM is loaded
-        document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
-    </script>
+
 </body>
+
 </html>
