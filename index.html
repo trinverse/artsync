@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +8,15 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon-32.png">
-    <meta name="description" content="ArtSync provides top-tier software development, data entry, and IT support services to help your business thrive.">
+    <meta name="description"
+        content="ArtSync provides top-tier software development, data entry, and IT support services to help your business thrive.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=8">
 </head>
+
 <body>
     <!-- Theme Toggle Button -->
     <button class="theme-toggle" aria-label="Toggle theme">
@@ -23,7 +25,7 @@
     </button>
     <script>
         // Initialize theme immediately
-        (function() {
+        (function () {
             const savedTheme = localStorage.getItem('theme') || 'light';
             document.documentElement.setAttribute('data-theme', savedTheme);
         })();
@@ -38,7 +40,7 @@
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="employees.html">Our Team</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="blog.html" class="nav-cta">Blog</a></li>
                 </ul>
             </nav>
         </div>
@@ -50,7 +52,8 @@
                 <div class="hero-grid">
                     <div class="hero-content">
                         <h1 class="hero-title">Your Partner in Digital Excellence</h1>
-                        <p class="hero-subtitle">We provide top-tier software development, data entry, and IT support services to help your business thrive in the digital age.</p>
+                        <p class="hero-subtitle">We provide top-tier software development, data entry, and IT support
+                            services to help your business thrive in the digital age.</p>
                         <div class="hero-actions">
                             <a href="#contact" class="m3-button filled large">Get Started</a>
                             <a href="#services" class="m3-button outlined large">Learn More</a>
@@ -63,7 +66,7 @@
                             <div class="shape shape-3"></div>
                         </div>
                         <div class="hero-graphic">
-                            <i class="fas fa-rocket"></i>
+                            <img src="artsync-logo.png" alt="ArtSync" class="hero-graphic-logo">
                         </div>
                     </div>
                 </div>
@@ -77,12 +80,14 @@
                     <div class="m3-card service-card">
                         <div class="icon"><i class="fas fa-code"></i></div>
                         <h4>Software Development</h4>
-                        <p>From custom applications to enterprise solutions, we build software that solves your unique challenges.</p>
+                        <p>From custom applications to enterprise solutions, we build software that solves your unique
+                            challenges.</p>
                     </div>
                     <div class="m3-card service-card">
                         <div class="icon"><i class="fas fa-keyboard"></i></div>
                         <h4>Data Entry</h4>
-                        <p>Accurate and efficient data entry services to keep your information organized and accessible.</p>
+                        <p>Accurate and efficient data entry services to keep your information organized and accessible.
+                        </p>
                     </div>
                     <div class="m3-card service-card">
                         <div class="icon"><i class="fas fa-headset"></i></div>
@@ -98,29 +103,54 @@
                 <h2>Our Work</h2>
                 <div class="grid-layout">
                     <div class="grid-item">
-                        <div class="m3-card">
-                            <img src="https://placehold.co/300x200/DDE0FF/001452?text=Project+1" alt="Project 1">
-                            <h4>Project 1</h4>
-                            <p>A brief description of the project.</p>
-                        </div>
+                        <a href="portfolio/project1.html" class="m3-card home-portfolio-card">
+                            <div class="home-portfolio-img">
+                                <img src="clout.png" alt="Clout Aesthetics">
+                            </div>
+                            <div class="home-portfolio-info">
+                                <div class="home-portfolio-tags">
+                                    <span>SaaS</span><span>AI/ML</span>
+                                </div>
+                                <h4>Clout Aesthetics</h4>
+                                <p>Full-stack reputation management platform with AI-powered sentiment analysis.</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="grid-item">
-                        <div class="m3-card">
-                            <img src="https://placehold.co/300x200/DDE0FF/001452?text=Project+2" alt="Project 2">
-                            <h4>Project 2</h4>
-                            <p>A brief description of the project.</p>
-                        </div>
+                        <a href="portfolio/project2.html" class="m3-card home-portfolio-card">
+                            <div class="home-portfolio-img">
+                                <img src="rdactd.png" alt="RDACTD">
+                            </div>
+                            <div class="home-portfolio-info">
+                                <div class="home-portfolio-tags">
+                                    <span>Mobile App</span><span>Flutter</span>
+                                </div>
+                                <h4>RDACTD</h4>
+                                <p>Anonymous complaint submission and business accountability platform.</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="grid-item">
-                        <div class="m3-card">
-                            <img src="https://placehold.co/300x200/DDE0FF/001452?text=Project+3" alt="Project 3">
-                            <h4>Project 3</h4>
-                            <p>A brief description of the project.</p>
-                        </div>
+                        <a href="portfolio.html" class="m3-card home-portfolio-card">
+                            <div class="home-portfolio-img home-portfolio-img--placeholder">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div class="home-portfolio-info">
+                                <div class="home-portfolio-tags">
+                                    <span>Data Analytics</span><span>Python</span>
+                                </div>
+                                <h4>Analytics Dashboard</h4>
+                                <p>Real-time business intelligence dashboard with predictive analytics.</p>
+                            </div>
+                        </a>
                     </div>
+                </div>
+                <div style="text-align:center; margin-top:2rem;">
+                    <a href="portfolio.html" class="m3-button outlined">View All Projects</a>
                 </div>
             </div>
         </section>
+
 
         <section id="team">
             <div class="container">
@@ -135,16 +165,23 @@
                     </div>
                     <div class="grid-item">
                         <div class="m3-card">
-                            <img src="aditya.jpeg" alt="Aditya Tyagi - Lead Developer">
+                            <img src="aditya_new.jpeg" alt="Aditya Tyagi - Lead Developer">
                             <h4>Aditya Tyagi</h4>
                             <p>Lead Developer</p>
                         </div>
                     </div>
                     <div class="grid-item">
                         <div class="m3-card">
-                            <img src="ujjawal.jpeg" alt="Ujjawal Tyagi - IT Support Specialist">
+                            <img src="ujjawal_new.jpeg" alt="Ujjawal Tyagi - IT Support Specialist">
                             <h4>Ujjawal Tyagi</h4>
                             <p>IT Support Specialist</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="m3-card">
+                            <img src="abhinav.jpeg" alt="Abhinav - AI Developer">
+                            <h4>Abhinav</h4>
+                            <p>AI Developer</p>
                         </div>
                     </div>
                 </div>
@@ -156,7 +193,8 @@
                 <h2>Our Partners</h2>
                 <p class="subtitle">We collaborate with industry leaders to deliver exceptional solutions</p>
                 <div class="partners-grid">
-                    <a href="https://trinly.us" target="_blank" rel="noopener noreferrer" class="partner-card glass-card">
+                    <a href="https://trinly.us" target="_blank" rel="noopener noreferrer"
+                        class="partner-card glass-card">
                         <div class="partner-logo">
                             <!-- Add Trinly logo here -->
                             <div class="logo-placeholder">
@@ -172,7 +210,8 @@
                             </span>
                         </div>
                     </a>
-                    <a href="https://corshift.com" target="_blank" rel="noopener noreferrer" class="partner-card glass-card">
+                    <a href="https://corshift.com" target="_blank" rel="noopener noreferrer"
+                        class="partner-card glass-card">
                         <div class="partner-logo">
                             <!-- Add Corshift logo here -->
                             <div class="logo-placeholder">
@@ -199,8 +238,10 @@
                     <div class="about-column">
                         <div class="glass-card">
                             <h3>About Us</h3>
-                            <p>ArtSync is a team of passionate and experienced professionals dedicated to providing the best possible solutions for our clients.</p>
-                            <p>We believe in building long-term partnerships based on trust and mutual success. Our mission is to empower businesses with technology and innovation.</p>
+                            <p>ArtSync is a team of passionate and experienced professionals dedicated to providing the
+                                best possible solutions for our clients.</p>
+                            <p>We believe in building long-term partnerships based on trust and mutual success. Our
+                                mission is to empower businesses with technology and innovation.</p>
                             <div class="company-info">
                                 <div class="info-item">
                                     <i class="fas fa-map-marker-alt"></i>
@@ -241,9 +282,6 @@
     </main>
 
     <footer>
-        <div class="footer-left">
-            <span id="footer-logo" class="logo-text">🎨 ArtSync</span>
-        </div>
         <div class="footer-center">
             <div class="social-links">
                 <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
@@ -260,17 +298,17 @@
     <script>
         // Add click handler after DOM is loaded
         document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
-        
+
         // Handle form submission with Web3Forms
-        document.getElementById('contact-form').addEventListener('submit', async function(e) {
+        document.getElementById('contact-form').addEventListener('submit', async function (e) {
             e.preventDefault();
-            
+
             const form = this;
             const submitButton = form.querySelector('button[type="submit"]');
             const originalText = submitButton.innerHTML;
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitButton.disabled = true;
-            
+
             // Prepare form data for Web3Forms
             const formData = new FormData();
             formData.append('access_key', '62c60694-167b-4fa3-98ea-a50b56889b4d');
@@ -278,15 +316,15 @@
             formData.append('email', this.email.value);
             formData.append('message', this.message.value);
             formData.append('subject', 'New Contact Form Submission from ArtSync');
-            
+
             try {
                 const response = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
                     body: formData
                 });
-                
+
                 const data = await response.json();
-                
+
                 if (data.success) {
                     if (typeof showNotification === 'function') {
                         showNotification('Thank you for your message! We will get back to you within 24 hours.', 'success');
@@ -311,4 +349,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -1,34 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - ArtSync</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="favicon-32.png">
+    <link rel="icon" href="tab-icon-large.png" type="image/png">
+    <link rel="apple-touch-icon" href="tab-icon-large.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=8">
 </head>
+
 <body>
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" aria-label="Toggle theme">
-        <i class="fas fa-sun"></i>
-        <i class="fas fa-moon"></i>
-    </button>
-    <script>
-        // Initialize theme immediately
-        (function() {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        })();
-    </script>
+
     <header>
         <div class="container">
-            <a href="index.html" class="logo" id="header-logo">ArtSync</a>
+            <a href="index.html" class="logo" id="header-logo"><img src="artsync-logo.png" alt="ArtSync Logo"></a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -36,7 +26,7 @@
                     <li><a href="portfolio.html" class="active">Portfolio</a></li>
                     <li><a href="employees.html">Our Team</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="blog.html" class="nav-cta">Blog</a></li>
                 </ul>
             </nav>
         </div>
@@ -61,26 +51,27 @@
                     <div class="portfolio-item" data-category="web">
                         <a href="portfolio/project1.html" class="portfolio-card glass-card">
                             <div class="portfolio-image">
-                                <img src="https://placehold.co/600x400/DDE0FF/001452?text=E-Commerce+Platform" alt="E-Commerce Platform">
+                                <img src="clout.png" alt="E-Commerce Platform">
                                 <div class="portfolio-overlay">
                                     <i class="fas fa-arrow-right"></i>
                                 </div>
                             </div>
                             <div class="portfolio-content">
                                 <div class="portfolio-tags">
-                                    <span class="tag">Web Development</span>
-                                    <span class="tag">React</span>
+                                    <span class="tag">SaaS</span>
+                                    <span class="tag">AI/ML</span>
                                 </div>
-                                <h3>E-Commerce Platform</h3>
-                                <p>A modern e-commerce solution with real-time inventory management and AI-powered recommendations.</p>
+                                <h3>Clout Aesthetics</h3>
+                                <p>Full-stack reputation management platform with AI-powered sentiment analysis and
+                                    proprietary scoring.</p>
                                 <div class="portfolio-stats">
                                     <div class="stat">
-                                        <i class="fas fa-users"></i>
-                                        <span>50K+ Users</span>
+                                        <i class="fas fa-star"></i>
+                                        <span>Reputation</span>
                                     </div>
                                     <div class="stat">
-                                        <i class="fas fa-chart-line"></i>
-                                        <span>200% ROI</span>
+                                        <i class="fas fa-brain"></i>
+                                        <span>AI Powered</span>
                                     </div>
                                 </div>
                             </div>
@@ -90,7 +81,7 @@
                     <div class="portfolio-item" data-category="mobile">
                         <a href="portfolio/project2.html" class="portfolio-card glass-card">
                             <div class="portfolio-image">
-                                <img src="https://placehold.co/600x400/DDE0FF/001452?text=Health+Tracking+App" alt="Health Tracking App">
+                                <img src="rdactd.png" alt="RDACTD">
                                 <div class="portfolio-overlay">
                                     <i class="fas fa-arrow-right"></i>
                                 </div>
@@ -100,16 +91,16 @@
                                     <span class="tag">Mobile App</span>
                                     <span class="tag">Flutter</span>
                                 </div>
-                                <h3>Health Tracking App</h3>
-                                <p>Cross-platform mobile application for personal health monitoring with wearable device integration.</p>
+                                <h3>RDACTD</h3>
+                                <p>Anonymous complaint submission and business accountability platform.</p>
                                 <div class="portfolio-stats">
                                     <div class="stat">
-                                        <i class="fas fa-download"></i>
-                                        <span>100K+ Downloads</span>
+                                        <i class="fas fa-user-secret"></i>
+                                        <span>Anonymous</span>
                                     </div>
                                     <div class="stat">
-                                        <i class="fas fa-star"></i>
-                                        <span>4.8 Rating</span>
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>Secure</span>
                                     </div>
                                 </div>
                             </div>
@@ -119,7 +110,8 @@
                     <div class="portfolio-item" data-category="data">
                         <a href="portfolio/project3.html" class="portfolio-card glass-card">
                             <div class="portfolio-image">
-                                <img src="https://placehold.co/600x400/DDE0FF/001452?text=Analytics+Dashboard" alt="Analytics Dashboard">
+                                <img src="placeholder-analytics.svg" alt="Analytics Dashboard"
+                                    onerror="this.style.background='#EEF2FF'; this.style.display='block'; this.style.height='220px'; this.removeAttribute('src')">
                                 <div class="portfolio-overlay">
                                     <i class="fas fa-arrow-right"></i>
                                 </div>
@@ -130,7 +122,8 @@
                                     <span class="tag">Python</span>
                                 </div>
                                 <h3>Analytics Dashboard</h3>
-                                <p>Real-time business intelligence dashboard with predictive analytics and automated reporting.</p>
+                                <p>Real-time business intelligence dashboard with predictive analytics and automated
+                                    reporting.</p>
                                 <div class="portfolio-stats">
                                     <div class="stat">
                                         <i class="fas fa-database"></i>
@@ -148,7 +141,8 @@
                     <div class="portfolio-item" data-category="web">
                         <a href="portfolio/project4.html" class="portfolio-card glass-card">
                             <div class="portfolio-image">
-                                <img src="https://placehold.co/600x400/DDE0FF/001452?text=SaaS+Platform" alt="SaaS Platform">
+                                <img src="placeholder-saas.svg" alt="SaaS Platform"
+                                    onerror="this.style.background='#EEF2FF'; this.style.display='block'; this.style.height='220px'; this.removeAttribute('src')">
                                 <div class="portfolio-overlay">
                                     <i class="fas fa-arrow-right"></i>
                                 </div>
@@ -159,7 +153,8 @@
                                     <span class="tag">Node.js</span>
                                 </div>
                                 <h3>SaaS Management Platform</h3>
-                                <p>Comprehensive business management platform with CRM, invoicing, and project tracking features.</p>
+                                <p>Comprehensive business management platform with CRM, invoicing, and project tracking
+                                    features.</p>
                                 <div class="portfolio-stats">
                                     <div class="stat">
                                         <i class="fas fa-building"></i>
@@ -177,7 +172,8 @@
                     <div class="portfolio-item" data-category="mobile">
                         <a href="portfolio/project5.html" class="portfolio-card glass-card">
                             <div class="portfolio-image">
-                                <img src="https://placehold.co/600x400/DDE0FF/001452?text=Food+Delivery+App" alt="Food Delivery App">
+                                <img src="placeholder-food.svg" alt="Food Delivery App"
+                                    onerror="this.style.background='#EEF2FF'; this.style.display='block'; this.style.height='220px'; this.removeAttribute('src')">
                                 <div class="portfolio-overlay">
                                     <i class="fas fa-arrow-right"></i>
                                 </div>
@@ -188,7 +184,8 @@
                                     <span class="tag">React Native</span>
                                 </div>
                                 <h3>Food Delivery App</h3>
-                                <p>On-demand food delivery application with real-time tracking and multi-restaurant support.</p>
+                                <p>On-demand food delivery application with real-time tracking and multi-restaurant
+                                    support.</p>
                                 <div class="portfolio-stats">
                                     <div class="stat">
                                         <i class="fas fa-utensils"></i>
@@ -206,7 +203,8 @@
                     <div class="portfolio-item" data-category="data">
                         <a href="portfolio/project6.html" class="portfolio-card glass-card">
                             <div class="portfolio-image">
-                                <img src="https://placehold.co/600x400/DDE0FF/001452?text=AI+Chatbot" alt="AI Chatbot">
+                                <img src="placeholder-ai.svg" alt="AI Chatbot"
+                                    onerror="this.style.background='#EEF2FF'; this.style.display='block'; this.style.height='220px'; this.removeAttribute('src')">
                                 <div class="portfolio-overlay">
                                     <i class="fas fa-arrow-right"></i>
                                 </div>
@@ -217,7 +215,8 @@
                                     <span class="tag">Python</span>
                                 </div>
                                 <h3>AI Customer Support Bot</h3>
-                                <p>Intelligent chatbot with natural language processing for automated customer support.</p>
+                                <p>Intelligent chatbot with natural language processing for automated customer support.
+                                </p>
                                 <div class="portfolio-stats">
                                     <div class="stat">
                                         <i class="fas fa-comments"></i>
@@ -236,7 +235,8 @@
                 <div class="cta-section">
                     <div class="cta-content glass-card">
                         <h2>Have a Project in Mind?</h2>
-                        <p>Let's work together to bring your ideas to life. Our team is ready to help you build something amazing.</p>
+                        <p>Let's work together to bring your ideas to life. Our team is ready to help you build
+                            something amazing.</p>
                         <div class="cta-buttons">
                             <a href="contact.html" class="m3-button filled large">Start Your Project</a>
                             <a href="services.html" class="m3-button outlined large">View Our Services</a>
@@ -248,40 +248,48 @@
     </main>
 
     <footer>
-        <div class="footer-left">
-            <span id="footer-logo" class="logo-text">🎨 ArtSync</span>
-        </div>
-        <div class="footer-center">
-            <div class="social-links">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <div class="footer-wrapper">
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul class="contact-list">
+                    <li>
+                        <a href="tel:+919997213595">
+                            <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                            +91-9997213595
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:artsyncindiallp@gmail.com">
+                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                            artsyncindiallp@gmail.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved.</p>
             </div>
         </div>
-        <div class="footer-right">
-            <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved. | <a href="#">Privacy Policy</a></p>
-        </div>
     </footer>
-    
+
     <script src="script.js"></script>
     <script>
-        // Add click handler after DOM is loaded
-        document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
-        
+
+
         // Portfolio filter functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const filterBtns = document.querySelectorAll('.filter-btn');
             const portfolioItems = document.querySelectorAll('.portfolio-item');
-            
+
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     // Remove active class from all buttons
                     filterBtns.forEach(b => b.classList.remove('active'));
                     // Add active class to clicked button
                     btn.classList.add('active');
-                    
+
                     const filter = btn.getAttribute('data-filter');
-                    
+
                     portfolioItems.forEach(item => {
                         if (filter === 'all') {
                             item.style.display = 'block';
@@ -298,4 +306,5 @@
         });
     </script>
 </body>
+
 </html>

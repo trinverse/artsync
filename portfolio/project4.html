@@ -1,50 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 4 - ArtSync</title>
+    <title>SaaS Management Platform - ArtSync Portfolio</title>
+    <link rel="icon" href="../tab-icon-large.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=8">
 </head>
+
 <body>
     <header>
-        <h1><a href="../index.html" style="color: #fff; text-decoration: none;">ArtSync</a></h1>
-        <nav>
-            <ul>
-                <li><a href="../services.html">Services</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="../portfolio.html">Portfolio</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <a href="../index.html" class="logo" id="header-logo">
+                <img src="../artsync-logo.png" alt="ArtSync">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="../employees.html">Our Team</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../blog.html" class="nav-cta">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="project-details">
-            <h2>Project 4</h2>
-            <img src="https://via.placeholder.com/800x400" alt="Project 4">
-            <p>This is a detailed description of Project 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.</p>
-            <h3>Key Features</h3>
-            <ul>
-                <li>Feature 1</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
-            </ul>
-            <a href="#" class="cta-button">Visit Website</a>
+        <section id="project-detail-page">
+            <div class="container">
+
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb" aria-label="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="../portfolio.html">Portfolio</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>SaaS Management Platform</span>
+                </nav>
+
+                <!-- Hero placeholder -->
+                <div class="project-hero-img" style="background: var(--color-bg-alt); min-height: 280px;">
+                    <i class="fas fa-layer-group"
+                        style="font-size:5rem; color:var(--color-secondary); opacity:0.4;"></i>
+                </div>
+
+                <!-- Project Title block -->
+                <div class="project-title-block">
+                    <div class="project-tags">
+                        <span class="tag">SaaS</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">CRM</span>
+                    </div>
+                    <h1>SaaS Management Platform</h1>
+                    <p class="project-lead">Comprehensive Business Management with CRM, Invoicing & Project Tracking</p>
+                </div>
+
+                <!-- Content body -->
+                <div class="project-body">
+
+                    <p>A full-featured <strong>SaaS management platform</strong> that consolidates CRM, invoicing,
+                        project tracking, and team collaboration into a single unified workspace — built for growing
+                        businesses.</p>
+
+                    <h3>Overview</h3>
+                    <p>This platform replaces a fragmented tool stack with one cohesive solution. Teams can manage
+                        customer relationships, track project timelines, generate invoices, and collaborate — all from
+                        a single dashboard with 99.9% uptime SLA.</p>
+
+                    <h3>Key Features</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <strong>CRM & Pipeline</strong>
+                            Contact management, deal pipelines, and automated follow-up sequences.
+                        </div>
+                        <div class="feature-card">
+                            <strong>Project Tracking</strong>
+                            Kanban boards, Gantt charts, time tracking, and milestone management.
+                        </div>
+                        <div class="feature-card">
+                            <strong>Smart Invoicing</strong>
+                            Automated invoice generation, recurring billing, and payment gateway integration.
+                        </div>
+                        <div class="feature-card">
+                            <strong>Team Collaboration</strong>
+                            Shared inboxes, internal notes, task assignments, and real-time updates.
+                        </div>
+                        <div class="feature-card">
+                            <strong>Client Portal</strong>
+                            Branded self-service portal for clients to view invoices and project status.
+                        </div>
+                        <div class="feature-card">
+                            <strong>Reporting & Analytics</strong>
+                            Revenue reports, project profitability, and team productivity metrics.
+                        </div>
+                    </div>
+
+                    <h3>Tech Stack</h3>
+                    <div class="tech-stack-grid">
+                        <div class="tech-category">
+                            <h4>Frontend</h4>
+                            <p>React, TypeScript, Tailwind CSS, React Query, Zustand</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Backend</h4>
+                            <p>Node.js, Express, PostgreSQL, Prisma ORM</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Payments & Email</h4>
+                            <p>Stripe, SendGrid, Twilio (SMS notifications)</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Infrastructure</h4>
+                            <p>AWS, Docker, Nginx, GitHub Actions CI/CD</p>
+                        </div>
+                    </div>
+
+                    <h3>Architecture Highlights</h3>
+                    <ul class="highlights-list">
+                        <li><strong>500+ companies onboarded:</strong> Multi-tenant architecture with strict data
+                            isolation per account.</li>
+                        <li><strong>99.9% uptime SLA:</strong> Load-balanced deployment with automated failover and
+                            health monitoring.</li>
+                        <li><strong>Webhook-driven events:</strong> Real-time Stripe payment events trigger invoice
+                            status updates instantly.</li>
+                        <li><strong>Role-based access control:</strong> Admin, Manager, Member, and Read-only roles
+                            with granular permissions.</li>
+                    </ul>
+
+                    <div class="project-cta">
+                        <a href="../contact.html" class="m3-button filled large">
+                            <i class="fas fa-envelope"></i> Enquire About This Project
+                        </a>
+                        <a href="../portfolio.html" class="m3-button outlined large">
+                            <i class="fas fa-arrow-left"></i> Back to Portfolio
+                        </a>
+                    </div>
+
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+        <div class="footer-wrapper">
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul class="contact-list">
+                    <li>
+                        <a href="tel:+919997213595">
+                            <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                            +91-9997213595
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:artsyncindiallp@gmail.com">
+                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                            artsyncindiallp@gmail.com
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <p>&copy; 2025 ArtSync. All rights reserved. | <a href="#">Privacy Policy</a></p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
+
 </html>

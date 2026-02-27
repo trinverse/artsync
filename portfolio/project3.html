@@ -1,50 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 3 - ArtSync</title>
+    <title>Analytics Dashboard - ArtSync Portfolio</title>
+    <link rel="icon" href="../tab-icon-large.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=8">
 </head>
+
 <body>
     <header>
-        <h1><a href="../index.html" style="color: #fff; text-decoration: none;">ArtSync</a></h1>
-        <nav>
-            <ul>
-                <li><a href="../services.html">Services</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="../portfolio.html">Portfolio</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <a href="../index.html" class="logo" id="header-logo">
+                <img src="../artsync-logo.png" alt="ArtSync">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="../employees.html">Our Team</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../blog.html" class="nav-cta">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="project-details">
-            <h2>Project 3</h2>
-            <img src="https://via.placeholder.com/800x400" alt="Project 3">
-            <p>This is a detailed description of Project 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.</p>
-            <h3>Key Features</h3>
-            <ul>
-                <li>Feature 1</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
-            </ul>
-            <a href="#" class="cta-button">Visit Website</a>
+        <section id="project-detail-page">
+            <div class="container">
+
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb" aria-label="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="../portfolio.html">Portfolio</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Analytics Dashboard</span>
+                </nav>
+
+                <!-- Hero placeholder -->
+                <div class="project-hero-img" style="background: var(--color-bg-alt); min-height: 280px;">
+                    <i class="fas fa-chart-bar" style="font-size:5rem; color:var(--color-secondary); opacity:0.4;"></i>
+                </div>
+
+                <!-- Project Title block -->
+                <div class="project-title-block">
+                    <div class="project-tags">
+                        <span class="tag">Data Analytics</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Business Intelligence</span>
+                    </div>
+                    <h1>Analytics Dashboard</h1>
+                    <p class="project-lead">Real-time Business Intelligence with Predictive Analytics</p>
+                </div>
+
+                <!-- Content body -->
+                <div class="project-body">
+
+                    <p>A comprehensive <strong>business intelligence dashboard</strong> delivering real-time insights,
+                        predictive analytics, and automated reporting — helping businesses make data-driven decisions
+                        faster.</p>
+
+                    <h3>Overview</h3>
+                    <p>This platform aggregates data from multiple sources into a unified dashboard, applying machine
+                        learning models to surface trends, anomalies, and forecasts. Custom report generation and
+                        automated alerting keep teams informed without manual effort.</p>
+
+                    <h3>Key Features</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <strong>Real-Time Data Streaming</strong>
+                            Live updates from connected data sources with sub-second refresh rates.
+                        </div>
+                        <div class="feature-card">
+                            <strong>Predictive Analytics</strong>
+                            ML-powered forecasting for sales, inventory, and operational metrics.
+                        </div>
+                        <div class="feature-card">
+                            <strong>Custom Report Builder</strong>
+                            Drag-and-drop report creation with scheduled PDF/CSV export.
+                        </div>
+                        <div class="feature-card">
+                            <strong>Anomaly Detection</strong>
+                            Automated alerting when KPIs deviate from expected ranges.
+                        </div>
+                        <div class="feature-card">
+                            <strong>Multi-Source Integration</strong>
+                            Connects to SQL databases, REST APIs, Google Sheets, and more.
+                        </div>
+                        <div class="feature-card">
+                            <strong>Role-Based Access</strong>
+                            Team-level permissions with audit logs and data governance controls.
+                        </div>
+                    </div>
+
+                    <h3>Tech Stack</h3>
+                    <div class="tech-stack-grid">
+                        <div class="tech-category">
+                            <h4>Frontend</h4>
+                            <p>React, TypeScript, Recharts, D3.js, Tailwind CSS</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Backend</h4>
+                            <p>Python, FastAPI, Pandas, scikit-learn, PostgreSQL</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Data Pipeline</h4>
+                            <p>Apache Kafka, Redis, Celery, Apache Airflow</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Infrastructure</h4>
+                            <p>AWS (EC2, RDS, S3), Docker, GitHub Actions</p>
+                        </div>
+                    </div>
+
+                    <h3>Architecture Highlights</h3>
+                    <ul class="highlights-list">
+                        <li><strong>Event-driven architecture:</strong> Kafka streams for real-time ingestion from
+                            multiple data producers.</li>
+                        <li><strong>10TB+ data capacity:</strong> Partitioned PostgreSQL with time-series optimisation.
+                        </li>
+                        <li><strong>Automated ML pipelines:</strong> Airflow-orchestrated model training and deployment.
+                        </li>
+                        <li><strong>White-label ready:</strong> Fully customisable branding for enterprise clients.</li>
+                    </ul>
+
+                    <div class="project-cta">
+                        <a href="../contact.html" class="m3-button filled large">
+                            <i class="fas fa-envelope"></i> Enquire About This Project
+                        </a>
+                        <a href="../portfolio.html" class="m3-button outlined large">
+                            <i class="fas fa-arrow-left"></i> Back to Portfolio
+                        </a>
+                    </div>
+
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+        <div class="footer-wrapper">
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul class="contact-list">
+                    <li>
+                        <a href="tel:+919997213595">
+                            <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                            +91-9997213595
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:artsyncindiallp@gmail.com">
+                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                            artsyncindiallp@gmail.com
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <p>&copy; 2025 ArtSync. All rights reserved. | <a href="#">Privacy Policy</a></p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
+
 </html>
