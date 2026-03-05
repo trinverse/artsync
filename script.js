@@ -140,8 +140,8 @@ function createArtSyncLogo(options = {}) {
 
     const scriptElement = document.querySelector('script[src$="script.js"]');
     const logoSource = scriptElement
-        ? new URL('artsync-logo.png', scriptElement.src).href
-        : 'artsync-logo.png';
+        ? new URL('artsync_logo_final.png', scriptElement.src).href
+        : 'artsync_logo_final.png';
 
     const logoImage = document.createElement('img');
     logoImage.src = logoSource;
