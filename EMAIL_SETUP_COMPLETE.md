@@ -4,7 +4,7 @@
 
 ### Email Service: Web3Forms
 - **Access Key:** 62c60694-167b-4fa3-98ea-a50b56889b4d
-- **Recipient:** artsyncindiallp@gmail.com
+- **Recipient:** artsyncindiallp@artsync.live
 - **Status:** Fully functional and tested
 
 ### Forms Configured:

@@ -12,7 +12,7 @@
 
 ### Step 1: Get Your Access Key
 1. Go to https://web3forms.com
-2. Enter your email: **artsyncindiallp@gmail.com**
+2. Enter your email: **artsyncindiallp@artsync.live**
 3. Click "Get Access Key"
 4. Check your email and click the verification link
 5. Copy the Access Key (looks like: `a1b2c3d4-e5f6-7890-abcd-ef1234567890`)
@@ -35,14 +35,14 @@ formData.append('access_key', 'YOUR_ACCESS_KEY'); // Replace with your actual ke
 ## How It Works
 1. User fills out the form
 2. Form data is sent to Web3Forms API
-3. Web3Forms sends email to artsyncindiallp@gmail.com
+3. Web3Forms sends email to artsyncindiallp@artsync.live
 4. User sees success message, no redirect
 
 ## Test Your Forms
 1. Open your website
 2. Fill out a contact form
 3. Submit it
-4. Check artsyncindiallp@gmail.com for the email
+4. Check artsyncindiallp@artsync.live for the email
 
 ## Advanced Features (Optional)
 
