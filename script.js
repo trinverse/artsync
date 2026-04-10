@@ -1,25 +1,14 @@
-// Theme Toggle Functionality
+/**
+ * ArtSync Interactive Logic
+ * Handles theme switching, mobile navigation, and UI interactions.
+ */
+
+// --- Theme Management ---
 function initTheme() {
-    // Check for system theme preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-
-    // Check for saved theme preference, or use system preference
-    const savedTheme = localStorage.getItem('theme');
-    const systemTheme = prefersDarkScheme.matches ? 'dark' : 'light';
-    const theme = savedTheme || systemTheme;
-
-    document.documentElement.setAttribute('data-theme', theme);
-
-    // Listen for system theme changes
-    prefersDarkScheme.addEventListener('change', (e) => {
-        if (!localStorage.getItem('theme')) {
-            // Only update if user hasn't manually set a preference
-            const newTheme = e.matches ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', newTheme);
-        }
-    });
-
-    // Update body class for smooth transition after initial load
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    // Add transition class after initial load to prevent flash
     setTimeout(() => {
         document.body.classList.add('theme-transition');
     }, 100);
@@ -28,232 +17,114 @@ function initTheme() {
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
+    
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
-
-    // Trigger animation on toggle button
-    const toggleBtn = document.querySelector('.theme-toggle');
-    if (toggleBtn) {
-        toggleBtn.style.transform = 'rotate(360deg)';
-        setTimeout(() => {
-            toggleBtn.style.transform = '';
-        }, 300);
-    }
 }
 
-// Initialize theme on page load
-initTheme();
-
+// --- Initialize ---
 document.addEventListener('DOMContentLoaded', () => {
-    const toggleBtns = document.querySelectorAll('.theme-toggle');
-    toggleBtns.forEach(btn => btn.addEventListener('click', toggleTheme));
-});
+    initTheme();
+    
+    // Theme toggle buttons
+    const toggles = document.querySelectorAll('.theme-toggle');
+    toggles.forEach(btn => {
+        btn.addEventListener('click', toggleTheme);
+    });
 
-// ArtSync Logo Component
-function trimTransparentPadding(imageElement) {
-    const handleImageLoad = () => {
-        if (imageElement.dataset.trimmed === 'true') {
-            imageElement.removeEventListener('load', handleImageLoad);
-            return;
-        }
-
-        const sourceWidth = imageElement.naturalWidth;
-        const sourceHeight = imageElement.naturalHeight;
-
-        if (!sourceWidth || !sourceHeight) {
-            return;
-        }
-
-        const canvas = document.createElement('canvas');
-        canvas.width = sourceWidth;
-        canvas.height = sourceHeight;
-
-        const context = canvas.getContext('2d');
-        if (!context) {
-            return;
-        }
-
-        context.drawImage(imageElement, 0, 0);
-        const imageData = context.getImageData(0, 0, sourceWidth, sourceHeight);
-        const pixels = imageData.data;
-
-        let minX = sourceWidth;
-        let minY = sourceHeight;
-        let maxX = 0;
-        let maxY = 0;
-        let hasVisiblePixels = false;
-
-        for (let y = 0; y < sourceHeight; y++) {
-            for (let x = 0; x < sourceWidth; x++) {
-                const alpha = pixels[(y * sourceWidth + x) * 4 + 3];
-                if (alpha > 0) {
-                    hasVisiblePixels = true;
-                    if (x < minX) minX = x;
-                    if (y < minY) minY = y;
-                    if (x > maxX) maxX = x;
-                    if (y > maxY) maxY = y;
-                }
-            }
-        }
-
-        if (!hasVisiblePixels) {
-            return;
-        }
-
-        const trimmedWidth = maxX - minX + 1;
-        const trimmedHeight = maxY - minY + 1;
-
-        const trimmedCanvas = document.createElement('canvas');
-        trimmedCanvas.width = trimmedWidth;
-        trimmedCanvas.height = trimmedHeight;
-
-        const trimmedContext = trimmedCanvas.getContext('2d');
-        if (!trimmedContext) {
-            return;
-        }
-
-        trimmedContext.putImageData(context.getImageData(minX, minY, trimmedWidth, trimmedHeight), 0, 0);
-
-        imageElement.dataset.trimmed = 'true';
-        imageElement.src = trimmedCanvas.toDataURL('image/png');
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     };
 
-    imageElement.addEventListener('load', handleImageLoad);
-    if (imageElement.complete && imageElement.naturalWidth > 0) {
-        handleImageLoad();
-    }
-}
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
 
-function createArtSyncLogo(options = {}) {
-    const {
-        size = 40,
-        showText = true,
-        className = 'artsync-logo'
-    } = options;
+    document.querySelectorAll('.glass-card, section h1, section h2').forEach(el => {
+        el.classList.add('reveal-on-scroll');
+        observer.observe(el);
+    });
 
-    const logoContainer = document.createElement('div');
-    logoContainer.className = className;
-    logoContainer.style.display = 'inline-flex';
-    logoContainer.style.alignItems = 'center';
-    logoContainer.style.gap = '8px';
-
-    const scriptElement = document.querySelector('script[src$="script.js"]');
-    const logoSource = scriptElement
-        ? new URL('artsync_logo_final.png', scriptElement.src).href
-        : 'artsync_logo_final.png';
-
-    const logoImage = document.createElement('img');
-    logoImage.src = logoSource;
-    logoImage.alt = 'ArtSync';
-    logoImage.className = 'artsync-logo-image';
-    logoImage.style.height = `${size}px`;
-    logoImage.style.width = 'auto';
-    logoImage.style.display = 'block';
-
-    trimTransparentPadding(logoImage);
-
-    logoContainer.appendChild(logoImage);
-
-    if (!showText) {
-        logoImage.alt = 'ArtSync logo';
-    }
-
-    return logoContainer;
-}
-
-// Initialize logos when page loads
-document.addEventListener('DOMContentLoaded', function () {
-    // Aggressive cleanup of any logos in hero section
-    const heroSection = document.getElementById('hero');
-    if (heroSection) {
-        const heroLogo = heroSection.querySelector('.hero-graphic-logo');
-        if (heroLogo) {
-            trimTransparentPadding(heroLogo);
-        }
-
-        // Remove any existing logos
-        const allLogos = heroSection.querySelectorAll('.artsync-logo, .hero-logo-container, [class*="logo"]');
-        allLogos.forEach(element => {
-            // Don't remove the word "logo" from text content, only actual logo elements
-            if (element.querySelector('svg') || element.id?.includes('logo')) {
-                element.remove();
+    // Scroll-to-top button logic
+    const scrollTopBtn = document.getElementById('scroll-top');
+    if (scrollTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
             }
         });
 
-        // Prevent any future logos from being added to hero
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                mutation.addedNodes.forEach((node) => {
-                    if (node.nodeType === 1) { // Element node
-                        if (node.classList?.contains('artsync-logo') ||
-                            node.classList?.contains('hero-logo-container') ||
-                            node.id?.includes('logo')) {
-                            node.remove();
-                        }
-                    }
-                });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
-
-        observer.observe(heroSection, { childList: true, subtree: true });
-    }
-
-    // Replace header logo
-    const headerLogo = document.getElementById('header-logo');
-    if (headerLogo) {
-        const logo = createArtSyncLogo({
-            size: 44,
-            showText: true,
-            className: 'artsync-logo header-logo'
-        });
-        headerLogo.innerHTML = '';
-        headerLogo.appendChild(logo);
-    }
-
-    // Add logo to footer
-    const footerLogo = document.getElementById('footer-logo');
-    if (footerLogo) {
-        const logo = createArtSyncLogo({
-            size: 32,
-            showText: true,
-            className: 'artsync-logo footer-logo',
-            primaryColor: '#0D0D0D'
-        });
-        footerLogo.innerHTML = '';
-        footerLogo.appendChild(logo);
     }
 });
 
-// Notification function for form submissions
+// --- Notifications ---
 window.showNotification = function (message, type = 'success') {
-    // Remove any existing notifications
-    const existingNotification = document.querySelector('.notification');
-    if (existingNotification) {
-        existingNotification.remove();
-    }
-
-    // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
+    notification.style.cssText = `
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        background: var(--glass-bg);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--color-border);
+        box-shadow: var(--shadow-lg);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        animation: slideIn 0.3s ease-out;
+    `;
+    
     notification.innerHTML = `
-        <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
-        <span>${message}</span>
-        <button onclick="this.parentElement.remove()" class="notification-close">
-            <i class="fas fa-times"></i>
-        </button>
+        <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}" style="color: var(--color-primary);"></i>
+        <span style="font-weight: 500;">${message}</span>
     `;
 
-    // Add to page
     document.body.appendChild(notification);
 
-    // Auto remove after 5 seconds
     setTimeout(() => {
-        if (notification.parentNode) {
-            notification.remove();
-        }
-    }, 5000);
-}
+        notification.style.animation = 'fadeOut 0.3s ease-in';
+        setTimeout(() => notification.remove(), 300);
+    }, 4000);
+};
 
-
-
+// Add necessary animations to CSS via JS if missing
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+    .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+`;
+document.head.appendChild(style);

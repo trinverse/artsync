@@ -4,40 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtSync - Software, Data, and IT Support</title>
+    <title>ArtSync - Engineering Business Excellence</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="favicon-32.png">
-    <meta name="description"
-        content="ArtSync provides top-tier software development, data entry, and IT support services to help your business thrive.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=10">
+    <link rel="stylesheet" href="style.css?v=16">
 </head>
 
-<body>
-
+<body class="theme-transition">
     <script>
-        // Initialize theme immediately
         (function () {
-            const savedTheme = localStorage.getItem('theme') || 'light';
+            const savedTheme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', savedTheme);
         })();
     </script>
+
     <header>
         <div class="container">
             <a href="index.html" class="logo" id="header-logo"><img src="artsync_logo_final.png" alt="ArtSync Logo"></a>
             <nav>
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="portfolio.html">Showcase</a></li>
                     <li><a href="employees.html">Our Team</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li class="nav-theme-toggle">
-                        <button class="theme-toggle" aria-label="Toggle theme">
+                    <li><a href="contact.html" class="nav-cta">Work with us</a></li>
+                    <li>
+                        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
                             <i class="fas fa-sun"></i>
                             <i class="fas fa-moon"></i>
                         </button>
@@ -50,299 +47,303 @@
     <main>
         <section id="hero">
             <div class="container">
-                <div class="hero-grid">
-                    <div class="hero-content">
-                        <h1 class="hero-title">Your Partner in Digital Excellence</h1>
-                        <p class="hero-subtitle">We provide top-tier software development, data entry, and IT support
-                            services to help your business thrive in the digital age.</p>
-                        <div class="hero-actions">
-                            <a href="#contact" class="m3-button filled large">Get Started</a>
-                            <a href="#services" class="m3-button outlined large">Learn More</a>
-                        </div>
+                <div class="badge">Innovation at Scale</div>
+                <h1 class="hero-title">We Build <span class="gradient-text">Intelligent Systems</span></h1>
+                <p>From production-grade AI systems to high-performance cloud architectures—we turn engineering
+                    ambitions into shipped products.</p>
+                <div class="hero-actions">
+                    <a href="portfolio.html" class="btn btn-primary">Explore Our Work</a>
+                    <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT WE BUILD -->
+        <section id="what-we-build">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">CAPABILITIES</div>
+                    <h2>What We Build</h2>
+                </div>
+                <div class="grid grid-3">
+                    <div class="glass-card">
+                        <div style="font-size: 2rem; color: var(--color-primary); margin-bottom: 1.5rem;"><i
+                                class="fas fa-layer-group"></i></div>
+                        <h3>RAG Systems</h3>
+                        <p>Production retrieval-augmented generation pipelines with vector stores, embedding strategies,
+                            and context-aware retrieval.</p>
                     </div>
-                    <div class="hero-visual">
-                        <div class="hero-shapes">
-                            <div class="shape shape-1"></div>
-                            <div class="shape shape-2"></div>
-                            <div class="shape shape-3"></div>
-                        </div>
-                        <div class="hero-graphic">
-                            <img src="artsync_logo_final.png" alt="ArtSync" class="hero-graphic-logo">
-                        </div>
+                    <div class="glass-card">
+                        <div style="font-size: 2rem; color: var(--color-primary); margin-bottom: 1.5rem;"><i
+                                class="fas fa-flask"></i></div>
+                        <h3>Model Training & Fine-tuning</h3>
+                        <p>Custom model training, LoRA fine-tuning, and domain-specific model adaptation for your unique
+                            data.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div style="font-size: 2rem; color: var(--color-primary); margin-bottom: 1.5rem;"><i
+                                class="fas fa-comment-dots"></i></div>
+                        <h3>Context Engineering</h3>
+                        <p>Structured prompt design, context window optimization, and systematic approaches to getting
+                            the best from LLMs.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div style="font-size: 2rem; color: var(--color-primary); margin-bottom: 1.5rem;"><i
+                                class="fas fa-robot"></i></div>
+                        <h3>AI Agents</h3>
+                        <p>Autonomous AI agents with tool use, multi-step reasoning, and production-grade orchestration
+                            frameworks.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div style="font-size: 2rem; color: var(--color-primary); margin-bottom: 1.5rem;"><i
+                                class="fas fa-th-large"></i></div>
+                        <h3>Data Pipelines & Prep</h3>
+                        <p>End-to-end data preparation, cleaning, labeling, and ETL pipelines purpose-built for ML
+                            workloads.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div style="font-size: 2rem; color: var(--color-primary); margin-bottom: 1.5rem;"><i
+                                class="fas fa-cloud-upload-alt"></i></div>
+                        <h3>MLOps & Deployment</h3>
+                        <p>Model serving, monitoring, A/B testing, and continuous deployment infrastructure for AI
+                            systems.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="services">
+        <!-- HOW WE WORK -->
+        <section id="how-we-work" style="background: var(--color-bg-alt);">
             <div class="container">
-                <h2>Our Services</h2>
-                <div class="services-grid">
-                    <div class="m3-card service-card">
-                        <div class="icon"><i class="fas fa-code"></i></div>
-                        <h4>Software Development</h4>
-                        <p>From custom applications to enterprise solutions, we build software that solves your unique
-                            challenges.</p>
+                <div class="section-header">
+                    <div class="badge">PROCESS</div>
+                    <h2>How We Work</h2>
+                </div>
+                <div class="grid grid-4">
+                    <div class="glass-card">
+                        <div class="process-number">01</div>
+                        <h3>Data Prep</h3>
+                        <p>We audit, clean, and structure your data for ML readiness.</p>
                     </div>
-                    <div class="m3-card service-card">
-                        <div class="icon"><i class="fas fa-keyboard"></i></div>
-                        <h4>Data Entry</h4>
-                        <p>Accurate and efficient data entry services to keep your information organized and accessible.
-                        </p>
+                    <div class="glass-card">
+                        <div class="process-number">02</div>
+                        <h3>Build & Train</h3>
+                        <p>Model selection, training, fine-tuning, and rigorous evaluation.</p>
                     </div>
-                    <div class="m3-card service-card">
-                        <div class="icon"><i class="fas fa-headset"></i></div>
-                        <h4>IT Support</h4>
-                        <p>Reliable IT support to ensure your systems are always running smoothly.</p>
+                    <div class="glass-card">
+                        <div class="process-number">03</div>
+                        <h3>Deploy</h3>
+                        <p>Production deployment with monitoring, scaling, and reliability.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="process-number">04</div>
+                        <h3>Iterate</h3>
+                        <p>Continuous improvement based on real-world performance data.</p>
+                    </div>
+                </div>
+
+                <div class="stats-strip">
+                    <div class="stat-item">
+                        <span class="stat-number">7+</span>
+                        <span class="stat-label">AI ENGINEERS</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">COUNTRIES</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">PRODUCTION-GRADE</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">GLOBAL COVERAGE</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="portfolio">
+        <!-- OUR PARTNERS -->
+        <section id="our-partners">
             <div class="container">
-                <h2>Our Work</h2>
-                <div class="grid-layout">
-                    <div class="grid-item">
-                        <a href="portfolio/project1.html" class="m3-card home-portfolio-card">
-                            <div class="home-portfolio-img">
-                                <img src="clout.png" alt="Clout Aesthetics">
-                            </div>
-                            <div class="home-portfolio-info">
-                                <div class="home-portfolio-tags">
-                                    <span>SaaS</span><span>AI/ML</span>
-                                </div>
-                                <h4>Clout Aesthetics</h4>
-                                <p>Full-stack reputation management platform with AI-powered sentiment analysis.</p>
-                            </div>
-                        </a>
+                <div class="section-header">
+                    <div class="badge">COLLABORATION</div>
+                    <h2>Our Partners</h2>
+                    <p style="margin-top: 1rem;">Collaborating with industry leaders to deliver exceptional AI solutions
+                    </p>
+                </div>
+                <div class="grid grid-2">
+                    <div class="glass-card" style="display: flex; gap: 2rem; align-items: start;">
+                        <div
+                            style="width: 64px; height: 64px; background: rgba(124, 58, 237, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--color-primary);">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <div>
+                            <h3>ArtSync - Digital Excellence</h3>
+                            <p style="margin: 1rem 0 2rem;">Your partner in digital excellence, providing top-tier
+                                software development, data entry, and IT support services. ArtSync specializes in custom
+                                applications and enterprise solutions.</p>
+                            <a href="#" class="btn btn-primary"
+                                style="padding: 0.6rem 1.2rem; font-size: 0.875rem;">Visit ArtSync →</a>
+                        </div>
                     </div>
-                    <div class="grid-item">
-                        <a href="portfolio/project2.html" class="m3-card home-portfolio-card">
-                            <div class="home-portfolio-img">
-                                <img src="rdactd.png" alt="RDACTD">
-                            </div>
-                            <div class="home-portfolio-info">
-                                <div class="home-portfolio-tags">
-                                    <span>Mobile App</span><span>Flutter</span>
-                                </div>
-                                <h4>RDACTD</h4>
-                                <p>Anonymous complaint submission and business accountability platform.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="grid-item">
-                        <a href="portfolio.html" class="m3-card home-portfolio-card">
-                            <div class="home-portfolio-img home-portfolio-img--placeholder">
-                                <i class="fas fa-chart-bar"></i>
-                            </div>
-                            <div class="home-portfolio-info">
-                                <div class="home-portfolio-tags">
-                                    <span>Data Analytics</span><span>Python</span>
-                                </div>
-                                <h4>Analytics Dashboard</h4>
-                                <p>Real-time business intelligence dashboard with predictive analytics.</p>
-                            </div>
-                        </a>
+                    <div class="glass-card" style="display: flex; gap: 2rem; align-items: start;">
+                        <div
+                            style="width: 64px; height: 64px; background: rgba(124, 58, 237, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--color-primary);">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <div>
+                            <h3>Corshift - UX Excellence</h3>
+                            <p style="margin: 1rem 0 2rem;">Specializing in user experience design and research,
+                                Corshift delivers intuitive, user-centered solutions that transform digital products and
+                                drive business success.</p>
+                            <a href="#" class="btn btn-primary"
+                                style="padding: 0.6rem 1.2rem; font-size: 0.875rem;">Visit Corshift →</a>
+                        </div>
                     </div>
                 </div>
-                <div style="text-align:center; margin-top:2rem;">
-                    <a href="portfolio.html" class="m3-button outlined">View All Projects</a>
-                </div>
-            </div>
-        </section>
 
-
-        <section id="team">
-            <div class="container">
-                <h2>Our Team</h2>
-                <div class="grid-layout">
-                    <div class="grid-item">
-                        <div class="m3-card">
-                            <img src="ashish.jpg" alt="Ashish Tyagi - CEO" class="team-img-ashish">
-                            <h4>Ashish Tyagi</h4>
-                            <p>CEO</p>
-                        </div>
+                <div class="grid grid-3" style="margin-top: 4rem; text-align: center;">
+                    <div>
+                        <div style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 1rem;"><i
+                                class="fas fa-hands-helping"></i></div>
+                        <h4 style="margin-bottom: 0.5rem;">Complementary Services</h4>
+                        <p style="font-size: 0.9375rem;">Our partnerships extend our AI capabilities across software
+                            development and design.</p>
                     </div>
-                    <div class="grid-item">
-                        <div class="m3-card">
-                            <img src="aditya_new.jpeg" alt="Aditya Tyagi - Lead Developer">
-                            <h4>Aditya Tyagi</h4>
-                            <p>Lead Developer</p>
-                        </div>
+                    <div>
+                        <div style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 1rem;"><i
+                                class="fas fa-chart-line"></i></div>
+                        <h4 style="margin-bottom: 0.5rem;">Enhanced Solutions</h4>
+                        <p style="font-size: 0.9375rem;">Together we deliver comprehensive AI-powered solutions that
+                            combine innovation and reliability.</p>
                     </div>
-                    <div class="grid-item">
-                        <div class="m3-card">
-                            <img src="ujjawal_new.jpeg" alt="Ujjawal Tyagi - Developer">
-                            <h4>Ujjawal Tyagi</h4>
-                            <p>Developer</p>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="m3-card">
-                            <img src="abhinav.jpeg" alt="Abhinav - AI Developer">
-                            <h4>Abhinav</h4>
-                            <p>AI Developer</p>
-                        </div>
+                    <div>
+                        <div style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 1rem;"><i
+                                class="fas fa-eye"></i></div>
+                        <h4 style="margin-bottom: 0.5rem;">Shared Vision</h4>
+                        <p style="font-size: 0.9375rem;">All partner companies share a commitment to empowering
+                            businesses with AI systems.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="partners">
+        <!-- ABOUT & GET IN TOUCH -->
+        <section id="bottom-section" style="background: var(--color-bg-alt); padding-bottom: 0;">
             <div class="container">
-                <h2>Our Partners</h2>
-                <p class="subtitle">We collaborate with industry leaders to deliver exceptional solutions</p>
-                <div class="partners-grid">
-                    <a href="https://trinly.us" target="_blank" rel="noopener noreferrer"
-                        class="partner-card glass-card">
-                        <div class="partner-logo">
-                            <!-- Add Trinly logo here -->
-                            <div class="logo-placeholder">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                        </div>
-                        <div class="partner-content">
-                            <h3>Trinly</h3>
-                            <p>Strategic technology partner</p>
-                            <span class="partner-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Visit trinly.us
-                            </span>
-                        </div>
-                    </a>
-                    <a href="https://corshift.com" target="_blank" rel="noopener noreferrer"
-                        class="partner-card glass-card">
-                        <div class="partner-logo">
-                            <!-- Add Corshift logo here -->
-                            <div class="logo-placeholder">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                        </div>
-                        <div class="partner-content">
-                            <h3>Corshift</h3>
-                            <p>Innovation and digital transformation</p>
-                            <span class="partner-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Visit corshift.com
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <h2>Get in Touch</h2>
-                <div class="contact-grid">
-                    <div class="about-column">
-                        <div class="glass-card">
-                            <h3>About Us</h3>
-                            <p>ArtSync is a team of passionate and experienced professionals dedicated to providing the
-                                best possible solutions for our clients.</p>
-                            <p>We believe in building long-term partnerships based on trust and mutual success. Our
-                                mission is to empower businesses with technology and innovation.</p>
-                            <div class="company-info">
-                                <div class="info-item">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>311/4 Jagrati Vihar, Meerut University, Meerut, UP 250004</span>
-                                </div>
-                                <div class="info-item">
-                                    <i class="fas fa-phone"></i>
-                                    <span>+91-9650076779</span>
-                                </div>
-                                <div class="info-item">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>artsyncindiallp@artsync.live</span>
-                                </div>
-                            </div>
-                        </div>
+                <div class="footer-main-grid">
+                    <div class="about-text">
+                        <h2 style="margin-bottom: 2rem;">About ArtSync</h2>
+                        <p>ArtSync was founded on the belief that the future is built on data and intelligence. Based in
+                            India, we have grown from a small team of engineers into a multi-disciplinary technology
+                            firm specializing in AI-first digital products.</p>
+                        <p>Our approach combines deep technical expertise in machine learning and cloud architecture
+                            with a relentless focus on business impact. We don't just build models; we build systems
+                            that solve real problems.</p>
+                        <p>Today, ArtSync serves clients globally, from high-growth startups to established enterprises,
+                            helping them navigate the complexity of the AI era with confidence and clarity.</p>
+                        <p>We are a team of lifelong learners and problem solvers, committed to pushing the boundaries
+                            of what's possible with code and community.</p>
                     </div>
-                    <div class="contact-column">
-                        <div class="glass-card">
-                            <h3>Contact Us</h3>
-                            <p>Ready to get started? Send us a message and we'll get back to you within 24 hours.</p>
-                            <form id="contact-form">
-                                <div class="form-field">
-                                    <input type="text" name="name" placeholder="Your Name" required>
-                                </div>
-                                <div class="form-field">
-                                    <input type="email" name="email" placeholder="Your Email" required>
-                                </div>
-                                <div class="form-field">
-                                    <textarea name="message" placeholder="Your Message" required rows="5"></textarea>
-                                </div>
-                                <button type="submit" class="m3-button filled large">Send Message</button>
-                            </form>
-                        </div>
+                    <div class="contact-form-area">
+                        <h2 style="margin-bottom: 2.rem;">Get in Touch</h2>
+                        <form id="contact-page-form"
+                            style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem;">
+                            <input type="hidden" name="access_key" value="62c60694-167b-4fa3-98ea-a50b56889b4d">
+                            <div class="form-field">
+                                <label
+                                    style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Your
+                                    Name</label>
+                                <input type="text" name="name" required
+                                    style="width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg); color: var(--color-text-main); outline: none;">
+                            </div>
+                            <div class="form-field">
+                                <label
+                                    style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Email
+                                    Address</label>
+                                <input type="email" name="email" required
+                                    style="width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg); color: var(--color-text-main); outline: none;">
+                            </div>
+                            <div class="form-field">
+                                <label
+                                    style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Project
+                                    Details</label>
+                                <textarea name="message" required rows="4"
+                                    style="width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg); color: var(--color-text-main); outline: none; resize: none;"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; border: none;">Send
+                                Message</button>
+                            <div style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-muted);">
+                                <p style="margin-bottom: 0.5rem;"><i class="fas fa-phone"
+                                        style="margin-right: 0.5rem;"></i> +91-9650076779</p>
+                                <p><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
+                                    artsyncindiallp@artsync.live</p>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-center">
-            <div class="social-links">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-cta">
+                <a href="contact.html" class="btn btn-primary footer-cta-btn">Send Message</a>
+                <div class="footer-contact-info">
+                    <p><i class="fas fa-phone"></i> +91-9650076779</p>
+                    <p><i class="fas fa-envelope"></i> artsyncindiallp@artsync.live</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2025 ArtSync India LLP. All Rights Reserved.
+                </div>
+                <div class="footer-slogan">
+                    AI-First Technology Solutions
+                </div>
             </div>
         </div>
-        <div class="footer-right">
-            <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved. | <a href="#">Privacy Policy</a></p>
-        </div>
+        <button id="scroll-top" class="scroll-top" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=3"></script>
     <script>
-        // Handle form submission with Web3Forms
-        document.getElementById('contact-form').addEventListener('submit', async function (e) {
+        document.getElementById('contact-page-form').addEventListener('submit', async function (e) {
             e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Transmitting...';
+            btn.disabled = true;
 
-            const form = this;
-            const submitButton = form.querySelector('button[type="submit"]');
-            const originalText = submitButton.innerHTML;
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitButton.disabled = true;
-
-            // Prepare form data for Web3Forms
-            const formData = new FormData();
-            formData.append('access_key', '62c60694-167b-4fa3-98ea-a50b56889b4d');
-            formData.append('name', this.name.value);
-            formData.append('email', this.email.value);
-            formData.append('message', this.message.value);
-            formData.append('subject', 'New Contact Form Submission from ArtSync');
+            const formData = new FormData(this);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
 
             try {
                 const response = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
-                    body: formData
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
                 });
-
-                const data = await response.json();
-
-                if (data.success) {
-                    if (typeof showNotification === 'function') {
-                        showNotification('Thank you for your message! We will get back to you within 24 hours.', 'success');
-                    } else {
-                        alert('Thank you for your message! We will get back to you within 24 hours.');
-                    }
-                    form.reset();
+                const result = await response.json();
+                if (response.status === 200) {
+                    alert('Thank you! We have received your message.');
+                    this.reset();
                 } else {
-                    throw new Error(data.message || 'Form submission failed');
+                    alert('Something went wrong. Please try again.');
                 }
             } catch (error) {
-                console.error('Form submission error:', error);
-                if (typeof showNotification === 'function') {
-                    showNotification('Sorry, there was an error sending your message. Please try again.', 'error');
-                } else {
-                    alert('Sorry, there was an error sending your message. Please try again.');
-                }
+                alert('Transmission error. Check your connection.');
             } finally {
-                submitButton.innerHTML = originalText;
-                submitButton.disabled = false;
+                btn.innerText = originalText;
+                btn.disabled = false;
             }
         });
     </script>

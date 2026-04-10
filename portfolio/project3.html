@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../style.css?v=10">
+    <link rel="stylesheet" href="../style.css?v=16">
 </head>
 
 <body>
@@ -23,24 +23,22 @@
     </script>
     <header>
         <div class="container">
-            <a href="../index.html" class="logo" id="header-logo">
-                <img src="../artsync_logo_final.png" alt="ArtSync">
-            </a>
+            <a href="../index.html" class="logo" id="header-logo"><img src="../artsync_logo_final.png" alt="ArtSync Logo"></a>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
                     <li><a href="../services.html">Services</a></li>
-                    <li><a href="../portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="../portfolio.html" class="active">Showcase</a></li>
                     <li><a href="../employees.html">Our Team</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                    <li class="nav-theme-toggle">
-                        <button class="theme-toggle" aria-label="Toggle theme">
+                    <li><a href="../contact.html" class="nav-cta">Work with us</a></li>
+                    <li>
+                        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
                             <i class="fas fa-sun"></i>
                             <i class="fas fa-moon"></i>
                         </button>
                     </li>
                 </ul>
-            </ul>
             </nav>
         </div>
     </header>
@@ -159,29 +157,27 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer-wrapper">
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <ul class="contact-list">
-                    <li>
-                        <a href="tel:+919650076779">
-                            <span class="contact-icon"><i class="fas fa-phone"></i></span>
-                            +91-9650076779
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:artsyncindiallp@artsync.live">
-                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
-                            artsyncindiallp@artsync.live
-                        </a>
-                    </li>
-                </ul>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-cta">
+                <a href="../contact.html" class="btn btn-primary footer-cta-btn">Send Message</a>
+                <div class="footer-contact-info">
+                    <p><i class="fas fa-phone"></i> +91-9650076779</p>
+                    <p><i class="fas fa-envelope"></i> artsyncindiallp@artsync.live</p>
+                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved.</p>
+                <div class="footer-copyright">
+                    &copy; 2025 ArtSync India LLP. All Rights Reserved.
+                </div>
+                <div class="footer-slogan">
+                    AI-First Technology Solutions
+                </div>
             </div>
         </div>
+        <button id="scroll-top" class="scroll-top" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
     </footer>
 
     <script src="../script.js"></script>
