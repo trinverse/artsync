@@ -4,21 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - ArtSync</title>
-    <link rel="icon" href="tab-icon-large.png" type="image/png">
-    <link rel="apple-touch-icon" href="tab-icon-large.png">
+    <title>Contact - ArtSync</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=10">
+    <link rel="stylesheet" href="style.css?v=16">
 </head>
 
 <body>
     <script>
-        // Initialize theme immediately
         (function () {
-            const savedTheme = localStorage.getItem('theme') || 'light';
+            const savedTheme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', savedTheme);
         })();
     </script>
@@ -29,12 +28,13 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="portfolio.html">Showcase</a></li>
                     <li><a href="employees.html">Our Team</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                    <li class="nav-theme-toggle">
-                        <button class="theme-toggle" aria-label="Toggle theme">
+                    <li><a href="contact.html" class="nav-cta active">Work with us</a></li>
+                    <li>
+                        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
                             <i class="fas fa-sun"></i>
                             <i class="fas fa-moon"></i>
                         </button>
@@ -45,380 +45,179 @@
     </header>
 
     <main>
-        <section id="contact-page">
-            <div class="container">
-                <div class="contact-header">
-                    <h1>Get in Touch</h1>
-                    <p class="subtitle">We're here to help bring your vision to life</p>
-                </div>
-
-                <div class="contact-info-grid">
-                    <div class="contact-card glass-card">
-                        <div class="contact-icon-large">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h2>Visit Our Office</h2>
-                        <p class="contact-description">Our headquarters is located near Meerut University in Uttar
-                            Pradesh, India.</p>
-
-                        <div class="contact-details">
-                            <div class="detail-item">
-                                <i class="fas fa-building"></i>
-                                <div>
-                                    <h4>Main Office</h4>
-                                    <p>ARTSYNC INDIA LLP<br>311/4 Jagrati Vihar<br>Meerut University<br>Meerut, Uttar
-                                        Pradesh, India<br>PIN - 250004</p>
-                                </div>
-                            </div>
-                            <div class="detail-item">
-                                <i class="fas fa-parking"></i>
-                                <div>
-                                    <h4>Parking</h4>
-                                    <p>Visitor parking available<br>Near University campus</p>
-                                </div>
-                            </div>
-                            <div class="detail-item">
-                                <i class="fas fa-bus"></i>
-                                <div>
-                                    <h4>Public Transit</h4>
-                                    <p>Local buses available<br>Auto-rickshaw accessible</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <a href="https://maps.google.com" target="_blank" class="m3-button filled large">Get
-                            Directions</a>
-                    </div>
-
-                    <div class="contact-card glass-card">
-                        <div class="contact-icon-large">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <h2>Call or Email</h2>
-                        <p class="contact-description">Reach out to our team directly for immediate assistance with your
-                            inquiries.</p>
-
-                        <div class="contact-details">
-                            <div class="detail-item">
-                                <i class="fas fa-phone"></i>
-                                <div>
-                                    <h4>Sales Department</h4>
-                                    <p><a href="tel:+919650076779">+91-9650076779</a></p>
-                                </div>
-                            </div>
-                            <div class="detail-item">
-                                <i class="fas fa-headset"></i>
-                                <div>
-                                    <h4>Support Hotline</h4>
-                                    <p><a href="tel:+919650076779">+91-9650076779</a></p>
-                                </div>
-                            </div>
-                            <div class="detail-item">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <h4>Email Inquiries</h4>
-                                    <p><a href="mailto:artsyncindiallp@artsync.live">artsyncindiallp@artsync.live</a></p>
-                                </div>
-                            </div>
-                            <div class="detail-item">
-                                <i class="fas fa-fax"></i>
-                                <div>
-                                    <h4>Fax</h4>
-                                    <p>+91-9650076779</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <a href="tel:+919650076779" class="m3-button filled large">Call Now</a>
-                    </div>
-
-                    <div class="contact-card glass-card">
-                        <div class="contact-icon-large">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h2>Business Hours</h2>
-                        <p class="contact-description">We're available to assist you during our regular business hours
-                            and offer 24/7 support.</p>
-
-                        <div class="contact-details">
-                            <div class="detail-item">
-                                <i class="fas fa-briefcase"></i>
-                                <div>
-                                    <h4>Weekdays</h4>
-                                    <p>Monday - Friday<br>9:00 AM - 6:00 PM IST</p>
-                                </div>
-                            </div>
-                            <div class="detail-item">
-                                <i class="fas fa-calendar-week"></i>
-                                <div>
-                                    <h4>Weekends</h4>
-                                    <p>Saturday: 10:00 AM - 4:00 PM IST<br>Sunday: Closed</p>
-                                </div>
-                            </div>
-                            <div class="detail-item">
-                                <i class="fas fa-globe"></i>
-                                <div>
-                                    <h4>Time Zone</h4>
-                                    <p>Indian Standard Time (IST)<br>UTC+5:30</p>
-                                </div>
-                            </div>
-                            <div class="detail-item">
-                                <i class="fas fa-life-ring"></i>
-                                <div>
-                                    <h4>Emergency Support</h4>
-                                    <p>24/7 availability for critical issues</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <a href="#contact-form" class="m3-button filled large">Schedule a Call</a>
-                    </div>
-                </div>
+        <section id="contact-hero" style="padding-top: 10rem;">
+            <div class="container" style="text-align: center;">
+                <div class="badge">Engagement</div>
+                <h1>Let's Build <span class="gradient-text">Together</span></h1>
+                <p style="margin: 0 auto; max-width: 650px;">Ready to start your next high-performance technology
+                    journey? Our team is standing by to help you engineer excellence.</p>
             </div>
         </section>
 
-        <!-- Full Width Contact Form Section -->
-        <div class="contact-form-section" id="contact-form">
-            <div class="glass-card">
-                <h2>Send Us a Message</h2>
-                <p>Have a project in mind? Fill out the form below and we'll get back to you within 24 hours.</p>
-
-                <form id="contact-page-form" class="contact-page-form">
-                    <div class="form-row">
-                        <div class="form-field">
-                            <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" name="firstName" required>
-                        </div>
-                        <div class="form-field">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" name="lastName" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-field">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-field">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-field">
-                            <label for="company">Company Name</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                        <div class="form-field">
-                            <label for="service">Service Interested In</label>
-                            <select id="service" name="service">
-                                <option value="">Select a service</option>
-                                <option value="software">Software Development</option>
-                                <option value="data">Data Entry Services</option>
-                                <option value="support">IT Support</option>
-                                <option value="consulting">Consulting</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
-                    </div>
-
-                    <button type="submit" class="m3-button filled large">
-                        <i class="fas fa-paper-plane"></i>
-                        Send Message
-                    </button>
-                </form>
-            </div>
-        </div>
-
-        <section id="contact-page-continued">
+        <section id="contact-main">
             <div class="container">
-                <div class="map-section">
-                    <div class="glass-card map-card">
-                        <h2>Find Us On The Map</h2>
-                        <div class="map-container">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3490.7273776139247!2d77.70089871506775!3d28.96604338228669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c65025ee8b5b9%3A0x5778eb5a5e5a5b5b!2sJagrati%20Vihar%2C%20Meerut%2C%20Uttar%20Pradesh%20250004!5e0!3m2!1sen!2sin!4v1678886875693!5m2!1sen!2sin"
-                                width="100%" height="400"
-                                style="border:0; border-radius: var(--md-sys-shape-corner-large);" allowfullscreen=""
-                                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
+                <div class="grid grid-2" style="gap: 4rem;">
+                    <div>
+                        <div class="glass-card" style="margin-bottom: 2rem;">
+                            <h3>Direct Contact</h3>
+                            <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem;">
+                                <div style="display: flex; align-items: center; gap: 1.25rem;">
+                                    <div
+                                        style="width: 48px; height: 48px; border-radius: 12px; background: rgba(124, 58, 237, 0.1); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <p style="margin: 0; font-size: 0.85rem; color: var(--color-text-muted);">Email
+                                        </p>
+                                        <a href="mailto:artsyncindiallp@artsync.live"
+                                            style="text-decoration: none; color: var(--color-text-main); font-weight: 600;">artsyncindiallp@artsync.live</a>
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 1.25rem;">
+                                    <div
+                                        style="width: 48px; height: 48px; border-radius: 12px; background: rgba(124, 58, 237, 0.1); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <p style="margin: 0; font-size: 0.85rem; color: var(--color-text-muted);">Phone
+                                        </p>
+                                        <a href="tel:+919650076779"
+                                            style="text-decoration: none; color: var(--color-text-main); font-weight: 600;">+91-9650076779</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card">
+                            <h3>Partner with us</h3>
+                            <p style="margin-top: 1.5rem; font-size: 1rem;">We collaborate with founders, startups, and
+                                enterprises to build AI-first digital products. Let's discuss your roadmap.</p>
+                            <div class="social-links" style="margin-top: 2rem; display: flex; gap: 1rem;">
+                                <a href="https://www.linkedin.com/company/artsync-india-llp/" target="_blank"
+                                    style="color: var(--color-text-muted); font-size: 1.5rem;"><i
+                                        class="fab fa-linkedin"></i></a>
+                                <a href="#" style="color: var(--color-text-muted); font-size: 1.5rem;"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a href="#" style="color: var(--color-text-muted); font-size: 1.5rem;"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="faq-section">
-                    <h2>Frequently Asked Questions</h2>
-                    <div class="faq-grid">
-                        <div class="faq-item glass-card">
-                            <div class="faq-icon">
-                                <i class="fas fa-question-circle"></i>
-                            </div>
-                            <h3>What services do you offer?</h3>
-                            <p>We provide comprehensive digital solutions including software development, data entry
-                                services, and IT support. Each service is tailored to meet your specific business needs.
-                            </p>
-                        </div>
-                        <div class="faq-item glass-card">
-                            <div class="faq-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <h3>How quickly can you start a project?</h3>
-                            <p>We can typically begin new projects within 1-2 weeks after initial consultation and
-                                agreement. Urgent projects can be accommodated based on availability.</p>
-                        </div>
-                        <div class="faq-item glass-card">
-                            <div class="faq-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <h3>Do you offer ongoing support?</h3>
-                            <p>Yes, we provide comprehensive support packages including 24/7 monitoring, regular
-                                maintenance, and dedicated support teams for all our solutions.</p>
-                        </div>
-                        <div class="faq-item glass-card">
-                            <div class="faq-icon">
-                                <i class="fas fa-dollar-sign"></i>
-                            </div>
-                            <h3>What is your pricing model?</h3>
-                            <p>We offer flexible pricing models including fixed-price projects, hourly rates, and
-                                retainer agreements. Contact us for a customized quote based on your requirements.</p>
-                        </div>
-                        <div class="faq-item glass-card">
-                            <div class="faq-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <h3>How do you ensure data security?</h3>
-                            <p>We implement industry-standard security protocols, encryption, and regular security
-                                audits to protect your sensitive data and maintain compliance with regulations.</p>
-                        </div>
-                        <div class="faq-item glass-card">
-                            <div class="faq-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h3>Can you work with our existing team?</h3>
-                            <p>Absolutely! We seamlessly integrate with your existing teams and workflows, providing
-                                collaborative solutions that enhance your current capabilities.</p>
-                        </div>
-                    </div>
-                </div>
+                    <div class="glass-card">
+                        <h3>Project Brief</h3>
+                        <p style="margin-bottom: 2.5rem; color: var(--color-text-muted);">Tell us about your project and
+                            we'll get back to you within 24 hours.</p>
 
-                <div class="social-section">
-                    <h2>Connect With Us</h2>
-                    <div class="social-links-large">
-                        <a href="#" class="social-link-card" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="#" class="social-link-card" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                            <span>Twitter</span>
-                        </a>
-                        <a href="#" class="social-link-card" aria-label="Facebook">
-                            <i class="fab fa-facebook"></i>
-                            <span>Facebook</span>
-                        </a>
-                        <a href="#" class="social-link-card" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                            <span>Instagram</span>
-                        </a>
-                        <a href="#" class="social-link-card" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
-                        <a href="#" class="social-link-card" aria-label="YouTube">
-                            <i class="fab fa-youtube"></i>
-                            <span>YouTube</span>
-                        </a>
+                        <form id="contact-page-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <input type="hidden" name="access_key" value="62c60694-167b-4fa3-98ea-a50b56889b4d">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div class="form-field">
+                                    <label
+                                        style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">First
+                                        Name</label>
+                                    <input type="text" name="firstName" required
+                                        style="width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg-alt); color: var(--color-text-main); outline: none;">
+                                </div>
+                                <div class="form-field">
+                                    <label
+                                        style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Last
+                                        Name</label>
+                                    <input type="text" name="lastName" required
+                                        style="width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg-alt); color: var(--color-text-main); outline: none;">
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label
+                                    style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Work
+                                    Email</label>
+                                <input type="email" name="email" required
+                                    style="width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg-alt); color: var(--color-text-main); outline: none;">
+                            </div>
+                            <div class="form-field">
+                                <label
+                                    style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Interested
+                                    in</label>
+                                <select name="service"
+                                    style="width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg-alt); color: var(--color-text-main); outline: none; appearance: none;">
+                                    <option value="product-design">Product Design</option>
+                                    <option value="ai-engineering">AI & Engineering</option>
+                                    <option value="cloud-arch">Cloud Architecture</option>
+                                    <option value="consulting">Strategic Consulting</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label
+                                    style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Message</label>
+                                <textarea name="message" required rows="4"
+                                    style="width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg-alt); color: var(--color-text-main); outline: none; resize: none;"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; border: none;">Initialize
+                                Discussion</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-wrapper">
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <ul class="contact-list">
-                    <li>
-                        <a href="tel:+919650076779">
-                            <span class="contact-icon"><i class="fas fa-phone"></i></span>
-                            +91-9650076779
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:artsyncindiallp@artsync.live">
-                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
-                            artsyncindiallp@artsync.live
-                        </a>
-                    </li>
-                </ul>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-cta">
+                <a href="contact.html" class="btn btn-primary footer-cta-btn">Send Message</a>
+                <div class="footer-contact-info">
+                    <p><i class="fas fa-phone"></i> +91-9650076779</p>
+                    <p><i class="fas fa-envelope"></i> artsyncindiallp@artsync.live</p>
+                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 ARTSYNC INDIA LLP. All rights reserved.</p>
+                <div class="footer-copyright">
+                    &copy; 2025 ArtSync India LLP. All Rights Reserved.
+                </div>
+                <div class="footer-slogan">
+                    AI-First Technology Solutions
+                </div>
             </div>
         </div>
+        <button id="scroll-top" class="scroll-top" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=3"></script>
     <script>
-
-
-        // Handle form submission with Web3Forms
         document.getElementById('contact-page-form').addEventListener('submit', async function (e) {
             e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Transmitting...';
+            btn.disabled = true;
 
-            const form = this;
-            const submitButton = form.querySelector('button[type="submit"]');
-            const originalText = submitButton.innerHTML;
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitButton.disabled = true;
-
-            // Prepare form data for Web3Forms
-            const formData = new FormData();
-            formData.append('access_key', '62c60694-167b-4fa3-98ea-a50b56889b4d');
-            formData.append('name', this.firstName.value + ' ' + this.lastName.value);
-            formData.append('email', this.email.value);
-            formData.append('phone', this.phone.value || 'Not provided');
-            formData.append('company', this.company.value || 'Not provided');
-            formData.append('service', this.service.value || 'Not specified');
-            formData.append('message', this.message.value);
-            formData.append('subject', 'New Contact Form Submission from ArtSync');
+            const formData = new FormData(this);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
 
             try {
                 const response = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
-                    body: formData
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
                 });
-
-                const data = await response.json();
-
-                if (data.success) {
-                    if (typeof showNotification === 'function') {
-                        showNotification('Thank you for your message! We will get back to you within 24 hours.', 'success');
-                    } else {
-                        alert('Thank you for your message! We will get back to you within 24 hours.');
-                    }
-                    form.reset();
+                const result = await response.json();
+                if (response.status === 200) {
+                    alert('Thank you! We have received your brief.');
+                    this.reset();
                 } else {
-                    throw new Error(data.message || 'Form submission failed');
+                    alert('Something went wrong. Please try again.');
                 }
             } catch (error) {
-                console.error('Form submission error:', error);
-                if (typeof showNotification === 'function') {
-                    showNotification('Sorry, there was an error sending your message. Please try again.', 'error');
-                } else {
-                    alert('Sorry, there was an error sending your message. Please try again.');
-                }
+                alert('Transmission error. Check your connection.');
             } finally {
-                submitButton.innerHTML = originalText;
-                submitButton.disabled = false;
+                btn.innerText = originalText;
+                btn.disabled = false;
             }
         });
     </script>
