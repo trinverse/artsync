@@ -8,13 +8,11 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=16">
+    <link rel="stylesheet" href="style.css?v=20">
 </head>
 
-<body>
+<body class="theme-transition">
     <script>
         (function () {
             const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -32,11 +30,10 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="portfolio.html">Showcase</a></li>
                     <li><a href="employees.html">Our Team</a></li>
-                    <li><a href="contact.html" class="nav-cta active">Work with us</a></li>
+                    <li><a href="contact.html" class="nav-cta active">Initiate Project</a></li>
                     <li>
                         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
                             <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon"></i>
                         </button>
                     </li>
                 </ul>
@@ -46,114 +43,87 @@
 
     <main>
         <section id="hero">
-            <div class="container">
-                <div class="badge">Engagement</div>
-                <h1>Let's Build <span class="gradient-text">Together</span></h1>
-                <p style="margin: 0 auto; max-width: 650px;">Ready to start your next high-performance technology
-                    journey? Our team is standing by to help you engineer excellence.</p>
+            <div class="container" style="text-align: center;">
+                <div class="badge">ENGAGEMENT</div>
+                <h1>Forge a <span class="gradient-text">Collaborative Path</span></h1>
+                <p style="margin: 0 auto; max-width: 650px;">Prepared to initiate your next high-velocity technological evolution? Our architectural leads are ready to synthesize your requirements into a custom roadmap.</p>
             </div>
         </section>
 
         <section id="contact-main">
             <div class="container">
                 <div class="grid grid-2" style="gap: 4rem;">
-                    <div>
-                        <div class="glass-card" style="margin-bottom: 2rem;">
-                            <h3>Direct Contact</h3>
-                            <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem;">
-                                <div style="display: flex; align-items: center; gap: 1.25rem;">
-                                    <div
-                                        style="width: 48px; height: 48px; border-radius: 12px; background: rgba(124, 58, 237, 0.1); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
-                                        <i class="fas fa-envelope"></i>
+                    <div style="display: flex; flex-direction: column; gap: 3rem;">
+                        <div class="glass-card">
+                            <h3>Direct Intelligence Channels</h3>
+                            <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 2rem;">
+                                <div style="display: flex; align-items: center; gap: 1.5rem;">
+                                    <div style="width: 56px; height: 56px; border-radius: 12px; background: rgba(244, 63, 94, 0.1); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fas fa-envelope-open-text"></i>
                                     </div>
                                     <div>
-                                        <p style="margin: 0; font-size: 0.85rem; color: var(--color-text-muted);">Email
-                                        </p>
-                                        <a href="mailto:artsyncindiallp@artsync.live"
-                                            style="text-decoration: none; color: var(--color-text-main); font-weight: 600;">artsyncindiallp@artsync.live</a>
+                                        <p style="margin: 0; font-size: 0.8rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 1px;">Transmission</p>
+                                        <a href="mailto:artsyncindiallp@artsync.live" style="text-decoration: none; color: var(--color-text-main); font-weight: 700; font-size: 1.1rem;">artsyncindiallp@artsync.live</a>
                                     </div>
                                 </div>
-                                <div style="display: flex; align-items: center; gap: 1.25rem;">
-                                    <div
-                                        style="width: 48px; height: 48px; border-radius: 12px; background: rgba(124, 58, 237, 0.1); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
-                                        <i class="fas fa-phone"></i>
+                                <div style="display: flex; align-items: center; gap: 1.5rem;">
+                                    <div style="width: 56px; height: 56px; border-radius: 12px; background: rgba(245, 158, 11, 0.1); color: var(--color-secondary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fas fa-satellite-dish"></i>
                                     </div>
                                     <div>
-                                        <p style="margin: 0; font-size: 0.85rem; color: var(--color-text-muted);">Phone
-                                        </p>
-                                        <a href="tel:+919650076779"
-                                            style="text-decoration: none; color: var(--color-text-main); font-weight: 600;">+91-9650076779</a>
+                                        <p style="margin: 0; font-size: 0.8rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 1px;">Direct Line</p>
+                                        <a href="tel:+919650076779" style="text-decoration: none; color: var(--color-text-main); font-weight: 700; font-size: 1.1rem;">+91-9650076779</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="glass-card">
-                            <h3>Partner with us</h3>
-                            <p style="margin-top: 1.5rem; font-size: 1rem;">We collaborate with founders, startups, and
-                                enterprises to build AI-first digital products. Let's discuss your roadmap.</p>
-                            <div class="social-links" style="margin-top: 2rem; display: flex; gap: 1rem;">
-                                <a href="https://www.linkedin.com/company/artsync-india-llp/" target="_blank"
-                                    style="color: var(--color-text-muted); font-size: 1.5rem;"><i
-                                        class="fab fa-linkedin"></i></a>
-                                <a href="#" style="color: var(--color-text-muted); font-size: 1.5rem;"><i
-                                        class="fab fa-twitter"></i></a>
-                                <a href="#" style="color: var(--color-text-muted); font-size: 1.5rem;"><i
-                                        class="fab fa-github"></i></a>
+                            <h3>Strategic Alliances</h3>
+                            <p style="margin-top: 1.5rem; font-size: 1.125rem;">Merging expertise with venture leads, high-growth startups, and established market leaders to manifest intelligence-first ecosystems.</p>
+                            <div class="social-links" style="margin-top: 2.5rem; display: flex; gap: 1.5rem;">
+                                <a href="https://www.linkedin.com/company/artsync-india-llp/" target="_blank" style="color: var(--color-text-muted); font-size: 2rem; transition: color 0.3s;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-muted)'"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" style="color: var(--color-text-muted); font-size: 2rem; transition: color 0.3s;" onmouseover="this.style.color='var(--color-secondary)'" onmouseout="this.style.color='var(--color-text-muted)'"><i class="fab fa-x-twitter"></i></a>
+                                <a href="#" style="color: var(--color-text-muted); font-size: 2rem; transition: color 0.3s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-muted)'"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
 
                     <div class="glass-card">
-                        <h3>Project Brief</h3>
-                        <p style="margin-bottom: 2.5rem; color: var(--color-text-muted);">Tell us about your project and
-                            we'll get back to you within 24 hours.</p>
+                        <h3>Technical Specification</h3>
+                        <p style="margin-bottom: 3rem; color: var(--color-text-muted);">Detail your architectural objectives and we will provide a comprehensive response within a single business cycle.</p>
 
-                        <form id="contact-page-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <form id="contact-page-form" style="display: flex; flex-direction: column; gap: 2rem;">
                             <input type="hidden" name="access_key" value="62c60694-167b-4fa3-98ea-a50b56889b4d">
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
                                 <div class="form-field">
-                                    <label
-                                        style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">First
-                                        Name</label>
-                                    <input type="text" name="firstName" required
-                                        style="width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg-alt); color: var(--color-text-main); outline: none;">
+                                    <input type="text" name="firstName" placeholder="Given Name" required
+                                        style="width: 100%; padding: 1.25rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg); color: var(--color-text-main); outline: none;">
                                 </div>
                                 <div class="form-field">
-                                    <label
-                                        style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Last
-                                        Name</label>
-                                    <input type="text" name="lastName" required
-                                        style="width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg-alt); color: var(--color-text-main); outline: none;">
+                                    <input type="text" name="lastName" placeholder="Surname" required
+                                        style="width: 100%; padding: 1.25rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg); color: var(--color-text-main); outline: none;">
                                 </div>
                             </div>
                             <div class="form-field">
-                                <label
-                                    style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Work
-                                    Email</label>
-                                <input type="email" name="email" required
-                                    style="width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg-alt); color: var(--color-text-main); outline: none;">
+                                <input type="email" name="email" placeholder="Professional Coordinates" required
+                                    style="width: 100%; padding: 1.25rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg); color: var(--color-text-main); outline: none;">
                             </div>
                             <div class="form-field">
-                                <label
-                                    style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Interested
-                                    in</label>
                                 <select name="service"
-                                    style="width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg-alt); color: var(--color-text-main); outline: none; appearance: none;">
-                                    <option value="product-design">Product Design</option>
-                                    <option value="ai-engineering">AI & Engineering</option>
-                                    <option value="cloud-arch">Cloud Architecture</option>
-                                    <option value="consulting">Strategic Consulting</option>
+                                    style="width: 100%; padding: 1.25rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg); color: var(--color-text-main); outline: none; appearance: none; cursor: pointer;">
+                                    <option value="" disabled selected>Objective Category</option>
+                                    <option value="architectural-design">Architectural Design</option>
+                                    <option value="neural-engineering">Neural Engineering</option>
+                                    <option value="cloud-optimization">Cloud Optimization</option>
+                                    <option value="strategic-blueprint">Strategic Blueprint</option>
                                 </select>
                             </div>
                             <div class="form-field">
-                                <label
-                                    style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Message</label>
-                                <textarea name="message" required rows="4"
-                                    style="width: 100%; padding: 1rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg-alt); color: var(--color-text-main); outline: none; resize: none;"></textarea>
+                                <textarea name="message" placeholder="Technical Goals & Infrastructure Details..." required rows="4"
+                                    style="width: 100%; padding: 1.25rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg); color: var(--color-text-main); outline: none; resize: none;"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%; border: none;">Initialize
-                                Discussion</button>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Specification</button>
                         </form>
                     </div>
                 </div>
@@ -164,27 +134,24 @@
     <footer class="main-footer">
         <div class="container">
             <div class="footer-cta">
-                <a href="contact.html" class="btn btn-primary footer-cta-btn">Send Message</a>
-                <div class="footer-contact-info">
-                    <p><i class="fas fa-phone"></i> +91-9650076779</p>
-                    <p><i class="fas fa-envelope"></i> artsyncindiallp@artsync.live</p>
-                </div>
+                <h2 style="margin-bottom: 3rem;">Ready to sync with the future?</h2>
+                <a href="contact.html" class="btn btn-primary">Start Your Journey</a>
             </div>
             <div class="footer-bottom">
                 <div class="footer-copyright">
                     &copy; 2025 ArtSync India LLP. All Rights Reserved.
                 </div>
                 <div class="footer-slogan">
-                    AI-First Technology Solutions
+                    Forging Autonomous Intelligence
                 </div>
             </div>
         </div>
         <button id="scroll-top" class="scroll-top" aria-label="Back to top">
-            <i class="fas fa-arrow-up"></i>
+            <i class="fas fa-chevron-up"></i>
         </button>
     </footer>
 
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=5"></script>
     <script>
         document.getElementById('contact-page-form').addEventListener('submit', async function (e) {
             e.preventDefault();
@@ -206,15 +173,14 @@
                     },
                     body: json
                 });
-                const result = await response.json();
                 if (response.status === 200) {
-                    alert('Thank you! We have received your brief.');
+                    alert('Submission received. Synthesizing response...');
                     this.reset();
                 } else {
-                    alert('Something went wrong. Please try again.');
+                    alert('Error in transmission. Please retry.');
                 }
             } catch (error) {
-                alert('Transmission error. Check your connection.');
+                alert('Connection failure. Check network availability.');
             } finally {
                 btn.innerText = originalText;
                 btn.disabled = false;

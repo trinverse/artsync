@@ -4,20 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clout Aesthetics - ArtSync Portfolio</title>
-    <link rel="icon" href="../tab-icon-large.png" type="image/png">
+    <title>Clout - ArtSync Blueprint</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../style.css?v=16">
+    <link rel="stylesheet" href="../style.css?v=20">
 </head>
 
-<body>
+<body class="theme-transition">
     <script>
-        // Initialize theme immediately
         (function () {
-            const savedTheme = localStorage.getItem('theme') || 'light';
+            const savedTheme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', savedTheme);
         })();
     </script>
@@ -31,11 +29,10 @@
                     <li><a href="../services.html">Services</a></li>
                     <li><a href="../portfolio.html" class="active">Showcase</a></li>
                     <li><a href="../employees.html">Our Team</a></li>
-                    <li><a href="../contact.html" class="nav-cta">Work with us</a></li>
+                    <li><a href="../contact.html" class="nav-cta">Initiate Project</a></li>
                     <li>
                         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
                             <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon"></i>
                         </button>
                     </li>
                 </ul>
@@ -49,114 +46,102 @@
 
                 <!-- Breadcrumb -->
                 <nav class="breadcrumb" aria-label="breadcrumb">
-                    <a href="../index.html">Home</a>
+                    <a href="../index.html">HQ</a>
                     <i class="fas fa-chevron-right"></i>
-                    <a href="../portfolio.html">Portfolio</a>
+                    <a href="../portfolio.html">Gallery</a>
                     <i class="fas fa-chevron-right"></i>
-                    <span>Clout Aesthetics</span>
+                    <span>Clout</span>
                 </nav>
 
                 <!-- Hero Image -->
                 <div class="project-hero-img">
-                    <img src="../clout.png" alt="Clout Aesthetics Dashboard">
+                    <img src="../clout.png" alt="Lumina Intelligence Interface">
                 </div>
 
                 <!-- Project Title block -->
                 <div class="project-title-block">
                     <div class="project-tags">
-                        <span class="tag">SaaS</span>
-                        <span class="tag">AI/ML</span>
-                        <span class="tag">Full-Stack</span>
+                        <span class="tag">NEURAL SAAS</span>
+                        <span class="tag">INTELLIGENCE</span>
+                        <span class="tag">STRUCTURAL ARCH</span>
                     </div>
                     <h1>Clout Aesthetics</h1>
-                    <p class="project-lead">Reputation Management Platform for Aesthetic Medicine</p>
+                    <p class="project-lead">Prestige Optimization Ecosystem for High-End Medicine</p>
                 </div>
 
                 <!-- Content body -->
                 <div class="project-body">
 
-                    <p><strong>Clout</strong> is a full-stack SaaS platform that helps aesthetic medical professionals
-                        build, track, and showcase their professional reputation through aggregated reviews,
-                        AI-powered analysis, and a proprietary scoring system.</p>
+                    <p><strong>Clout</strong> is a comprehensive intelligence platform enabling cosmetic medical professionals to monitor, amplify, and professionally manage their industry standing through data aggregation and adaptive scoring.</p>
 
-                    <h3>The Problem</h3>
-                    <p>Aesthetic providers have reviews scattered across Google, Yelp, and RealSelf with no unified way
-                        to measure or improve their online reputation. Manual tracking is tedious and provides no
-                        actionable insights.</p>
+                    <h3>Architectural Challenge</h3>
+                    <p>Elite aesthetic providers often face fragmented feedback across multiple digital domains, leaving them without a unified metric to evaluate or enhance their market reputation. Manual synthesis is inefficient and lacks predictive utility.</p>
 
-                    <h3>The Solution</h3>
-                    <p>Clout aggregates multi-platform reviews, runs AI-powered sentiment analysis on each one, and
-                        distills everything into a single <strong>CLOUT Score</strong> — a proprietary reputation
-                        metric weighted across endorsements (40%), reviews (30%), certifications (20%), and
-                        engagement (10%).</p>
+                    <h3>The Intelligence Response</h3>
+                    <p>Clout synthesizes multi-channel feedback data, executes advanced sentiment evaluation, and distills the output into the <strong>Clout Index</strong>—a precision metric weighted across peer recognition (40%), patient feedback (30%), certifications (20%), and market presence (10%).</p>
 
-                    <h3>Key Features</h3>
+                    <h3>Strategic Capabilities</h3>
                     <div class="features-grid">
                         <div class="feature-card">
-                            <strong>Multi-Platform Review Aggregation</strong>
-                            Automated collection from Google Reviews, Yelp, and RealSelf with hash-based
-                            deduplication.
+                            <strong>Omni-Channel Synthesis</strong>
+                            Automated data harvesting from elite review sources with integrity-based deduplication logic.
                         </div>
                         <div class="feature-card">
-                            <strong>AI Sentiment Analysis</strong>
-                            OpenAI-powered analysis extracting sentiment scores, topic categories, aspect-based
-                            ratings, and emotional tone.
+                            <strong>Neural Sentiment Evaluation</strong>
+                            Advanced NLP extraction of emotional vectors, category-specific trends, and behavioral indicators.
                         </div>
                         <div class="feature-card">
-                            <strong>Proprietary CLOUT Score</strong>
-                            Multi-factor reputation scoring with historical tracking and logarithmic scaling.
+                            <strong>The Clout Index</strong>
+                            Proprietary multi-factor prestige scoring with deep temporal tracking and logarithmic normalization.
                         </div>
                         <div class="feature-card">
-                            <strong>Peer Endorsement System</strong>
-                            Provider-to-provider endorsements with relationship tracking and quality weighting.
+                            <strong>Peer Credibility Framework</strong>
+                            Professional-to-professional accreditation system featuring relationship mapping and prestige weighting.
                         </div>
                         <div class="feature-card">
-                            <strong>Analytics Dashboard</strong>
-                            Interactive charts, sentiment trends, competitive benchmarking, and exportable reports.
+                            <strong>Operational Telemetry</strong>
+                            High-definition visualization of sentiment velocity, competitive positioning, and architectural benchmarks.
                         </div>
                         <div class="feature-card">
-                            <strong>Real-Time Updates</strong>
-                            WebSocket-powered live feeds for review notifications and score changes.
+                            <strong>Real-Time Pulse</strong>
+                            High-frequency logic streams for instant transmission of prestige changes and network alerts.
                         </div>
                     </div>
 
-                    <h3>Tech Stack</h3>
+                    <h3>Core Stack</h3>
                     <div class="tech-stack-grid">
                         <div class="tech-category">
-                            <h4>Frontend</h4>
-                            <p>React, TypeScript, Tailwind CSS, Recharts, React Query</p>
+                            <h4>Interface Layer</h4>
+                            <p>React, TypeSafe, Fluid CSS, Real-Time Telemetry</p>
                         </div>
                         <div class="tech-category">
-                            <h4>Backend</h4>
-                            <p>FastAPI (Python), SQLAlchemy 2.0, PostgreSQL 15, Alembic</p>
+                            <h4>Processing Core</h4>
+                            <p>FastAPI, Neural Compute Engine, Structured Logic</p>
                         </div>
                         <div class="tech-category">
-                            <h4>AI/ML</h4>
-                            <p>OpenAI GPT-4o-mini with specialty-aware prompts</p>
+                            <h4>Neural Layer</h4>
+                            <p>Advanced Generative Contexts, Emotional Vectoring</p>
                         </div>
                         <div class="tech-category">
-                            <h4>Infrastructure</h4>
-                            <p>Docker, Nginx, GCP Cloud Run, Firebase Hosting</p>
+                            <h4>Base Ops</h4>
+                            <p>Containerized Scalability, Orchestrated Release</p>
                         </div>
                     </div>
 
-                    <h3>Architecture Highlights</h3>
-                    <ul class="highlights-list">
-                        <li><strong>8-service Docker production stack:</strong> PostgreSQL, Redis, FastAPI, Celery
-                            Worker, Celery Beat, Flower, React, Nginx.</li>
-                        <li><strong>Dual authentication system:</strong> Local passwords and Firebase social auth.
-                        </li>
-                        <li><strong>Scheduled background processing:</strong> Daily review collection, score
-                            recalculation, and weekly cleanup.</li>
+                    <h3>Structural Highlights</h3>
+                    <ul class="highlights-list" style="margin-bottom: 4rem;">
+                        <li><strong>Multi-Container Orchestration:</strong> Orchestrated stack involving distributed compute nodes, caching layers, and high-availability database clusters.</li>
+                        <li><strong>Dual Integrity Auth:</strong> Professional-grade security featuring social identity verification and encrypted credential management.</li>
+                        <li><strong>Automated Refinement Cycles:</strong> Periodic data harvesting, index recalibration, and automated system sanitization.</li>
                     </ul>
 
                     <div class="project-cta">
-                        <a href="https://cloutaesthetics.com/" class="m3-button filled large" target="_blank"
+                        <a href="https://cloutaesthetics.com/" class="btn btn-primary" target="_blank"
                             rel="noopener noreferrer">
-                            <i class="fas fa-external-link-alt"></i> Visit Website
+                            <i class="fas fa-external-link-alt"></i> Execute Live Environment
                         </a>
-                        <a href="../portfolio.html" class="m3-button outlined large">
-                            <i class="fas fa-arrow-left"></i> Back to Portfolio
+                        <a href="../portfolio.html" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Return to Gallery
                         </a>
                     </div>
 
@@ -168,27 +153,24 @@
     <footer class="main-footer">
         <div class="container">
             <div class="footer-cta">
-                <a href="../contact.html" class="btn btn-primary footer-cta-btn">Send Message</a>
-                <div class="footer-contact-info">
-                    <p><i class="fas fa-phone"></i> +91-9650076779</p>
-                    <p><i class="fas fa-envelope"></i> artsyncindiallp@artsync.live</p>
-                </div>
+                <h2 style="margin-bottom: 3rem;">Ready to sync with the future?</h2>
+                <a href="../contact.html" class="btn btn-primary">Start Your Journey</a>
             </div>
             <div class="footer-bottom">
                 <div class="footer-copyright">
                     &copy; 2025 ArtSync India LLP. All Rights Reserved.
                 </div>
                 <div class="footer-slogan">
-                    AI-First Technology Solutions
+                    Forging Autonomous Intelligence
                 </div>
             </div>
         </div>
         <button id="scroll-top" class="scroll-top" aria-label="Back to top">
-            <i class="fas fa-arrow-up"></i>
+            <i class="fas fa-chevron-up"></i>
         </button>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="../script.js?v=5"></script>
 </body>
 
 </html>

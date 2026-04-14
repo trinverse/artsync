@@ -8,10 +8,8 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=16">
+    <link rel="stylesheet" href="style.css?v=20">
 </head>
 
 <body class="theme-transition">
@@ -32,11 +30,10 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="portfolio.html" class="active">Showcase</a></li>
                     <li><a href="employees.html">Our Team</a></li>
-                    <li><a href="contact.html" class="nav-cta">Work with us</a></li>
+                    <li><a href="contact.html" class="nav-cta">Initiate Project</a></li>
                     <li>
                         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
                             <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon"></i>
                         </button>
                     </li>
                 </ul>
@@ -48,38 +45,36 @@
         <!-- HERO SECTION -->
         <section id="hero">
             <div class="container" style="text-align: center;">
-                <div class="badge">OUR WORK</div>
-                <h1>AI Systems <span class="gradient-text">We've Built</span></h1>
-                <p style="max-width: 650px; margin: 0 auto;">From proof-of-concept to production — real AI systems
-                    solving real problems.</p>
+                <div class="badge">ARCHITECTURAL PROVENANCE</div>
+                <h1>Deployed <span class="gradient-text">Intelligence</span></h1>
+                <p style="max-width: 650px; margin: 0 auto;">Transmuting experimental prototypes into industrially resilient systems—real-world intelligence addressing critical operational gaps.</p>
             </div>
         </section>
 
-        <!-- SHOWCASE GRID -->
+        <!-- SOLUTIONS GALLERY -->
         <section id="showcase-main" style="padding-bottom: 8rem;">
             <div class="container">
-                <div class="grid grid-2" style="max-width: 900px; margin: 0 auto;">
+                <div class="grid grid-2" style="max-width: 1000px; margin: 0 auto;">
                     <!-- Project 1 -->
                     <div class="glass-card project-card">
                         <div class="img-container">
                             <img src="clout.png" alt="Clout Aesthetics">
                         </div>
                         <div class="card-content">
-                            <div style="margin-bottom: 1rem;">
-                                <span class="badge" style="font-size: 0.65rem; padding: 0.35rem 0.75rem;">AI
-                                    SYSTEMS</span>
+                            <div style="margin-bottom: 1.5rem;">
+                                <span class="badge" style="font-size: 0.7rem; padding: 0.4rem 1rem;">NEURAL FABRIC</span>
                             </div>
                             <h3>Clout Aesthetics</h3>
-                            <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">
-                                Visual commerce platform designed for rapid scale and high engagement.</p>
+                            <p style="font-size: 1rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+                                Elite visual merchandising framework engineered for hyper-dynamic scaling and high-conversion engagement.</p>
                             <div style="flex-grow: 1;"></div>
-                            <div class="tag-container">
-                                <span class="tech-tag">Next.js</span>
-                                <span class="tech-tag">OpenAI</span>
+                            <div class="tag-container" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                                <span class="tech-tag" style="background: rgba(244, 63, 94, 0.1); border-color: var(--color-primary); color: var(--color-primary);">Next.js</span>
+                                <span class="tech-tag">Vector Search</span>
                                 <span class="tech-tag">FastAPI</span>
                             </div>
                             <a href="portfolio/project1.html" class="btn btn-secondary"
-                                style="margin-top: 2rem; width: 100%;">View Mission</a>
+                                style="margin-top: 2.5rem; width: 100%;">Examine Blueprint</a>
                         </div>
                     </div>
 
@@ -89,21 +84,20 @@
                             <img src="rdactd.png" alt="RDACTD">
                         </div>
                         <div class="card-content">
-                            <div style="margin-bottom: 1rem;">
-                                <span class="badge"
-                                    style="font-size: 0.65rem; padding: 0.35rem 0.75rem;">SECURITY</span>
+                            <div style="margin-bottom: 1.5rem;">
+                                <span class="badge" style="font-size: 0.7rem; padding: 0.4rem 1rem;">SECURITY OPS</span>
                             </div>
                             <h3>RDACTD</h3>
-                            <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">
-                                Privacy-focused enterprise redaction engine for secure document workflows.</p>
+                            <p style="font-size: 1rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+                                High-security redaction architecture for sensitive enterprise document streams, featuring automated PII identification.</p>
                             <div style="flex-grow: 1;"></div>
-                            <div class="tag-container">
-                                <span class="tech-tag">AWS</span>
-                                <span class="tech-tag">Python</span>
+                            <div class="tag-container" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                                <span class="tech-tag" style="background: rgba(245, 158, 11, 0.1); border-color: var(--color-secondary); color: var(--color-secondary);">AWS</span>
+                                <span class="tech-tag">Privacy Core</span>
                                 <span class="tech-tag">Docker</span>
                             </div>
                             <a href="portfolio/project2.html" class="btn btn-secondary"
-                                style="margin-top: 2rem; width: 100%;">View Mission</a>
+                                style="margin-top: 2.5rem; width: 100%;">Examine Blueprint</a>
                         </div>
                     </div>
                 </div>
@@ -111,13 +105,12 @@
         </section>
 
         <!-- CTA SECTION -->
-        <section id="contact-cta" style="padding: 8rem 0; background: var(--color-bg-alt); text-align: center;">
+        <section id="contact-cta" style="padding: 10rem 0; background: var(--color-bg-alt); text-align: center;">
             <div class="container">
-                <h2 style="font-size: 2.75rem; margin-bottom: 1.5rem;">Have a Project in <span
-                        class="gradient-text">Mind?</span></h2>
-                <p style="max-width: 600px; margin: 0 auto 3rem;">Let's discuss how we can help you build the next
-                    generation of AI products.</p>
-                <a href="contact.html" class="btn btn-primary" style="padding: 1rem 3rem;">Let's Talk</a>
+                <div class="badge">CONSULTATION</div>
+                <h2 style="font-size: 3.5rem; margin-bottom: 2rem;">Proposing a <span class="gradient-text">New Architecture?</span></h2>
+                <p style="max-width: 650px; margin: 0 auto 4rem; font-size: 1.25rem;">Consult with our lead architects to engineer the next iteration of your intelligence-driven platform.</p>
+                <a href="contact.html" class="btn btn-primary">Initiate Dialogue</a>
             </div>
         </section>
     </main>
@@ -125,27 +118,24 @@
     <footer class="main-footer">
         <div class="container">
             <div class="footer-cta">
-                <a href="contact.html" class="btn btn-primary footer-cta-btn">Send Message</a>
-                <div class="footer-contact-info">
-                    <p><i class="fas fa-phone"></i> +91-9650076779</p>
-                    <p><i class="fas fa-envelope"></i> artsyncindiallp@artsync.live</p>
-                </div>
+                <h2 style="margin-bottom: 3rem;">Ready to sync with the future?</h2>
+                <a href="contact.html" class="btn btn-primary">Start Your Journey</a>
             </div>
             <div class="footer-bottom">
                 <div class="footer-copyright">
                     &copy; 2025 ArtSync India LLP. All Rights Reserved.
                 </div>
                 <div class="footer-slogan">
-                    AI-First Technology Solutions
+                    Forging Autonomous Intelligence
                 </div>
             </div>
         </div>
         <button id="scroll-top" class="scroll-top" aria-label="Back to top">
-            <i class="fas fa-arrow-up"></i>
+            <i class="fas fa-chevron-up"></i>
         </button>
     </footer>
 
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=5"></script>
 </body>
 
 </html>
