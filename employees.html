@@ -8,13 +8,11 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=16">
+    <link rel="stylesheet" href="style.css?v=20">
 </head>
 
-<body>
+<body class="theme-transition">
     <script>
         (function () {
             const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -32,11 +30,10 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="portfolio.html">Showcase</a></li>
                     <li><a href="employees.html" class="active">Our Team</a></li>
-                    <li><a href="contact.html" class="nav-cta">Work with us</a></li>
+                    <li><a href="contact.html" class="nav-cta">Initiate Project</a></li>
                     <li>
                         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
                             <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon"></i>
                         </button>
                     </li>
                 </ul>
@@ -47,18 +44,13 @@
     <main>
         <section id="hero">
             <div class="container" style="text-align: center;">
-                <h1 style="margin-bottom: 2rem;"><span class="gradient-text">Meet Our Team</span></h1>
-                <p style="margin: 0 auto 1.5rem; max-width: 800px;">ArtSync's team combines deep AI expertise, technical leadership, and global execution to build intelligent systems that deliver real business value.</p>
-                <p style="margin: 0 auto 3rem; max-width: 800px; color: var(--color-text-muted);">With a distributed footprint across key markets, we combine local insight and cross-border execution to scale AI solutions globally.</p>
-
-                <div class="hero-actions" style="display: flex; gap: 1.5rem; justify-content: center;">
-                    <a href="#team-grid" class="btn btn-primary">Meet The Team &rarr;</a>
-                    <a href="contact.html" class="btn btn-secondary">Join Our Team</a>
-                </div>
+                <div class="badge">Engineers</div>
+                <h1 style="margin-bottom: 2rem;">The Minds Behind <span class="gradient-text">the Code</span></h1>
+                <p style="margin: 0 auto; max-width: 650px;">A specialized team of engineers and innovators dedicated to building high-performance systems.</p>
             </div>
         </section>
 
-        <section id="team-grid">
+        <section id="team-grid" style="padding-bottom: 8rem;">
             <div class="container">
                 <div class="grid grid-4" style="align-items: stretch;">
                     <!-- Ashish -->
@@ -67,20 +59,16 @@
                             <img src="ashish_new.jpeg" alt="Ashish Tyagi">
                         </div>
                         <div class="team-content">
+                            <div style="color: var(--color-primary); font-weight: 800; font-size: 0.75rem; letter-spacing: 0.1em; margin-bottom: 0.5rem;">CEO</div>
                             <h3>Ashish Tyagi</h3>
-                            <div
-                                style="color: var(--color-primary); font-weight: 800; font-size: 0.75rem; letter-spacing: 0.05em; margin-bottom: 0.25rem;">
-                                CEO</div>
                             <p class="team-title">Chief Executive Officer</p>
-                            <p class="team-bio">Leading ArtSync with a vision to deliver exceptional digital solutions
-                                and innovation.</p>
-                            <div class="social-links" style="margin-bottom: 1rem;">
+                            <p class="team-bio">Leading ArtSync with a vision to deliver exceptional digital solutions and innovation.</p>
+                            <div class="social-links" style="margin-bottom: 1.5rem; display: flex; gap: 1rem;">
                                 <a href="https://www.linkedin.com/in/ashish-tyagi-709841261/" target="_blank"
-                                    style="color: var(--color-text-muted); font-size: 1.1rem;"><i
-                                        class="fab fa-linkedin"></i></a>
+                                    style="color: var(--color-primary); font-size: 1.25rem;"><i class="fab fa-linkedin"></i></a>
                             </div>
-                            <div class="team-divider"></div>
-                            <div class="team-footer-badge">
+                            <div style="height: 1px; background: var(--color-border); margin: 1.5rem 0;"></div>
+                            <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.8rem; color: var(--color-text-muted);">
                                 <i class="fas fa-briefcase"></i>
                                 <span>Founder & CEO</span>
                             </div>
@@ -93,19 +81,18 @@
                             <img src="aditya_new.jpeg" alt="Aditya Tyagi">
                         </div>
                         <div class="team-content">
+                            <div style="color: var(--color-primary); font-weight: 800; font-size: 0.75rem; letter-spacing: 0.1em; margin-bottom: 0.5rem;">SYSTEM ARCHITECT</div>
                             <h3>Aditya Tyagi</h3>
                             <p class="team-title">Lead Developer</p>
-                            <p class="team-bio">Expert in full-stack development, driving the technical architecture and
-                                engineering excellence at ArtSync.</p>
-                            <div class="social-links" style="margin-bottom: 1rem;">
+                            <p class="team-bio">Expert in full-stack development, driving the technical architecture and engineering excellence at ArtSync.</p>
+                            <div class="social-links" style="margin-bottom: 1.5rem; display: flex; gap: 1rem;">
                                 <a href="https://www.linkedin.com/in/aditya-tyagi-091a1324a/" target="_blank"
-                                    style="color: var(--color-text-muted); font-size: 1.1rem;"><i
-                                        class="fab fa-linkedin"></i></a>
+                                    style="color: var(--color-primary); font-size: 1.25rem;"><i class="fab fa-linkedin"></i></a>
                             </div>
-                            <div class="team-divider"></div>
-                            <div class="team-footer-badge">
+                            <div style="height: 1px; background: var(--color-border); margin: 1.5rem 0;"></div>
+                            <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.8rem; color: var(--color-text-muted);">
                                 <i class="fas fa-code"></i>
-                                <span>Full Stack Architech</span>
+                                <span>Full Stack Architect</span>
                             </div>
                         </div>
                     </div>
@@ -116,20 +103,18 @@
                             <img src="ujjawal_new.jpeg" alt="Ujjawal Tyagi">
                         </div>
                         <div class="team-content">
+                            <div style="color: var(--color-primary); font-weight: 800; font-size: 0.75rem; letter-spacing: 0.1em; margin-bottom: 0.5rem;">INTERFACE ENG</div>
                             <h3>Ujjawal Tyagi</h3>
                             <p class="team-title">Developer</p>
-                            <p class="team-bio">Passionate developer focused on creating seamless and efficient software
-                                solutions.</p>
-                            <div class="social-links" style="margin-bottom: 1rem;">
+                            <p class="team-bio">Passionate developer focused on creating seamless and efficient software solutions.</p>
+                            <div class="social-links" style="margin-bottom: 1.5rem; display: flex; gap: 1rem;">
                                 <a href="https://github.com/ujjawal999" target="_blank"
-                                    style="color: var(--color-text-muted); font-size: 1.1rem; margin-right: 0.75rem;"><i
-                                        class="fab fa-github"></i></a>
+                                    style="color: var(--color-primary); font-size: 1.25rem;"><i class="fab fa-github"></i></a>
                                 <a href="https://www.linkedin.com/in/ujjawaltyagi/" target="_blank"
-                                    style="color: var(--color-text-muted); font-size: 1.1rem;"><i
-                                        class="fab fa-linkedin"></i></a>
+                                    style="color: var(--color-primary); font-size: 1.25rem;"><i class="fab fa-linkedin"></i></a>
                             </div>
-                            <div class="team-divider"></div>
-                            <div class="team-footer-badge">
+                            <div style="height: 1px; background: var(--color-border); margin: 1.5rem 0;"></div>
+                            <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.8rem; color: var(--color-text-muted);">
                                 <i class="fas fa-laptop-code"></i>
                                 <span>Software Development</span>
                             </div>
@@ -142,56 +127,22 @@
                             <img src="abhinav.jpeg" alt="Abhinav">
                         </div>
                         <div class="team-content">
+                            <div style="color: var(--color-primary); font-weight: 800; font-size: 0.75rem; letter-spacing: 0.1em; margin-bottom: 0.5rem;">NEURAL ARCH</div>
                             <h3>Abhinav</h3>
                             <p class="team-title">AI Developer</p>
-                            <p class="team-bio">Building intelligent systems and machine learning solutions that power
-                                the next generation of ArtSync products.</p>
-                            <div class="social-links" style="margin-bottom: 1rem;">
+                            <p class="team-bio">Building intelligent systems and machine learning solutions that power the next generation of ArtSync products.</p>
+                            <div class="social-links" style="margin-bottom: 1.5rem; display: flex; gap: 1rem;">
                                 <a href="https://github.com/abhinavtyagi" target="_blank"
-                                    style="color: var(--color-text-muted); font-size: 1.1rem; margin-right: 0.75rem;"><i
-                                        class="fab fa-github"></i></a>
+                                    style="color: var(--color-primary); font-size: 1.25rem;"><i class="fab fa-github"></i></a>
                                 <a href="https://www.linkedin.com/in/abhinav-tyagi-953b0222a/" target="_blank"
-                                    style="color: var(--color-text-muted); font-size: 1.1rem;"><i
-                                        class="fab fa-linkedin"></i></a>
+                                    style="color: var(--color-primary); font-size: 1.25rem;"><i class="fab fa-linkedin"></i></a>
                             </div>
-                            <div class="team-divider"></div>
-                            <div class="team-footer-badge">
+                            <div style="height: 1px; background: var(--color-border); margin: 1.5rem 0;"></div>
+                            <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.8rem; color: var(--color-text-muted);">
                                 <i class="fas fa-brain"></i>
                                 <span>Artificial Intelligence</span>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- OUR CULTURE SECTION -->
-        <section id="culture" style="padding: 10rem 0; background: var(--color-bg-alt);">
-            <div class="container">
-                <div class="section-header">
-                    <h2 style="font-size: 3rem; text-align: center; margin-bottom: 4rem;">Our Culture</h2>
-                </div>
-                <div class="grid grid-3">
-                    <div class="glass-card">
-                        <div style="font-size: 2rem; color: var(--color-primary); margin-bottom: 1.5rem;">
-                            <i class="fas fa-microchip"></i>
-                        </div>
-                        <h3 style="margin-bottom: 1rem;">AI-Native Thinking</h3>
-                        <p style="color: var(--color-text-muted); line-height: 1.6;">We approach every problem through an AI lens, identifying where intelligent systems can create the most value.</p>
-                    </div>
-                    <div class="glass-card">
-                        <div style="font-size: 2rem; color: var(--color-primary); margin-bottom: 1.5rem;">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 style="margin-bottom: 1rem;">Collaborative Spirit</h3>
-                        <p style="color: var(--color-text-muted); line-height: 1.6;">Our distributed team collaborates across time zones, sharing knowledge and pushing each other toward better AI solutions.</p>
-                    </div>
-                    <div class="glass-card">
-                        <div style="font-size: 2rem; color: var(--color-primary); margin-bottom: 1.5rem;">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h3 style="margin-bottom: 1rem;">Continuous Learning</h3>
-                        <p style="color: var(--color-text-muted); line-height: 1.6;">The AI landscape evolves weekly. We stay at the frontier, continuously learning and applying the latest techniques.</p>
                     </div>
                 </div>
             </div>
@@ -209,27 +160,24 @@
     <footer class="main-footer">
         <div class="container">
             <div class="footer-cta">
-                <a href="contact.html" class="btn btn-primary footer-cta-btn">Send Message</a>
-                <div class="footer-contact-info">
-                    <p><i class="fas fa-phone"></i> +91-9650076779</p>
-                    <p><i class="fas fa-envelope"></i> artsyncindiallp@artsync.live</p>
-                </div>
+                <h2 style="margin-bottom: 3rem;">Ready to sync with the future?</h2>
+                <a href="contact.html" class="btn btn-primary">Start Your Journey</a>
             </div>
             <div class="footer-bottom">
                 <div class="footer-copyright">
                     &copy; 2025 ArtSync India LLP. All Rights Reserved.
                 </div>
                 <div class="footer-slogan">
-                    AI-First Technology Solutions
+                    Forging Autonomous Intelligence
                 </div>
             </div>
         </div>
         <button id="scroll-top" class="scroll-top" aria-label="Back to top">
-            <i class="fas fa-arrow-up"></i>
+            <i class="fas fa-chevron-up"></i>
         </button>
     </footer>
 
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=5"></script>
 </body>
 
 </html>

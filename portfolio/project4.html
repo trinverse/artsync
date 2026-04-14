@@ -4,20 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaaS Management Platform - ArtSync Portfolio</title>
-    <link rel="icon" href="../tab-icon-large.png" type="image/png">
+    <title>Nexus Hub - ArtSync Blueprint</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../style.css?v=16">
+    <link rel="stylesheet" href="../style.css?v=20">
 </head>
 
-<body>
+<body class="theme-transition">
     <script>
-        // Initialize theme immediately
         (function () {
-            const savedTheme = localStorage.getItem('theme') || 'light';
+            const savedTheme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', savedTheme);
         })();
     </script>
@@ -31,11 +29,10 @@
                     <li><a href="../services.html">Services</a></li>
                     <li><a href="../portfolio.html" class="active">Showcase</a></li>
                     <li><a href="../employees.html">Our Team</a></li>
-                    <li><a href="../contact.html" class="nav-cta">Work with us</a></li>
+                    <li><a href="../contact.html" class="nav-cta">Initiate Project</a></li>
                     <li>
                         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
                             <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon"></i>
                         </button>
                     </li>
                 </ul>
@@ -49,108 +46,98 @@
 
                 <!-- Breadcrumb -->
                 <nav class="breadcrumb" aria-label="breadcrumb">
-                    <a href="../index.html">Home</a>
+                    <a href="../index.html">HQ</a>
                     <i class="fas fa-chevron-right"></i>
-                    <a href="../portfolio.html">Portfolio</a>
+                    <a href="../portfolio.html">Gallery</a>
                     <i class="fas fa-chevron-right"></i>
-                    <span>SaaS Management Platform</span>
+                    <span>Nexus Hub</span>
                 </nav>
 
-                <!-- Hero placeholder -->
-                <div class="project-hero-img" style="background: var(--color-bg-alt); min-height: 280px;">
-                    <i class="fas fa-layer-group"
-                        style="font-size:5rem; color:var(--color-secondary); opacity:0.4;"></i>
+                <!-- Hero Image -->
+                <div class="project-hero-img" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(45deg, var(--color-bg-alt), #1e293b);">
+                    <i class="fas fa-cubes" style="font-size: 8rem; color: var(--color-primary); opacity: 0.6; filter: drop-shadow(0 0 20px var(--color-primary));"></i>
                 </div>
 
                 <!-- Project Title block -->
                 <div class="project-title-block">
                     <div class="project-tags">
-                        <span class="tag">SaaS</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">CRM</span>
+                        <span class="tag">B2B CORE</span>
+                        <span class="tag">OPS INTEGRATION</span>
+                        <span class="tag">CRM ARCH</span>
                     </div>
-                    <h1>SaaS Management Platform</h1>
-                    <p class="project-lead">Comprehensive Business Management with CRM, Invoicing & Project Tracking</p>
+                    <h1>Nexus Hub</h1>
+                    <p class="project-lead">Integrated Operational Control & Enterprise CRM System</p>
                 </div>
 
                 <!-- Content body -->
                 <div class="project-body">
 
-                    <p>A full-featured <strong>SaaS management platform</strong> that consolidates CRM, invoicing,
-                        project tracking, and team collaboration into a single unified workspace — built for growing
-                        businesses.</p>
+                    <p><strong>Nexus Hub</strong> is a multi-dimensional operational core that consolidates resource governance, financial transmission, and project tracking into a single, high-integrity architectural workspace—engineered for high-velocity enterprises.</p>
 
-                    <h3>Overview</h3>
-                    <p>This platform replaces a fragmented tool stack with one cohesive solution. Teams can manage
-                        customer relationships, track project timelines, generate invoices, and collaborate — all from
-                        a single dashboard with 99.9% uptime SLA.</p>
+                    <h3>System Synopsis</h3>
+                    <p>Nexus replaces disparate operational layers with a singular, high-integrity solution. Teams can orchestrate client relationships, monitor complex project lifecycles, and execute financial transfers under a rigorous 99.9% availability protocol.</p>
 
-                    <h3>Key Features</h3>
+                    <h3>Operational Modules</h3>
                     <div class="features-grid">
                         <div class="feature-card">
-                            <strong>CRM & Pipeline</strong>
-                            Contact management, deal pipelines, and automated follow-up sequences.
+                            <strong>Client Lifecycle Management</strong>
+                            Centralized identity tracking, deal pipeline visualizers, and automated engagement sequences.
                         </div>
                         <div class="feature-card">
-                            <strong>Project Tracking</strong>
-                            Kanban boards, Gantt charts, time tracking, and milestone management.
+                            <strong>Operational Visualizers</strong>
+                            Advanced Kanban frameworks, Gantt modeling, and high-frequency milestone tracking.
                         </div>
                         <div class="feature-card">
-                            <strong>Smart Invoicing</strong>
-                            Automated invoice generation, recurring billing, and payment gateway integration.
+                            <strong>Automated Financial Settlement</strong>
+                            Programmatic invoicing, recurrent fiscal transmission, and secure financial gateway integration.
                         </div>
                         <div class="feature-card">
-                            <strong>Team Collaboration</strong>
-                            Shared inboxes, internal notes, task assignments, and real-time updates.
+                            <strong>Synchronized Workspace Synergy</strong>
+                            Unified communication hubs, collaborative task delegation, and real-time operational updates.
                         </div>
                         <div class="feature-card">
-                            <strong>Client Portal</strong>
-                            Branded self-service portal for clients to view invoices and project status.
+                            <strong>External Stakeholder Interface</strong>
+                            Bespoke self-service hubs for clients to monitor project status and financial history.
                         </div>
                         <div class="feature-card">
-                            <strong>Reporting & Analytics</strong>
-                            Revenue reports, project profitability, and team productivity metrics.
+                            <strong>Structural Telemetry</strong>
+                            Real-time reporting on revenue velocity, project integrity, and team-level performance.
                         </div>
                     </div>
 
-                    <h3>Tech Stack</h3>
+                    <h3>Structural Engineering Details</h3>
                     <div class="tech-stack-grid">
                         <div class="tech-category">
-                            <h4>Frontend</h4>
-                            <p>React, TypeScript, Tailwind CSS, React Query, Zustand</p>
+                            <h4>Interface Core</h4>
+                            <p>React-based architectural interface featuring type-safe logic and adaptive state management.</p>
                         </div>
                         <div class="tech-category">
-                            <h4>Backend</h4>
-                            <p>Node.js, Express, PostgreSQL, Prisma ORM</p>
+                            <h4>Logic Layer</h4>
+                            <p>Synchronized compute environment with integrated object-relational mapping.</p>
                         </div>
                         <div class="tech-category">
-                            <h4>Payments & Email</h4>
-                            <p>Stripe, SendGrid, Twilio (SMS notifications)</p>
+                            <h4>Fiscal Gateways</h4>
+                            <p>Industrial-grade financial transmission and communication protocols.</p>
                         </div>
                         <div class="tech-category">
-                            <h4>Infrastructure</h4>
-                            <p>AWS, Docker, Nginx, GitHub Actions CI/CD</p>
+                            <h4>Cloud Ops</h4>
+                            <p>Resilient infrastructure featuring automated orchestration and continuous deployment logic.</p>
                         </div>
                     </div>
 
                     <h3>Architecture Highlights</h3>
-                    <ul class="highlights-list">
-                        <li><strong>500+ companies onboarded:</strong> Multi-tenant architecture with strict data
-                            isolation per account.</li>
-                        <li><strong>99.9% uptime SLA:</strong> Load-balanced deployment with automated failover and
-                            health monitoring.</li>
-                        <li><strong>Webhook-driven events:</strong> Real-time Stripe payment events trigger invoice
-                            status updates instantly.</li>
-                        <li><strong>Role-based access control:</strong> Admin, Manager, Member, and Read-only roles
-                            with granular permissions.</li>
+                    <ul class="highlights-list" style="margin-bottom: 4rem;">
+                        <li><strong>Scalable Multi-Tenancy:</strong> Advanced architectural isolation ensuring absolute data integrity across diverse organizational accounts.</li>
+                        <li><strong>High-Availability Protocols:</strong> Load-balanced operational deployment with predictive health monitoring and automated recovery.</li>
+                        <li><strong>Event-Driven Financials:</strong> Webhook-triggered logic for instantaneous processing of global financial transitions.</li>
                     </ul>
 
                     <div class="project-cta">
-                        <a href="../contact.html" class="m3-button filled large">
-                            <i class="fas fa-envelope"></i> Enquire About This Project
+                        <a href="../contact.html" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Initiate Development Inquiry
                         </a>
-                        <a href="../portfolio.html" class="m3-button outlined large">
-                            <i class="fas fa-arrow-left"></i> Back to Portfolio
+                        <a href="../portfolio.html" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Return to Gallery
                         </a>
                     </div>
 
@@ -162,27 +149,24 @@
     <footer class="main-footer">
         <div class="container">
             <div class="footer-cta">
-                <a href="../contact.html" class="btn btn-primary footer-cta-btn">Send Message</a>
-                <div class="footer-contact-info">
-                    <p><i class="fas fa-phone"></i> +91-9650076779</p>
-                    <p><i class="fas fa-envelope"></i> artsyncindiallp@artsync.live</p>
-                </div>
+                <h2 style="margin-bottom: 3rem;">Ready to sync with the future?</h2>
+                <a href="../contact.html" class="btn btn-primary">Start Your Journey</a>
             </div>
             <div class="footer-bottom">
                 <div class="footer-copyright">
                     &copy; 2025 ArtSync India LLP. All Rights Reserved.
                 </div>
                 <div class="footer-slogan">
-                    AI-First Technology Solutions
+                    Forging Autonomous Intelligence
                 </div>
             </div>
         </div>
         <button id="scroll-top" class="scroll-top" aria-label="Back to top">
-            <i class="fas fa-arrow-up"></i>
+            <i class="fas fa-chevron-up"></i>
         </button>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="../script.js?v=5"></script>
 </body>
 
 </html>

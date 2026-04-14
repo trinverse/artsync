@@ -4,20 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytics Dashboard - ArtSync Portfolio</title>
-    <link rel="icon" href="../tab-icon-large.png" type="image/png">
+    <title>Vortex Analytics - ArtSync Blueprint</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../style.css?v=16">
+    <link rel="stylesheet" href="../style.css?v=20">
 </head>
 
-<body>
+<body class="theme-transition">
     <script>
-        // Initialize theme immediately
         (function () {
-            const savedTheme = localStorage.getItem('theme') || 'light';
+            const savedTheme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', savedTheme);
         })();
     </script>
@@ -31,11 +29,10 @@
                     <li><a href="../services.html">Services</a></li>
                     <li><a href="../portfolio.html" class="active">Showcase</a></li>
                     <li><a href="../employees.html">Our Team</a></li>
-                    <li><a href="../contact.html" class="nav-cta">Work with us</a></li>
+                    <li><a href="../contact.html" class="nav-cta">Initiate Project</a></li>
                     <li>
                         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
                             <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon"></i>
                         </button>
                     </li>
                 </ul>
@@ -49,106 +46,98 @@
 
                 <!-- Breadcrumb -->
                 <nav class="breadcrumb" aria-label="breadcrumb">
-                    <a href="../index.html">Home</a>
+                    <a href="../index.html">HQ</a>
                     <i class="fas fa-chevron-right"></i>
-                    <a href="../portfolio.html">Portfolio</a>
+                    <a href="../portfolio.html">Gallery</a>
                     <i class="fas fa-chevron-right"></i>
-                    <span>Analytics Dashboard</span>
+                    <span>Vortex Analytics</span>
                 </nav>
 
-                <!-- Hero placeholder -->
-                <div class="project-hero-img" style="background: var(--color-bg-alt); min-height: 280px;">
-                    <i class="fas fa-chart-bar" style="font-size:5rem; color:var(--color-secondary); opacity:0.4;"></i>
+                <!-- Hero Image -->
+                <div class="project-hero-img" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(45deg, var(--color-bg-alt), #0f172a);">
+                    <i class="fas fa-chart-line" style="font-size: 8rem; color: var(--color-primary); opacity: 0.6; filter: drop-shadow(0 0 20px var(--color-primary));"></i>
                 </div>
 
                 <!-- Project Title block -->
                 <div class="project-title-block">
                     <div class="project-tags">
-                        <span class="tag">Data Analytics</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Business Intelligence</span>
+                        <span class="tag">DATA OPS</span>
+                        <span class="tag">NEURAL COMPUTE</span>
+                        <span class="tag">BI ARCHITECTURE</span>
                     </div>
-                    <h1>Analytics Dashboard</h1>
-                    <p class="project-lead">Real-time Business Intelligence with Predictive Analytics</p>
+                    <h1>Vortex Analytics</h1>
+                    <p class="project-lead">Dynamic Computational Intelligence & Predictive Forecast Engine</p>
                 </div>
 
                 <!-- Content body -->
                 <div class="project-body">
 
-                    <p>A comprehensive <strong>business intelligence dashboard</strong> delivering real-time insights,
-                        predictive analytics, and automated reporting — helping businesses make data-driven decisions
-                        faster.</p>
+                    <p><strong>Vortex</strong> is an extensive computational interface delivering high-frequency insights, predictive modeling, and automated synthesis—accelerating data-driven strategic maneuvers for high-growth enterprises.</p>
 
-                    <h3>Overview</h3>
-                    <p>This platform aggregates data from multiple sources into a unified dashboard, applying machine
-                        learning models to surface trends, anomalies, and forecasts. Custom report generation and
-                        automated alerting keep teams informed without manual effort.</p>
+                    <h3>System Synopsis</h3>
+                    <p>The Vortex engine synthesizes inputs from diverse topographical data sources into a unified operational view, utilizing cognitive models to identify nascent trends, structural anomalies, and predictive architectural forecasts.</p>
 
-                    <h3>Key Features</h3>
+                    <h3>Operational Modules</h3>
                     <div class="features-grid">
                         <div class="feature-card">
-                            <strong>Real-Time Data Streaming</strong>
-                            Live updates from connected data sources with sub-second refresh rates.
+                            <strong>High-Frequency Stream Synthesis</strong>
+                            Sub-second data ingestion from live architectural nodes with real-time UI synchronization.
                         </div>
                         <div class="feature-card">
-                            <strong>Predictive Analytics</strong>
-                            ML-powered forecasting for sales, inventory, and operational metrics.
+                            <strong>Cognitive Forecasting</strong>
+                            Neural-driven predictive modeling for market trajectory, resource velocity, and operational targets.
                         </div>
                         <div class="feature-card">
-                            <strong>Custom Report Builder</strong>
-                            Drag-and-drop report creation with scheduled PDF/CSV export.
+                            <strong>Synthesis Logic Engine</strong>
+                            Modular architecture for crafting deep-insight reports with automated distribution protocols.
                         </div>
                         <div class="feature-card">
-                            <strong>Anomaly Detection</strong>
-                            Automated alerting when KPIs deviate from expected ranges.
+                            <strong>Operational Variance Alerting</strong>
+                            Autonomous monitoring systems providing high-priority alerts for KPI deviations and system anomalies.
                         </div>
                         <div class="feature-card">
-                            <strong>Multi-Source Integration</strong>
-                            Connects to SQL databases, REST APIs, Google Sheets, and more.
+                            <strong>Unified Ingest Architectures</strong>
+                            Seamless bridges to distributed SQL clusters, REST protocols, and unstructured data streams.
                         </div>
                         <div class="feature-card">
-                            <strong>Role-Based Access</strong>
-                            Team-level permissions with audit logs and data governance controls.
+                            <strong>Governance & Access Logic</strong>
+                            Granular permission frameworks with absolute metadata integrity and audit-ready tracking.
                         </div>
                     </div>
 
-                    <h3>Tech Stack</h3>
+                    <h3>Structural Engineering Details</h3>
                     <div class="tech-stack-grid">
                         <div class="tech-category">
-                            <h4>Frontend</h4>
-                            <p>React, TypeScript, Recharts, D3.js, Tailwind CSS</p>
+                            <h4>Visualization Layer</h4>
+                            <p>React with specialized D3.js and Recharts integration for high-density telemetry.</p>
                         </div>
                         <div class="tech-category">
-                            <h4>Backend</h4>
-                            <p>Python, FastAPI, Pandas, scikit-learn, PostgreSQL</p>
+                            <h4>Synthesis Core</h4>
+                            <p>Python-based compute layer featuring specialized ML libraries and high-output API logic.</p>
                         </div>
                         <div class="tech-category">
                             <h4>Data Pipeline</h4>
-                            <p>Apache Kafka, Redis, Celery, Apache Airflow</p>
+                            <p>Distributed throughput management using asynchronous event-streams and task orchestration.</p>
                         </div>
                         <div class="tech-category">
-                            <h4>Infrastructure</h4>
-                            <p>AWS (EC2, RDS, S3), Docker, GitHub Actions</p>
+                            <h4>Deployment Hub</h4>
+                            <p>Cloud-native infrastructure optimized for high-volume storage and resilient compute cycles.</p>
                         </div>
                     </div>
 
                     <h3>Architecture Highlights</h3>
-                    <ul class="highlights-list">
-                        <li><strong>Event-driven architecture:</strong> Kafka streams for real-time ingestion from
-                            multiple data producers.</li>
-                        <li><strong>10TB+ data capacity:</strong> Partitioned PostgreSQL with time-series optimisation.
-                        </li>
-                        <li><strong>Automated ML pipelines:</strong> Airflow-orchestrated model training and deployment.
-                        </li>
-                        <li><strong>White-label ready:</strong> Fully customisable branding for enterprise clients.</li>
+                    <ul class="highlights-list" style="margin-bottom: 4rem;">
+                        <li><strong>Event-Driven Orchestration:</strong> High-capacity message brokers managing real-time data flows between disparate systems.</li>
+                        <li><strong>Scalable Data Persistence:</strong> Optimize time-series storage designed for multi-terabyte analytical environments.</li>
+                        <li><strong>Orchestrated ML Lifecycles:</strong> Automated logic for model refinement, training iterations, and production release cycles.</li>
                     </ul>
 
                     <div class="project-cta">
-                        <a href="../contact.html" class="m3-button filled large">
-                            <i class="fas fa-envelope"></i> Enquire About This Project
+                        <a href="../contact.html" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Initiate Development Inquiry
                         </a>
-                        <a href="../portfolio.html" class="m3-button outlined large">
-                            <i class="fas fa-arrow-left"></i> Back to Portfolio
+                        <a href="../portfolio.html" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Return to Gallery
                         </a>
                     </div>
 
@@ -160,27 +149,24 @@
     <footer class="main-footer">
         <div class="container">
             <div class="footer-cta">
-                <a href="../contact.html" class="btn btn-primary footer-cta-btn">Send Message</a>
-                <div class="footer-contact-info">
-                    <p><i class="fas fa-phone"></i> +91-9650076779</p>
-                    <p><i class="fas fa-envelope"></i> artsyncindiallp@artsync.live</p>
-                </div>
+                <h2 style="margin-bottom: 3rem;">Ready to sync with the future?</h2>
+                <a href="../contact.html" class="btn btn-primary">Start Your Journey</a>
             </div>
             <div class="footer-bottom">
                 <div class="footer-copyright">
                     &copy; 2025 ArtSync India LLP. All Rights Reserved.
                 </div>
                 <div class="footer-slogan">
-                    AI-First Technology Solutions
+                    Forging Autonomous Intelligence
                 </div>
             </div>
         </div>
         <button id="scroll-top" class="scroll-top" aria-label="Back to top">
-            <i class="fas fa-arrow-up"></i>
+            <i class="fas fa-chevron-up"></i>
         </button>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="../script.js?v=5"></script>
 </body>
 
 </html>
