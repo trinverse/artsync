@@ -242,6 +242,9 @@ function initHeroWordReveal() {
 
         let delay = 0;
         nodes.forEach(node => {
+            // Don't split inside gradient spans — breaks -webkit-text-fill-color
+            if (node.parentElement?.closest('.gradient-text')) return;
+
             const parts = node.textContent.split(/(\s+)/);
             const frag = document.createDocumentFragment();
             parts.forEach(part => {
