@@ -9,10 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=20">
+    <link rel="stylesheet" href="style.css?v=25">
 </head>
 
-<body class="theme-transition">
+<body>
     <script>
         (function () {
             const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -43,58 +43,57 @@
 
     <main>
         <section id="hero">
-            <div class="container">
-                <div class="badge">Limitless Digital Evolution</div>
+            <div class="hero-visual">
+                <div class="hero-glow"></div>
+                <div class="hero-ring hero-ring-1"></div>
+                <div class="hero-ring hero-ring-2"></div>
+                <div class="hero-ring hero-ring-3"></div>
+            </div>
+            <div class="container hero-inner hero-entrance">
+                <div class="badge"><span class="badge-dot"></span> Limitless Digital Evolution</div>
                 <h1 class="hero-title">We Forge <span class="gradient-text">Proactive Intelligence</span></h1>
                 <p>Designing industrial-grade AI ecosystems and specialized cloud frameworks—transforming complex engineering visions into high-impact digital solutions.</p>
                 <div class="hero-actions">
-                    <a href="portfolio.html" class="btn btn-primary">View Showcase</a>
-                    <a href="contact.html" class="btn btn-secondary">Connect With Us</a>
+                    <a href="portfolio.html" class="btn btn-primary"><i class="fas fa-rocket"></i> View Showcase</a>
+                    <a href="contact.html" class="btn btn-secondary"><i class="fas fa-bolt"></i> Connect With Us</a>
                 </div>
             </div>
         </section>
 
-        <!-- CORE ENGINEERING -->
         <section id="what-we-build">
             <div class="container">
                 <div class="section-header">
-                    <div class="badge">TECH STACK</div>
+                    <div class="badge"><span class="badge-dot"></span> TECH STACK</div>
                     <h2>Engineering Command Centers</h2>
                 </div>
-                <div class="grid grid-3">
+                <div class="grid grid-3 reveal-stagger">
                     <div class="glass-card">
-                        <div style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 2rem;"><i
-                                class="fas fa-brain"></i></div>
+                        <div class="card-icon"><i class="fas fa-brain"></i></div>
                         <h3>Knowledge Retrieval Architectures</h3>
                         <p>Deploying advanced RAG frameworks with integrated vector intelligence and hyper-focused retrieval logic.</p>
                     </div>
                     <div class="glass-card">
-                        <div style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 2rem;"><i
-                                class="fas fa-microchip"></i></div>
+                        <div class="card-icon"><i class="fas fa-microchip"></i></div>
                         <h3>Neural Calibration & Refinement</h3>
                         <p>Specialized fine-tuning and model optimization designed to adapt large-scale intelligence to niche data environments.</p>
                     </div>
                     <div class="glass-card">
-                        <div style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 2rem;"><i
-                                class="fas fa-terminal"></i></div>
+                        <div class="card-icon"><i class="fas fa-terminal"></i></div>
                         <h3>Cognitive Synthesis Design</h3>
                         <p>Systematic prompt engineering and window-size management to maximize the efficiency of generative agents.</p>
                     </div>
                     <div class="glass-card">
-                        <div style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 2rem;"><i
-                                class="fas fa-user-gear"></i></div>
+                        <div class="card-icon"><i class="fas fa-user-gear"></i></div>
                         <h3>Autonomous Digital Workforce</h3>
                         <p>Orchestrating self-reasoning AI agents capable of multi-layered task execution and tool integration.</p>
                     </div>
                     <div class="glass-card">
-                        <div style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 2rem;"><i
-                                class="fas fa-database"></i></div>
+                        <div class="card-icon"><i class="fas fa-database"></i></div>
                         <h3>High-Velocity Data Refinement</h3>
                         <p>Comprehensive data restructuring and ETL processing optimized for modern machine learning lifecycles.</p>
                     </div>
                     <div class="glass-card">
-                        <div style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 2rem;"><i
-                                class="fas fa-shield-halved"></i></div>
+                        <div class="card-icon"><i class="fas fa-shield-halved"></i></div>
                         <h3>Intelligence Ops & Release</h3>
                         <p>Scalable model deployment pipelines with real-time analytics and automated reliability monitoring.</p>
                     </div>
@@ -102,31 +101,30 @@
             </div>
         </section>
 
-        <!-- OUR STRATEGY -->
-        <section id="how-we-work" style="background: var(--color-bg-alt);">
+        <section id="how-we-work" class="section-alt">
             <div class="container">
                 <div class="section-header">
-                    <div class="badge">METHODOLOGY</div>
+                    <div class="badge"><span class="badge-dot"></span> METHODOLOGY</div>
                     <h2>Our Strategic Roadmap</h2>
                 </div>
-                <div class="grid grid-4">
+                <div class="grid grid-4 reveal-stagger">
                     <div class="glass-card">
-                        <div class="stat-number" style="font-size: 1.5rem; margin-bottom: 1rem;">SEC 01</div>
+                        <div class="step-num">SEC 01</div>
                         <h3>Data Audit</h3>
                         <p>Evaluating and sanitizing datasets to ensure foundational accuracy for all AI models.</p>
                     </div>
                     <div class="glass-card">
-                        <div class="stat-number" style="font-size: 1.5rem; margin-bottom: 1rem;">SEC 02</div>
+                        <div class="step-num">SEC 02</div>
                         <h3>Neural Forge</h3>
                         <p>Executing model selection and training through rigorous performance-driven benchmarks.</p>
                     </div>
                     <div class="glass-card">
-                        <div class="stat-number" style="font-size: 1.5rem; margin-bottom: 1rem;">SEC 03</div>
+                        <div class="step-num">SEC 03</div>
                         <h3>Global Launch</h3>
                         <p>Transitioning into production with high-availability infrastructure and adaptive scaling.</p>
                     </div>
                     <div class="glass-card">
-                        <div class="stat-number" style="font-size: 1.5rem; margin-bottom: 1rem;">SEC 04</div>
+                        <div class="step-num">SEC 04</div>
                         <h3>Continuous Pulse</h3>
                         <p>Evolutionary optimization based on live telemetry and evolving user requirements.</p>
                     </div>
@@ -134,91 +132,77 @@
 
                 <div class="stats-strip">
                     <div class="stat-item">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">AI ARCHITECTS</span>
+                        <span class="stat-number" data-count="10" data-suffix="+">10+</span>
+                        <span class="stat-label">AI Architects</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">6</span>
-                        <span class="stat-label">GLOBAL HUBS</span>
+                        <span class="stat-number" data-count="6">6</span>
+                        <span class="stat-label">Global Hubs</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">MARKET RELIABILITY</span>
+                        <span class="stat-number" data-count="100" data-suffix="%">100%</span>
+                        <span class="stat-label">Market Reliability</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">AUTO</span>
-                        <span class="stat-label">SCALING OPS</span>
+                        <span class="stat-label">Scaling Ops</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ALLIED ECOSYSTEMS -->
         <section id="our-partners">
             <div class="container">
                 <div class="section-header">
-                    <div class="badge">SYNERGY</div>
+                    <div class="badge"><span class="badge-dot"></span> SYNERGY</div>
                     <h2>Allied Ecosystems</h2>
-                    <p style="margin-top: 1rem;">Merging strengths with industry pioneers to redefine intelligent software.</p>
+                    <p>Merging strengths with industry pioneers to redefine intelligent software.</p>
                 </div>
                 <div class="grid grid-2">
-                    <div class="glass-card" style="display: flex; gap: 2rem; align-items: start;">
-                        <div
-                            style="width: 80px; height: 80px; background: rgba(244, 63, 94, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--color-primary); flex-shrink: 0;">
-                            <i class="fas fa-layer-group"></i>
-                        </div>
+                    <div class="glass-card partner-card">
+                        <div class="partner-icon"><i class="fas fa-layer-group"></i></div>
                         <div>
                             <h3>Trinly Hub</h3>
-                            <p style="margin: 1rem 0 2rem;">A powerhouse of digital implementation, Trinly focuses on bespoke software engineering and large-scale data management solutions for the modern enterprise.</p>
-                            <a href="https://trinly.us/" class="btn btn-secondary" target="_blank"
-                                style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Review Partnership →</a>
+                            <p>A powerhouse of digital implementation, Trinly focuses on bespoke software engineering and large-scale data management solutions for the modern enterprise.</p>
+                            <a href="https://trinly.us/" class="btn btn-secondary" target="_blank" rel="noopener">Review Partnership →</a>
                         </div>
                     </div>
-                    <div class="glass-card" style="display: flex; gap: 2rem; align-items: start;">
-                        <div
-                            style="width: 80px; height: 80px; background: rgba(245, 158, 11, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--color-secondary); flex-shrink: 0;">
-                            <i class="fas fa-wand-magic-sparkles"></i>
-                        </div>
+                    <div class="glass-card partner-card">
+                        <div class="partner-icon" style="color: var(--secondary);"><i class="fas fa-wand-magic-sparkles"></i></div>
                         <div>
                             <h3>Corshift Creative</h3>
-                            <p style="margin: 1rem 0 2rem;">Specializing in behavioral design and user flow optimization, Corshift ensures that high-tech solutions remain intuitive and human-centric.</p>
-                            <a href="https://corshift.com/" class="btn btn-secondary" target="_blank"
-                                style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Review Partnership →</a>
+                            <p>Specializing in behavioral design and user flow optimization, Corshift ensures that high-tech solutions remain intuitive and human-centric.</p>
+                            <a href="https://corshift.com/" class="btn btn-secondary" target="_blank" rel="noopener">Review Partnership →</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- THE NARRATIVE -->
-        <section id="bottom-section" style="background: var(--color-bg-alt); padding-bottom: 0;">
+        <section id="bottom-section" class="section-alt">
             <div class="container">
-                <div class="grid grid-2" style="align-items: center; padding-bottom: 8rem;">
+                <div class="grid grid-2" style="align-items: center;">
                     <div class="about-text">
-                        <div class="badge">THE NARRATIVE</div>
-                        <h2 style="margin-bottom: 2rem;">The ArtSync Evolution</h2>
+                        <div class="badge"><span class="badge-dot"></span> THE NARRATIVE</div>
+                        <h2>The ArtSync Evolution</h2>
                         <p>ArtSync arrived with a singular mission: to redefine the boundary between data and decision. Operating out of the technological nexus of India, we have evolved from a specialized code workshop into a global intelligence provider.</p>
                         <p>Our philosophy merges intense computational rigor with a pragmatic focus on commercial utility. We don't just innovate; we build the infrastructure that allows businesses to dominate their respective markets.</p>
                         <p>From agile startups to established market titans, ArtSync provides the clarity needed to navigate the AI-driven landscape with absolute certainty.</p>
                     </div>
                     <div class="glass-card">
-                        <h2 style="margin-bottom: 2rem;">Connect with Tech</h2>
-                        <form id="contact-page-form"
-                            style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <h2 style="margin-bottom: 1.5rem;">Connect with Tech</h2>
+                        <form id="contact-page-form" class="contact-form">
                             <input type="hidden" name="access_key" value="62c60694-167b-4fa3-98ea-a50b56889b4d">
                             <div class="form-field">
-                                <input type="text" name="name" placeholder="Full Name" required
-                                    style="width: 100%; padding: 1.25rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg); color: var(--color-text-main); outline: none;">
+                                <input type="text" name="name" placeholder="Full Name" required>
                             </div>
                             <div class="form-field">
-                                <input type="email" name="email" placeholder="Professional Email" required
-                                    style="width: 100%; padding: 1.25rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg); color: var(--color-text-main); outline: none;">
+                                <input type="email" name="email" placeholder="Professional Email" required>
                             </div>
                             <div class="form-field">
-                                <textarea name="message" placeholder="Describe your architectural needs..." required rows="4"
-                                    style="width: 100%; padding: 1.25rem; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg); color: var(--color-text-main); outline: none; resize: none;"></textarea>
+                                <textarea name="message" placeholder="Describe your architectural needs..." required rows="4"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%;">Initiate Connection</button>
+                            <button type="submit" class="btn btn-primary" style="width:100%;">Initiate Connection</button>
                         </form>
                     </div>
                 </div>
@@ -229,16 +213,15 @@
     <footer class="main-footer">
         <div class="container">
             <div class="footer-cta">
-                <h2 style="margin-bottom: 3rem;">Ready to sync with the future?</h2>
+                <h2>Ready to sync with the future?</h2>
                 <a href="contact.html" class="btn btn-primary">Start Your Journey</a>
             </div>
             <div class="footer-bottom">
-                <div class="footer-copyright">
-                    &copy; 2025 ArtSync India LLP. All Rights Reserved.
+                <div class="footer-copyright">&copy; 2025 ArtSync India LLP. All Rights Reserved.</div>
+                <div class="footer-contact">
+                    <a href="tel:+919997213595"><i class="fas fa-phone"></i> +91-9997213595</a>
                 </div>
-                <div class="footer-slogan">
-                    Forging Autonomous Intelligence
-                </div>
+                <div class="footer-slogan">Forging Autonomous Intelligence</div>
             </div>
         </div>
         <button id="scroll-top" class="scroll-top" aria-label="Back to top">
@@ -246,7 +229,7 @@
         </button>
     </footer>
 
-    <script src="script.js?v=5"></script>
+    <script src="script.js?v=9"></script>
     <script>
         document.getElementById('contact-page-form').addEventListener('submit', async function (e) {
             e.preventDefault();
@@ -255,27 +238,20 @@
             btn.innerText = 'Syncing...';
             btn.disabled = true;
 
-            const formData = new FormData(this);
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
-
             try {
                 const response = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: json
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(Object.fromEntries(new FormData(this)))
                 });
                 if (response.status === 200) {
-                    alert('Integration Success! Expect a transmission soon.');
+                    window.initiateTransmissionNotice('Integration success! Expect a transmission soon.');
                     this.reset();
                 } else {
-                    alert('Submission error. Please retry.');
+                    window.initiateTransmissionNotice('Submission error. Please retry.', 'error');
                 }
-            } catch (error) {
-                alert('Connection lost. Please check your network.');
+            } catch {
+                window.initiateTransmissionNotice('Connection lost. Check your network.', 'error');
             } finally {
                 btn.innerText = originalText;
                 btn.disabled = false;

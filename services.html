@@ -9,10 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=20">
+    <link rel="stylesheet" href="style.css?v=25">
 </head>
 
-<body class="theme-transition">
+<body>
     <script>
         (function () {
             const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -42,10 +42,9 @@
     </header>
 
     <main>
-        <!-- HERO SECTION -->
-        <section id="hero">
-            <div class="container">
-                <div class="badge">OMNI-CHANNEL INTELLIGENCE</div>
+        <section id="hero" class="hero-compact">
+            <div class="container hero-inner hero-entrance">
+                <div class="badge"><span class="badge-dot"></span> OMNI-CHANNEL INTELLIGENCE</div>
                 <h1 class="hero-title">Intelligence <span class="gradient-text">Architectures</span></h1>
                 <p>Comprehensive intelligence frameworks from conceptual data modeling to high-scale production deployment.</p>
                 <div class="hero-actions">
@@ -55,42 +54,41 @@
             </div>
         </section>
 
-        <!-- CORE DOMAINS -->
         <section id="specialties">
             <div class="container">
                 <div class="section-header">
-                    <div class="badge">CAPABILITIES</div>
+                    <div class="badge"><span class="badge-dot"></span> CAPABILITIES</div>
                     <h2>Core Computational Domains</h2>
                     <p>Specialized mastery across every layer of the modern AI stack.</p>
                 </div>
-                <div class="grid grid-3">
+                <div class="grid grid-3 reveal-stagger">
                     <div class="glass-card">
-                        <div style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 2rem;"><i class="fas fa-database"></i></div>
+                        <div class="card-icon"><i class="fas fa-database"></i></div>
                         <h3>RAG & Retrieval Systems</h3>
                         <p>Production retrieval-augmented generation pipelines with multi-stage reranking and hybrid vector search.</p>
                     </div>
                     <div class="glass-card">
-                        <div style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 2rem;"><i class="fas fa-microchip"></i></div>
+                        <div class="card-icon"><i class="fas fa-microchip"></i></div>
                         <h3>Model Tuning & Calibration</h3>
                         <p>Specializing in LLM adaptation, performance optimization, and professional dataset curation for niche domains.</p>
                     </div>
                     <div class="glass-card">
-                        <div style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 2rem;"><i class="fas fa-code"></i></div>
+                        <div class="card-icon"><i class="fas fa-code"></i></div>
                         <h3>Cognitive Engineering</h3>
                         <p>Sophisticated prompt architecture, structured output control, and systematic refinement for high-output workflows.</p>
                     </div>
                     <div class="glass-card">
-                        <div style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 2rem;"><i class="fas fa-robot"></i></div>
+                        <div class="card-icon"><i class="fas fa-robot"></i></div>
                         <h3>Autonomous Orchestration</h3>
                         <p>Multi-agent frameworks, self-correcting tool-use, and industrial-grade orchestration logic built for scale.</p>
                     </div>
                     <div class="glass-card">
-                        <div style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 2rem;"><i class="fas fa-vials"></i></div>
+                        <div class="card-icon"><i class="fas fa-flask"></i></div>
                         <h3>Data Refinement & Processing</h3>
                         <p>End-to-end vectorization, intelligent ETL flows, and automated data validation purpose-built for AI models.</p>
                     </div>
                     <div class="glass-card">
-                        <div style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 2rem;"><i class="fas fa-server"></i></div>
+                        <div class="card-icon"><i class="fas fa-server"></i></div>
                         <h3>Intelligence Operations</h3>
                         <p>High-availability model inference pipelines, real-time monitoring, and resilient infrastructure for global AI systems.</p>
                     </div>
@@ -98,45 +96,44 @@
             </div>
         </section>
 
-        <!-- SECTORS -->
-        <section id="industries" style="background: var(--color-bg-alt);">
+        <section id="industries" class="section-alt">
             <div class="container">
                 <div class="section-header">
-                    <div class="badge">TARGET SECTORS</div>
+                    <div class="badge"><span class="badge-dot"></span> TARGET SECTORS</div>
                     <h2>Industries We Transform</h2>
                     <p>Customized intelligence frameworks optimized for high-complexity environments.</p>
                 </div>
-                <div class="grid grid-2">
-                    <div class="glass-card" style="display: flex; gap: 2rem; align-items: start;">
-                        <div style="width: 80px; height: 80px; background: rgba(244, 63, 94, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--color-primary); flex-shrink: 0;">
-                            <i class="fas fa-vial-circle-check"></i>
+                <div class="grid grid-2 reveal-stagger">
+                    <div class="glass-card sector-card">
+                        <div class="sector-icon sector-icon--primary">
+                            <i class="fas fa-dna" aria-hidden="true"></i>
                         </div>
                         <div>
                             <h3>Biotech & Medical Research</h3>
                             <p>Driving pharmacological innovation and analyzing research telemetry with precision AI while maintaining absolute regulatory compliance.</p>
                         </div>
                     </div>
-                    <div class="glass-card" style="display: flex; gap: 2rem; align-items: start;">
-                        <div style="width: 80px; height: 80px; background: rgba(245, 158, 11, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--color-secondary); flex-shrink: 0;">
-                            <i class="fas fa-chart-pie"></i>
+                    <div class="glass-card sector-card">
+                        <div class="sector-icon sector-icon--secondary">
+                            <i class="fas fa-chart-pie" aria-hidden="true"></i>
                         </div>
                         <div>
                             <h3>Fintech & Quant Markets</h3>
                             <p>Dynamic risk evaluation, pattern-based fraud identification, and automated data synthesis for elite financial sectors.</p>
                         </div>
                     </div>
-                    <div class="glass-card" style="display: flex; gap: 2rem; align-items: start;">
-                        <div style="width: 80px; height: 80px; background: rgba(16, 185, 129, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--color-accent); flex-shrink: 0;">
-                            <i class="fas fa-drone"></i>
+                    <div class="glass-card sector-card">
+                        <div class="sector-icon sector-icon--accent">
+                            <i class="fas fa-satellite" aria-hidden="true"></i>
                         </div>
                         <div>
                             <h3>Autonomous Aerial & Mapping</h3>
                             <p>Sophisticated visual intelligence for spatial reconstruction and automated object identification in multi-dimensional spaces.</p>
                         </div>
                     </div>
-                    <div class="glass-card" style="display: flex; gap: 2rem; align-items: start;">
-                        <div style="width: 80px; height: 80px; background: rgba(244, 63, 94, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--color-primary); flex-shrink: 0;">
-                            <i class="fas fa-cloud-bolt"></i>
+                    <div class="glass-card sector-card">
+                        <div class="sector-icon sector-icon--primary">
+                            <i class="fas fa-cloud-bolt" aria-hidden="true"></i>
                         </div>
                         <div>
                             <h3>B2B SaaS & Infrastructure</h3>
@@ -147,12 +144,11 @@
             </div>
         </section>
 
-        <!-- BOTTOM CTA -->
-        <section id="contact-cta" style="padding: 10rem 0; text-align: center;">
+        <section id="contact-cta" class="cta-section">
             <div class="container">
-                <div class="badge">INITIATE PROGRESS</div>
-                <h2 style="font-size: 4rem; margin-bottom: 2rem;">Prepared to <span class="gradient-text">Integrate Intelligence?</span></h2>
-                <p style="max-width: 700px; margin: 0 auto 4rem; font-size: 1.25rem;">Transform your operational logic with ArtSync's intelligence systems. Let's engineer products that define their categories.</p>
+                <div class="badge"><span class="badge-dot"></span> INITIATE PROGRESS</div>
+                <h2>Prepared to <span class="gradient-text">Integrate Intelligence?</span></h2>
+                <p>Transform your operational logic with ArtSync's intelligence systems. Let's engineer products that define their categories.</p>
                 <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
             </div>
         </section>
@@ -161,16 +157,15 @@
     <footer class="main-footer">
         <div class="container">
             <div class="footer-cta">
-                <h2 style="margin-bottom: 3rem;">Ready to sync with the future?</h2>
+                <h2>Ready to sync with the future?</h2>
                 <a href="contact.html" class="btn btn-primary">Start Your Journey</a>
             </div>
             <div class="footer-bottom">
-                <div class="footer-copyright">
-                    &copy; 2025 ArtSync India LLP. All Rights Reserved.
+                <div class="footer-copyright">&copy; 2025 ArtSync India LLP. All Rights Reserved.</div>
+                <div class="footer-contact">
+                    <a href="tel:+919997213595"><i class="fas fa-phone"></i> +91-9997213595</a>
                 </div>
-                <div class="footer-slogan">
-                    Forging Autonomous Intelligence
-                </div>
+                <div class="footer-slogan">Forging Autonomous Intelligence</div>
             </div>
         </div>
         <button id="scroll-top" class="scroll-top" aria-label="Back to top">
@@ -178,7 +173,7 @@
         </button>
     </footer>
 
-    <script src="script.js?v=5"></script>
+    <script src="script.js?v=9"></script>
 </body>
 
 </html>
