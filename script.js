@@ -34,33 +34,30 @@ function initParticles() {
     const ctx = canvas.getContext('2d');
     let w, h, particles = [], animId;
 
-    const count = () => Math.min(55, Math.floor((w * h) / 18000));
+    const count = () => Math.min(80, Math.floor((w * h) / 12000));
 
     function resize() {
         w = canvas.width = window.innerWidth;
         h = canvas.height = window.innerHeight;
         const n = count();
-        particles = Array.from({ length: n }, (_, i) => ({
+        particles = Array.from({ length: n }, () => ({
             x: Math.random() * w,
             y: Math.random() * h,
-            vx: (Math.random() - 0.5) * 0.22,
-            vy: (Math.random() - 0.5) * 0.22,
-            r: Math.random() * 1.2 + 0.4,
-            tone: i % 3,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            r: Math.random() * 1.5 + 0.5,
         }));
     }
 
-    function getColor(tone) {
+    function getColor() {
         const theme = document.documentElement.getAttribute('data-theme');
-        if (theme === 'light') {
-            return tone === 1 ? '217, 119, 6' : tone === 2 ? '219, 39, 119' : '13, 148, 136';
-        }
-        return tone === 1 ? '245, 158, 11' : tone === 2 ? '236, 72, 153' : '20, 184, 166';
+        return theme === 'light' ? '42, 157, 181' : '66, 201, 223';
     }
 
     function draw() {
         ctx.clearRect(0, 0, w, h);
-        const linkDist = 95;
+        const rgb = getColor();
+        const linkDist = 140;
 
         particles.forEach((p, i) => {
             p.x += p.vx;
@@ -68,10 +65,9 @@ function initParticles() {
             if (p.x < 0 || p.x > w) p.vx *= -1;
             if (p.y < 0 || p.y > h) p.vy *= -1;
 
-            const rgb = getColor(p.tone);
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(${rgb}, 0.32)`;
+            ctx.fillStyle = `rgba(${rgb}, 0.38)`;
             ctx.fill();
 
             for (let j = i + 1; j < particles.length; j++) {
@@ -80,13 +76,11 @@ function initParticles() {
                 const dy = p.y - q.y;
                 const dist = Math.sqrt(dx * dx + dy * dy);
                 if (dist < linkDist) {
-                    const midX = (p.x + q.x) / 2;
-                    const midY = (p.y + q.y) / 2 - (linkDist - dist) * 0.08;
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
-                    ctx.quadraticCurveTo(midX, midY, q.x, q.y);
-                    ctx.strokeStyle = `rgba(${rgb}, ${0.08 * (1 - dist / linkDist)})`;
-                    ctx.lineWidth = 0.6;
+                    ctx.lineTo(q.x, q.y);
+                    ctx.strokeStyle = `rgba(${rgb}, ${0.1 * (1 - dist / linkDist)})`;
+                    ctx.lineWidth = 0.5;
                     ctx.stroke();
                 }
             }
@@ -205,7 +199,7 @@ function initScrollReveal() {
         return;
     }
 
-    const variants = ['reveal-up', 'reveal-scale', 'reveal-up', 'reveal-right', 'reveal-scale'];
+    const variants = ['reveal-up', 'reveal-left', 'reveal-right', 'reveal-scale'];
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -283,27 +277,33 @@ function initHeroParallax() {
         const rect = hero.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width - 0.5;
         const y = (e.clientY - rect.top) / rect.height - 0.5;
-        visual.style.transform = `rotateY(${x * 6}deg) rotateX(${y * -4}deg)`;
+        visual.style.transform = `translate(${x * 28}px, ${y * 18}px)`;
     });
 
     hero.addEventListener('mouseleave', () => {
         visual.style.transform = '';
-        visual.style.transition = 'transform 0.7s ease';
-        setTimeout(() => { visual.style.transition = ''; }, 700);
+        visual.style.transition = 'transform 0.6s ease';
+        setTimeout(() => { visual.style.transition = ''; }, 600);
     });
 }
 
-// ─── Button Ripple ───
-function initButtonRipple() {
+// ─── Magnetic Buttons ───
+function initMagneticButtons() {
+    if (window.matchMedia('(max-width: 768px)').matches) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.classList.add('btn-magnetic');
         btn.addEventListener('mousemove', (e) => {
             const rect = btn.getBoundingClientRect();
-            const x = ((e.clientX - rect.left) / rect.width) * 100;
-            const y = ((e.clientY - rect.top) / rect.height) * 100;
-            btn.style.setProperty('--ripple-x', `${x}%`);
-            btn.style.setProperty('--ripple-y', `${y}%`);
+            const x = (e.clientX - rect.left - rect.width / 2) * 0.18;
+            const y = (e.clientY - rect.top - rect.height / 2) * 0.18;
+            btn.style.setProperty('--mag-x', `${x}px`);
+            btn.style.setProperty('--mag-y', `${y}px`);
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.setProperty('--mag-x', '0px');
+            btn.style.setProperty('--mag-y', '0px');
         });
     });
 }
@@ -447,7 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeaderScroll();
     initHeroWordReveal();
     initHeroParallax();
-    initButtonRipple();
+    initMagneticButtons();
     initScrollProgress();
     initSectionLines();
     initScrollReveal();
