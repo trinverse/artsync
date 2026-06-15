@@ -715,6 +715,9 @@ section { padding: 7rem 0; }
 .hero-entrance .badge { animation: fadeUp 0.8s var(--ease-out) 0.1s both; }
 .hero-entrance h1:not([data-split]) { animation: fadeUp 0.8s var(--ease-out) 0.25s both; }
 .hero-entrance h1[data-split="1"] { animation: none; }
+.hero-entrance h1[data-split="1"] .gradient-text {
+    animation: fadeUp 0.8s var(--ease-out) 0.45s both;
+}
 .hero-entrance p { animation: fadeUp 0.8s var(--ease-out) 0.4s both; }
 .hero-entrance .hero-actions { animation: fadeUp 0.8s var(--ease-out) 0.55s both; }
 
@@ -723,6 +726,16 @@ section { padding: 7rem 0; }
     opacity: 0;
     transform: translateY(24px) rotate(2deg);
     animation: wordReveal 0.65s var(--ease-out) forwards;
+}
+
+/* Safety: gradient children must keep their own clip if ever split */
+.gradient-text .word-chip {
+    background: var(--gradient-hero);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: wordReveal 0.65s var(--ease-out) forwards, gradientShift 8s ease infinite;
 }
 
 @keyframes wordReveal {
