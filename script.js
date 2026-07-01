@@ -27,6 +27,7 @@ function updateToggleIcons(theme) {
 // ─── Particle Network ───
 function initParticles() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (window.innerWidth < 768) return;
 
     const canvas = document.createElement('canvas');
     canvas.id = 'fx-canvas';
