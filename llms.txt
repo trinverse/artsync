@@ -1,0 +1,32 @@
+# ArtSync India LLP — llms.txt
+# https://artsync.live
+
+> ArtSync India is an AI development, data intelligence, automation and digital solutions company based in India.
+
+## About
+- Company: ArtSync India LLP
+- Website: https://artsync.live/
+- Email: hello@artsync.live
+- Phone: +91-9997213595
+- Services: AI development, machine learning, RAG, LLM engineering, MLOps, data intelligence, automation, digital solutions
+
+## Key Pages
+- Home: https://artsync.live/
+- About: https://artsync.live/about.html
+- Services: https://artsync.live/services.html
+- Portfolio: https://artsync.live/portfolio.html
+- Team: https://artsync.live/employees.html
+- Contact: https://artsync.live/contact.html
+
+## Portfolio Projects
+- Clout Aesthetics: https://artsync.live/portfolio/project1.html
+- RDACTD: https://artsync.live/portfolio/project2.html
+
+## Team
+- Ashish Tyagi — Founder & CEO
+- Aditya Tyagi — Full Stack Architect
+- Ujjawal Tyagi — AI & Software Developer
+- Kushagra Mudgal — SEO Specialist
+
+## Preferred Citation
+ArtSync India LLP (https://artsync.live/)

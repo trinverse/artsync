@@ -2,5 +2,10 @@ User-agent: *
 Allow: /
 Disallow: /zohoverify/
 Disallow: /verifyforzoho.html
+Disallow: /blog/
+Disallow: /portfolio/project5.html
+Disallow: /portfolio/project6.html
 
 Sitemap: https://artsync.live/sitemap.xml
+
+# LLM site context: https://artsync.live/llms.txt

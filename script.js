@@ -2,6 +2,8 @@
  * ArtSync — Futuristic UI Engine
  */
 
+const isMobileView = () => window.matchMedia('(max-width: 768px)').matches;
+
 // ─── Theme ───
 function synchronizeTheme() {
     const theme = localStorage.getItem('theme') || 'dark';
@@ -27,7 +29,7 @@ function updateToggleIcons(theme) {
 // ─── Particle Network ───
 function initParticles() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    if (window.innerWidth < 768) return;
+    if (isMobileView()) return;
 
     const canvas = document.createElement('canvas');
     canvas.id = 'fx-canvas';
@@ -92,13 +94,11 @@ function initParticles() {
     resize();
     draw();
     window.addEventListener('resize', resize);
-
-    const observer = new MutationObserver(() => {});
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 }
 
 // ─── Ambient Orbs ───
 function initOrbs() {
+    if (isMobileView()) return;
     if (document.querySelector('.ambient-orbs')) return;
     const div = document.createElement('div');
     div.className = 'ambient-orbs';
@@ -195,8 +195,10 @@ function initHeaderScroll() {
 
 // ─── Scroll Reveal ───
 function initScrollReveal() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.querySelectorAll('.glass-card, .section-header, .stat-item').forEach(el => el.classList.add('visible'));
+    const revealTargets = '.glass-card, .section-header, .stat-item, .project-card, .feature-card, .about-text, .footer-cta, .reveal-stagger > *';
+
+    if (isMobileView() || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll(revealTargets).forEach(el => el.classList.add('visible'));
         return;
     }
 
@@ -231,6 +233,7 @@ function initScrollReveal() {
 
 // ─── Hero Word Reveal ───
 function initHeroWordReveal() {
+    if (isMobileView()) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     document.querySelectorAll('.hero-title').forEach(title => {
@@ -333,6 +336,7 @@ function initPageLoad() {
 
 // ─── Section Line Reveal ───
 function initSectionLines() {
+    if (isMobileView()) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const observer = new IntersectionObserver((entries) => {
