@@ -7,7 +7,7 @@
 - Company: ArtSync India LLP
 - Website: https://artsync.live/
 - Email: hello@artsync.live
-- Phone: +91-9997213595
+- Phone: +91-8448412144
 - Services: AI development, machine learning, RAG, LLM engineering, MLOps, data intelligence, automation, digital solutions
 
 ## Key Pages
