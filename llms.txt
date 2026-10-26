@@ -24,7 +24,6 @@
 
 ## Team
 - Ashish Tyagi — Founder & CEO
-- Aditya Tyagi — Full Stack Architect
 - Ujjawal Tyagi — AI & Software Developer
 - Kushagra Mudgal — SEO Specialist
 
